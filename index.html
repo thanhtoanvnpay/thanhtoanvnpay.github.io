@@ -117,7 +117,7 @@ a{
 
     gap:50px;
 
-    align-items:center;
+    align-items:start;
 }
 
 
@@ -291,6 +291,35 @@ a{
     color:#777;
 
     margin-top:9px;
+
+    margin-bottom:20px;
+}
+
+/* FB VIDEO WRAPPER */
+.fb-video-container {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    background: #000;
+    margin-top: 15px;
+}
+
+.fb-video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* Tỷ lệ 16:9 chuẩn responsive */
+    height: 0;
+    overflow: hidden;
+}
+
+.fb-video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
 }
 
 
@@ -1106,6 +1135,20 @@ footer strong{
         ✓ Không bắt buộc sử dụng dịch vụ
 
     </p>
+
+
+    <!-- FACEBOOK VIDEO PLAYER -->
+    <div class="fb-video-container">
+        <div class="fb-video-wrapper">
+            <iframe 
+                src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2FVNPAYQR.vn%2Fvideos%2F2011979816357812%2F&show_text=false&width=560" 
+                scrolling="no" 
+                frameborder="0" 
+                allowfullscreen="true" 
+                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+            </iframe>
+        </div>
+    </div>
 
 </div>
 
