@@ -94,7 +94,6 @@ a{
     gap: 12px;
 }
 
-/* Tối ưu hiển thị Logo */
 .logo-img {
     height: 42px;
     width: auto;
@@ -179,7 +178,7 @@ a{
 }
 
 /* ==================================================
-   HERO SECTION
+   HERO SECTION (CHIA 2 CỘT SONG SONG CHUẨN BỐ CỤC)
 ================================================== */
 .hero{
     background: radial-gradient(circle at 90% 0%, rgba(0, 102, 255, .08), transparent 40%),
@@ -188,15 +187,10 @@ a{
 }
 
 .hero-grid{
-    display:grid;
-    grid-template-columns: 1.1fr 0.9fr;
-    gap:40px;
-}
-
-@media(min-width: 801px) {
-    .hero-grid {
-        align-items: center; /* Căn giữa chiều dọc giữa 2 cột */
-    }
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Chia 2 cột bằng nhau */
+    gap: 40px;
+    align-items: flex-start; /* Căn lề trên cùng cho 2 cột */
 }
 
 .badge{
@@ -214,9 +208,9 @@ a{
 }
 
 .hero h1{
-    font-size: clamp(30px, 4vw, 48px);
-    line-height:1.15;
-    letter-spacing:-1px;
+    font-size: clamp(28px, 3.5vw, 42px);
+    line-height:1.2;
+    letter-spacing:-0.5px;
     margin-bottom:16px;
 }
 .hero h1 span{ color:var(--blue); }
@@ -252,16 +246,14 @@ a{
     font-size:11px;
 }
 
-/* KHỐI VIDEO DỌC TỐI ƯU CÂN BẰNG FORM */
+/* KHỐI VIDEO DỌC */
 .video-box {
-    margin-top: 15px;
+    margin-top: 20px;
     background: #000;
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 10px 25px rgba(0,0,0,0.12);
-    max-width: 360px;
-    margin-left: auto;
-    margin-right: auto;
+    max-width: 320px;
 }
 .video-title {
     background: #1e293b;
@@ -273,13 +265,13 @@ a{
 }
 .video-box video {
     width: 100%;
-    height: 380px; /* Khống chế chiều cao chuẩn */
+    height: 350px;
     object-fit: cover;
     display: block;
 }
 
 /* ==================================================
-   LEAD FORM (RÚT GỌN 3 TRƯỜNG)
+   LEAD FORM (CỘT BÊN PHẢI)
 ================================================== */
 .form-card{
     background:white;
@@ -593,6 +585,7 @@ footer{
     .mobile-cta { display:block; }
     body { padding-bottom:60px; }
     .header-contact { display: none; }
+    .video-box { max-width: 100%; }
 }
 </style>
 </head>
@@ -630,11 +623,12 @@ footer{
     </div>
 </header>
 
-<!-- HERO SECTION -->
+<!-- HERO SECTION: CẤU TRÚC 2 CỘT CHUẨN BỐ CỤC -->
 <section class="hero">
 <div class="container hero-grid">
 
-    <div>
+    <!-- CỘT 1 (BÊN TRÁI): TIÊU ĐỀ + ƯU ĐIỂM + VIDEO -->
+    <div class="hero-left">
         <div class="badge">
             🛡️ GIẢI PHÁP THANH TOÁN TOÀN DIỆN
         </div>
@@ -647,7 +641,6 @@ footer{
             <li><span class="check">✓</span> Thủ tục đăng ký đơn giản, hỗ trợ tận nơi</li>
         </ul>
 
-        <!-- VIDEO DỌC TỐI ƯU KHUNG HÌNH -->
         <div class="video-box">
             <div class="video-title">🎥 Trải nghiệm thanh toán VNPAY tại điểm bán</div>
             <video loop playsinline controls preload="auto">
@@ -656,51 +649,53 @@ footer{
         </div>
     </div>
 
-    <!-- FORM RÚT GỌN 3 TRƯỜNG TỐI ƯU DỄ CHUYỂN ĐỔI -->
-    <div class="form-card" id="dang-ky">
-        <h2>Đăng Ký Tư Vấn</h2>
-        <p class="form-subtitle">Điền thông tin bên dưới, chuyên viên VNPAY sẽ liên hệ lại trong ít phút.</p>
+    <!-- CỘT 2 (BÊN PHẢI - KHU VỰC KHOANH VÀNG): FORM ĐĂNG KÝ -->
+    <div class="hero-right">
+        <div class="form-card" id="dang-ky">
+            <h2>Đăng Ký Tư Vấn</h2>
+            <p class="form-subtitle">Điền thông tin bên dưới, chuyên viên VNPAY sẽ liên hệ lại trong ít phút.</p>
 
-        <div class="offer-box">
-            <div class="offer-title">🎁 QUYỀN LỢI ĐĂNG KÝ MIỄN PHÍ</div>
-            <ul class="offer-list">
-                <li>✓ Khảo sát & Tư vấn giải pháp tối ưu chi phí</li>
-                <li>✓ Hỗ trợ trọn gói hồ sơ & Triển khai nhanh</li>
-            </ul>
+            <div class="offer-box">
+                <div class="offer-title">🎁 QUYỀN LỢI ĐĂNG KÝ MIỄN PHÍ</div>
+                <ul class="offer-list">
+                    <li>✓ Khảo sát & Tư vấn giải pháp tối ưu chi phí</li>
+                    <li>✓ Hỗ trợ trọn gói hồ sơ & Triển khai nhanh</li>
+                </ul>
+            </div>
+
+            <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted){alert('Cảm ơn bạn! Chuyên viên tư vấn VNPAY sẽ liên hệ lại ngay.'); document.getElementById('leadForm').reset();}"></iframe>
+
+            <form id="leadForm" action="https://docs.google.com/forms/d/e/1FAIpQLSd9k4BFTZW10Md4D2UeMlTO65Bf-YVxCMvTPyZNZkoFDpu6mw/formResponse" method="POST" target="hidden_iframe" onsubmit="submitted=true;">
+
+                <div class="form-group">
+                    <label>Họ và tên *</label>
+                    <input type="text" name="entry.1444757328" placeholder="Nhập họ và tên của bạn" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Số điện thoại (Zalo) *</label>
+                    <input type="tel" name="entry.1967364401" placeholder="09xxxxxxxx" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Mô hình kinh doanh của bạn *</label>
+                    <select name="entry.1091732008" required>
+                        <option value="">-- Chọn mô hình --</option>
+                        <option value="Cửa hàng bán lẻ / Chuỗi cửa hàng">Cửa hàng bán lẻ / Chuỗi</option>
+                        <option value="Nhà hàng / Cafe / Bán đồ ăn">Nhà hàng / Cafe / F&B</option>
+                        <option value="Hộ kinh doanh cá thể">Hộ kinh doanh cá thể</option>
+                        <option value="Doanh nghiệp / Công ty">Doanh nghiệp / Công ty</option>
+                        <option value="Bán hàng online / Website">Bán hàng online / Website</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="submit-btn">
+                    👉 ĐĂNG KÝ TƯ VẤN NGAY
+                </button>
+
+                <p class="form-security">🔒 Bảo mật thông tin khách hàng tuyệt đối</p>
+            </form>
         </div>
-
-        <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted){alert('Cảm ơn bạn! Chuyên viên tư vấn VNPAY sẽ liên hệ lại ngay.'); document.getElementById('leadForm').reset();}"></iframe>
-
-        <form id="leadForm" action="https://docs.google.com/forms/d/e/1FAIpQLSd9k4BFTZW10Md4D2UeMlTO65Bf-YVxCMvTPyZNZkoFDpu6mw/formResponse" method="POST" target="hidden_iframe" onsubmit="submitted=true;">
-
-            <div class="form-group">
-                <label>Họ và tên *</label>
-                <input type="text" name="entry.1444757328" placeholder="Nhập họ và tên của bạn" required>
-            </div>
-
-            <div class="form-group">
-                <label>Số điện thoại (Zalo) *</label>
-                <input type="tel" name="entry.1967364401" placeholder="09xxxxxxxx" required>
-            </div>
-
-            <div class="form-group">
-                <label>Mô hình kinh doanh của bạn *</label>
-                <select name="entry.1091732008" required>
-                    <option value="">-- Chọn mô hình --</option>
-                    <option value="Cửa hàng bán lẻ / Chuỗi cửa hàng">Cửa hàng bán lẻ / Chuỗi</option>
-                    <option value="Nhà hàng / Cafe / Bán đồ ăn">Nhà hàng / Cafe / F&B</option>
-                    <option value="Hộ kinh doanh cá thể">Hộ kinh doanh cá thể</option>
-                    <option value="Doanh nghiệp / Công ty">Doanh nghiệp / Công ty</option>
-                    <option value="Bán hàng online / Website">Bán hàng online / Website</option>
-                </select>
-            </div>
-
-            <button type="submit" class="submit-btn">
-                👉 ĐĂNG KÝ TƯ VẤN NGAY
-            </button>
-
-            <p class="form-security">🔒 Bảo mật thông tin khách hàng tuyệt đối</p>
-        </form>
     </div>
 
 </div>
