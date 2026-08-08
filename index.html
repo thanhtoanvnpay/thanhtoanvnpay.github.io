@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Đăng Ký Giải Pháp Thanh Toán VNPAY Miễn Phí</title>
-<meta name="description" content="Tư vấn và lắp đặt giải pháp thanh toán VNPAY-QR, SmartPOS, Cổng thanh toán cho cửa hàng, doanh nghiệp.">
+<meta name="description" content="Tư vấn và lắp đặt giải pháp thanh toán VNPAY-QR, SmartPOS, PhonePOS, Cổng thanh toán cho cửa hàng, doanh nghiệp.">
 
 <style>
 /* ==================================================
@@ -123,7 +123,7 @@ a{
 }
 
 /* ==================================================
-   FLOATING WIDGETS + TOOLTIP ZALO/CALL
+   FLOATING WIDGETS
 ================================================== */
 .floating-contact {
     position: fixed;
@@ -207,7 +207,7 @@ a{
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px; /* Tạo khoảng cách giữa Form và Khối thông số bên dưới */
+    gap: 20px;
 }
 
 .badge{
@@ -393,7 +393,6 @@ input:focus, select:focus{
     margin-top:10px;
 }
 
-/* KHỐI THÔNG SỐ CHUYỂN VÀO BÊN DƯỚI FORM (KHU VỰC ĐỎ) */
 .hero-trust-grid {
     width: 100%;
     max-width: 460px;
@@ -485,32 +484,56 @@ input:focus, select:focus{
     margin-top: 5px;
 }
 
-.pain-grid, .services, .steps{
+.pain-grid, .steps{
     display:grid;
     grid-template-columns: repeat(3,1fr);
     gap:20px;
 }
 
-.services { grid-template-columns: repeat(2,1fr); }
+/* KHU VỰC 1: DỊCH VỤ CUNG CẤP (4 ĐẦU MỤC) */
+.services { 
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
 
 .pain-card, .service, .step{
     background:white;
     border: 1px solid var(--border);
     border-radius:12px;
-    padding:22px;
+    padding:24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.service-sub {
+    color: var(--blue);
+    font-weight: 700;
+    font-size: 13px;
+    margin-bottom: 4px;
 }
 
 .pain-card h3, .service h3, .step h3 {
-    font-size: 17px;
-    margin: 10px 0 6px;
+    font-size: 18px;
+    margin: 4px 0 8px;
+    color: var(--black);
 }
 
 .pain-card p, .service p, .step p {
     color: var(--gray);
-    font-size: 13.5px;
+    font-size: 14px;
+    margin-bottom: 15px;
 }
 
-/* TESTIMONIALS */
+.service-link {
+    color: var(--blue);
+    font-weight: 800;
+    font-size: 14px;
+    display: inline-block;
+}
+
+/* KHU VỰC 2: TESTIMONIALS (4 NHẬN XÉT) */
 .testimonials-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -521,26 +544,31 @@ input:focus, select:focus{
     background: #fff;
     border: 1px solid var(--border);
     border-radius: 12px;
-    padding: 20px;
+    padding: 22px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .testimonial-text {
     font-style: italic;
     color: #444;
     font-size: 14px;
-    margin-bottom: 12px;
+    margin-bottom: 16px;
+    line-height: 1.6;
 }
 
 .testimonial-author {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
 }
 
+/* CSS CHO CẢ ANH ĐẠI DIỆN VÀ CHỮ CÁI THAY THẾ */
 .author-avatar {
-    width: 40px;
-    height: 40px;
+    width: 44px;
+    height: 44px;
     border-radius: 50%;
     background: #0066ff;
     color: #fff;
@@ -548,10 +576,21 @@ input:focus, select:focus{
     align-items: center;
     justify-content: center;
     font-weight: bold;
+    font-size: 16px;
+    flex-shrink: 0;
 }
 
-.author-info h4 { font-size: 14px; margin: 0; }
-.author-info p { font-size: 11px; color: #777; margin: 0; }
+.author-avatar-img {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+    border: 1px solid var(--border);
+}
+
+.author-info h4 { font-size: 14px; margin: 0; color: var(--black); }
+.author-info p { font-size: 12px; color: #777; margin: 0; }
 
 /* ==================================================
    CTA & FOOTER
@@ -662,7 +701,7 @@ footer{
             🛡️ GIẢI PHÁP THANH TOÁN TOÀN DIỆN
         </div>
         <h1>Tăng Doanh Thu & Tối Ưu Thanh Toán Với <span>VNPAY</span></h1>
-        <p class="hero-description">Giải pháp kết nối QR, SmartPOS và Cổng thanh toán giúp cửa hàng của bạn tiếp cận hơn 30 triệu người dùng ứng dụng ngân hàng.</p>
+        <p class="hero-description">Giải pháp kết nối QR, SmartPOS, PhonePOS và Cổng thanh toán giúp cửa hàng của bạn tiếp cận hơn 30 triệu người dùng ứng dụng ngân hàng.</p>
 
         <ul class="hero-benefits">
             <li><span class="check">✓</span> Chấp nhận thanh toán từ 40+ Ngân hàng & Ví điện tử</li>
@@ -678,7 +717,7 @@ footer{
         </div>
     </div>
 
-    <!-- CỘT BÊN PHẢI: FORM ĐĂNG KÝ + KHỐI THÔNG SỐ (ĐÃ ĐƯA VÀO VỊ TRÍ ĐỎ) -->
+    <!-- CỘT BÊN PHẢI: FORM ĐĂNG KÝ + KHỐI THÔNG SỐ -->
     <div class="hero-right">
         <div class="form-card" id="dang-ky">
             <h2>Đăng Ký Tư Vấn</h2>
@@ -726,7 +765,6 @@ footer{
             </form>
         </div>
 
-        <!-- KHỐI THÔNG SỐ ĐÃ ĐƯỢC CHUYỂN VÀO ĐÂY -->
         <div class="hero-trust-grid">
             <div class="trust-item">
                 <span class="trust-number">40+</span>
@@ -786,7 +824,7 @@ footer{
 </div>
 </section>
 
-<!-- SERVICES -->
+<!-- SERVICES (KHU VỰC VÀNG - ĐÃ THÊM ĐỦ 4 ĐẦU MỤC) -->
 <section class="section">
 <div class="container">
     <div class="section-title">
@@ -796,20 +834,42 @@ footer{
 
     <div class="services">
         <div class="service">
-            <h3>1. Mã VNPAY-QR</h3>
-            <p>Đặt tại quầy thu ngân. Khách hàng dùng App Ngân hàng bất kỳ để quét mã trả tiền ngay tức thì.</p>
-            <a href="#dang-ky" style="color:var(--blue); font-weight:800;">Đăng ký QR →</a>
+            <div>
+                <h3>1. Mã VNPAY-QR</h3>
+                <p>Đặt tại quầy thu ngân. Khách hàng dùng App Ngân hàng bất kỳ để quét mã trả tiền ngay tức thì.</p>
+            </div>
+            <a href="#dang-ky" class="service-link">Đăng ký QR →</a>
         </div>
+
         <div class="service">
-            <h3>2. Máy VNPAY SmartPOS</h3>
-            <p>Thiết bị quẹt thẻ Android thông minh, hỗ trợ quẹt thẻ Visa/Master, in hóa đơn và quét mã QR trên cùng 1 máy.</p>
-            <a href="#dang-ky" style="color:var(--blue); font-weight:800;">Đăng ký SmartPOS →</a>
+            <div>
+                <h3>2. Máy VNPAY SmartPOS</h3>
+                <p>Thiết bị quẹt thẻ Android thông minh, hỗ trợ quẹt thẻ Visa/Master, in hóa đơn và quét mã QR trên cùng 1 máy.</p>
+            </div>
+            <a href="#dang-ky" class="service-link">Đăng ký SmartPOS →</a>
+        </div>
+
+        <div class="service">
+            <div>
+                <div class="service-sub">Biến điện thoại thành POS đầu tiên ở Việt Nam</div>
+                <h3>3. VNPAY PhonePOS</h3>
+                <p>Tận dụng thiết bị di động cá nhân để thực hiện thanh toán, không cần tới thiết bị riêng biệt.</p>
+            </div>
+            <a href="#dang-ky" class="service-link">Đăng ký PhonePOS →</a>
+        </div>
+
+        <div class="service">
+            <div>
+                <h3>4. Cổng thanh toán VNPAY</h3>
+                <p>Giải pháp “may đo” toàn diện giúp nhà bán hàng tăng trưởng doanh thu mạnh mẽ nhờ khả năng chấp nhận đa dạng hình thức thanh toán.</p>
+            </div>
+            <a href="#dang-ky" class="service-link">Đăng ký Cổng thanh toán →</a>
         </div>
     </div>
 </div>
 </section>
 
-<!-- KHỐI ĐÁNH GIÁ KHÁCH HÀNG -->
+<!-- KHỐI ĐÁNH GIÁ KHÁCH HÀNG (KHU VỰC ĐỎ - ĐÃ THÊM ĐỦ 4 ĐÁNH GIÁ) -->
 <section class="section section-light">
 <div class="container">
     <div class="section-title">
@@ -818,9 +878,12 @@ footer{
     </div>
 
     <div class="testimonials-grid">
+        <!-- Nhận xét 1 -->
         <div class="testimonial-card">
             <div class="testimonial-text">"Từ ngày đặt mã VNPAY-QR tại quầy, việc thu tiền nhanh hơn hẳn. Khách trẻ giờ toàn quét mã, vừa tiện cho khách vừa giúp shop không phải lo đổi tiền lẻ."</div>
             <div class="testimonial-author">
+                <!-- Bạn thay link ảnh thật vào src bên dưới nếu muốn -->
+                <!-- <img src="link-anh-1.jpg" class="author-avatar-img" alt="Avatar"> -->
                 <div class="author-avatar">M</div>
                 <div class="author-info">
                     <h4>Chị Minh Trang</h4>
@@ -828,6 +891,8 @@ footer{
                 </div>
             </div>
         </div>
+
+        <!-- Nhận xét 2 -->
         <div class="testimonial-card">
             <div class="testimonial-text">"Máy SmartPOS của VNPAY rất tiện, vừa quẹt thẻ vừa quét QR được. Chuyên viên hỗ trợ thủ tục rất nhanh, đăng ký xong 1-2 ngày là có máy dùng."</div>
             <div class="testimonial-author">
@@ -838,6 +903,31 @@ footer{
                 </div>
             </div>
         </div>
+
+        <!-- Nhận xét 3 (Thêm mới) -->
+        <div class="testimonial-card">
+            <div class="testimonial-text">"Giải pháp PhonePOS quá tuyệt vời! Mình bán hàng hội chợ lưu động không cần mang máy móc cồng kềnh, chỉ cần dùng ngay chiếc điện thoại di động là quẹt thẻ nhận tiền được luôn."</div>
+            <div class="testimonial-author">
+                <div class="author-avatar">H</div>
+                <div class="author-info">
+                    <h4>Chị Hoàng Yến</h4>
+                    <p>Chủ cửa hàng Nông sản sạch</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Nhận xét 4 (Thêm mới) -->
+        <div class="testimonial-card">
+            <div class="testimonial-text">"Website bán hàng trực tuyến của bên mình tích hợp Cổng thanh toán VNPAY giúp tỷ lệ hủy đơn giảm hẳn. Khách hàng yên tâm vì thanh toán rất an toàn và tiện lợi."</div>
+            <div class="testimonial-author">
+                <div class="author-avatar">D</div>
+                <div class="author-info">
+                    <h4>Anh Quốc Dũng</h4>
+                    <p>CEO Công ty Mỹ phẩm Natural</p>
+                </div>
+            </div>
+        </div>
+
     </div>
 </div>
 </section>
@@ -855,7 +945,7 @@ footer{
 <footer>
 <div class="container">
     <p><strong>Dịch vụ tư vấn & Triển khai Giải pháp Thanh toán VNPAY</strong></p>
-    <p style="margin-top:5px; color:#666;">Hỗ trợ đăng ký VNPAY-QR, PhonePOS, SmartPOS, Cổng thanh toán toàn quốc</p>
+    <p style="margin-top:5px; color:#666;">Hỗ trợ đăng ký VNPAY-QR, SmartPOS, PhonePOS & Cổng thanh toán toàn quốc</p>
 </div>
 </footer>
 
