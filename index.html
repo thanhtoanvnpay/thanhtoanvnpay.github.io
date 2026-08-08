@@ -31,7 +31,6 @@ content="Đăng ký tư vấn miễn phí – lựa chọn giải pháp thanh to
 }
 
 :root{
-    /* ĐÃ ĐỔI TẤT CẢ MÀU ĐỎ SANG BLUE */
     --blue:#0066ff;
     --blue-dark:#0047b3;
     --black:#111111;
@@ -110,7 +109,6 @@ a{
     letter-spacing: -0.5px;
 }
 
-/* Hiệu ứng nhấp nháy cho nút hotline */
 @keyframes pulse-green {
     0% {
         box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
@@ -354,10 +352,10 @@ a{
     margin-bottom:20px;
 }
 
-/* FB VIDEO WRAPPER */
-.fb-video-container {
+/* LOCAL HTML5 VIDEO CONTAINER (LOOP TRỰC TIẾP, KHÔNG FB) */
+.local-video-container {
     width: 100%;
-    max-width: 500px;
+    max-width: 480px;
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 10px 25px rgba(0,0,0,0.12);
@@ -365,20 +363,11 @@ a{
     margin-top: 15px;
 }
 
-.fb-video-wrapper {
-    position: relative;
-    padding-bottom: 56.25%; /* Tỷ lệ 16:9 responsive */
-    height: 0;
-    overflow: hidden;
-}
-
-.fb-video-wrapper iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
+.local-video-container video {
     width: 100%;
-    height: 100%;
-    border: 0;
+    height: auto;
+    display: block;
+    object-fit: cover;
 }
 
 
@@ -1035,7 +1024,7 @@ footer strong{
             clamp(
                 38px,
                 11vw,
-                52px
+                52px;
             );
 
         letter-spacing:-1.5px;
@@ -1209,17 +1198,12 @@ footer strong{
     </p>
 
 
-    <!-- VIDEO FACEBOOK PHÁT TRỰC TIẾP TRÊN LANDING PAGE -->
-    <div class="fb-video-container">
-        <div class="fb-video-wrapper">
-            <iframe 
-                src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2FVNPAYQR.vn%2Fvideos%2F2011979816357812%2F&show_text=false&width=560" 
-                scrolling="no" 
-                frameborder="0" 
-                allowfullscreen="true" 
-                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
-            </iframe>
-        </div>
+    <!-- VIDEO TỰ ĐỘNG PHÁT VÀ LẶP LẠI (LOOP) TRÊN PAGE, KHÔNG DÙNG FACEBOOK -->
+    <div class="local-video-container">
+        <video autoplay muted loop playsinline controls>
+            <source src="VNPAY-mien-phi-phan-mem-quan-ly-ban-hang_Media_2011979816357812_001_1080p.mp4" type="video/mp4">
+            Trình duyệt của bạn không hỗ trợ thẻ video HTML5.
+        </video>
     </div>
 
 </div>
@@ -1834,7 +1818,7 @@ footer strong{
      FOOTER
 ================================================== -->
 
-footer>
+<footer>
 
 <div class="container">
 
