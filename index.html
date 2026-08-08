@@ -262,7 +262,7 @@ a{
 
     color:white;
 
-    border-radius:9px;
+    border-radius:99px;
 
     font-size:16px;
 
@@ -301,14 +301,14 @@ a{
     max-width: 500px;
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
     background: #000;
     margin-top: 15px;
 }
 
 .fb-video-wrapper {
     position: relative;
-    padding-bottom: 56.25%; /* Tỷ lệ 16:9 chuẩn responsive */
+    padding-bottom: 56.25%; /* Tỷ lệ 16:9 responsive */
     height: 0;
     overflow: hidden;
 }
@@ -485,6 +485,8 @@ textarea:focus{
     cursor:pointer;
 
     font-size:16px;
+
+    border-radius: 9px;
 }
 
 .form-security{
@@ -1069,7 +1071,7 @@ footer strong{
 <div class="container hero-grid">
 
 
-<!-- LEFT -->
+<!-- LEFT COLUMN: THÔNG TIN VÀ VIDEO NẰM TẠI ĐÂY -->
 
 <div>
 
@@ -1137,7 +1139,7 @@ footer strong{
     </p>
 
 
-    <!-- FACEBOOK VIDEO PLAYER -->
+    <!-- VIDEO FACEBOOK PHÁT TRỰC TIẾP TRÊN LANDING PAGE -->
     <div class="fb-video-container">
         <div class="fb-video-wrapper">
             <iframe 
@@ -1153,7 +1155,7 @@ footer strong{
 </div>
 
 
-<!-- RIGHT FORM -->
+<!-- RIGHT COLUMN: LEAD FORM -->
 
 <div
     class="form-card"
@@ -1189,8 +1191,6 @@ footer strong{
 
     </div>
 
-
-    <!-- IFRAME VÀ FORM ĐÃ ĐƯỢC KẾT NỐI VỚI GOOGLE FORM -->
 
     <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted){alert('Cảm ơn bạn đã đăng ký! Đội ngũ tư vấn VNPAY sẽ liên hệ lại trong thời gian sớm nhất.'); document.getElementById('leadForm').reset();}"></iframe>
 
@@ -1805,12 +1805,6 @@ footer strong{
 
 var submitted = false;
 
-/*
-====================================================
-TRACK CTA CLICK
-====================================================
-*/
-
 document
 .querySelectorAll('a[href="#dang-ky"]')
 .forEach(function(button){
@@ -1839,13 +1833,6 @@ document
     );
 
 });
-
-
-/*
-====================================================
-FORM SUBMIT TRACKING
-====================================================
-*/
 
 document
 .getElementById('leadForm')
