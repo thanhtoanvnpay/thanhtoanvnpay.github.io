@@ -394,7 +394,8 @@ a{
 }
 
 input,
-select{
+select,
+textarea{
 
     width:100%;
 
@@ -415,10 +416,19 @@ select{
     outline:none;
 
     transition:.2s;
+
+    font-family: inherit;
+}
+
+textarea{
+    height: 80px;
+    padding-top: 10px;
+    resize: vertical;
 }
 
 input:focus,
-select:focus{
+select:focus,
+textarea:focus{
 
     border-color:var(--red);
 
@@ -1137,10 +1147,14 @@ footer strong{
 
     <!-- FORM -->
 
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted){alert('Cảm ơn bạn đã đăng ký! Đội ngũ tư vấn sẽ liên hệ lại sớm nhất.'); document.getElementById('leadForm').reset();}"></iframe>
+
     <form
         id="leadForm"
-        action="YOUR_FORM_ENDPOINT"
-        method="POST">
+        action="https://docs.google.com/forms/d/e/1FAIpQLSd9k4BFTZW10Md4D2UeMlTO65Bf-YVxCMvTPyZNZkoFDpu6mw/formResponse"
+        method="POST"
+        target="hidden_iframe"
+        onsubmit="submitted=true;">
 
 
         <div class="form-group">
@@ -1151,7 +1165,7 @@ footer strong{
 
             <input
                 type="text"
-                name="name"
+                name="entry.1444757328"
                 placeholder="Nhập họ và tên"
                 required>
 
@@ -1166,7 +1180,7 @@ footer strong{
 
             <input
                 type="tel"
-                name="phone"
+                name="entry.1967364401"
                 placeholder="09xxxxxxxx"
                 required>
 
@@ -1176,40 +1190,114 @@ footer strong{
         <div class="form-group">
 
             <label>
-                Bạn đang kinh doanh?
+                Email
             </label>
 
-            <select name="business">
+            <input
+                type="email"
+                name="entry.1793769074"
+                placeholder="example@gmail.com">
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label>
+                Tên cửa hàng / Doanh nghiệp
+            </label>
+
+            <input
+                type="text"
+                name="entry.1187497283"
+                placeholder="Tên cửa hàng hoặc công ty">
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label>
+                Giải pháp quan tâm
+            </label>
+
+            <select name="entry.14513303">
+
+                <option value="">
+                    Chọn giải pháp
+                </option>
+
+                <option value="Giải pháp thanh toán VNPAY-QR (Cho cửa hàng/Website)">
+                    Giải pháp thanh toán VNPAY-QR (Cho cửa hàng/Website)
+                </option>
+
+                <option value="VNPAY SmartPOS (Máy quẹt thẻ POS)">
+                    VNPAY SmartPOS (Máy quẹt thẻ POS)
+                </option>
+
+                <option value="Cổng thanh toán VNPAY (Cho Website/App)">
+                    Cổng thanh toán VNPAY (Cho Website/App)
+                </option>
+
+                <option value="Khác / Cần tư vấn thêm">
+                    Khác / Cần tư vấn thêm
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label>
+                Mô hình kinh doanh
+            </label>
+
+            <select name="entry.1091732008">
 
                 <option value="">
                     Chọn mô hình
                 </option>
 
-                <option>
+                <option value="Cửa hàng bán lẻ / Chuỗi cửa hàng">
+                    Cửa hàng bán lẻ / Chuỗi cửa hàng
+                </option>
+
+                <option value="Hộ kinh doanh">
                     Hộ kinh doanh
                 </option>
 
-                <option>
+                <option value="Nhà hàng / Cafe">
                     Nhà hàng / Cafe
                 </option>
 
-                <option>
-                    Shop / Bán lẻ
-                </option>
-
-                <option>
+                <option value="Doanh nghiệp">
                     Doanh nghiệp
                 </option>
 
-                <option>
+                <option value="Bán hàng online">
                     Bán hàng online
                 </option>
 
-                <option>
+                <option value="Khác">
                     Khác
                 </option>
 
             </select>
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label>
+                Ghi chú thêm
+            </label>
+
+            <textarea
+                name="entry.1268683863"
+                placeholder="Nhập yêu cầu chi tiết (nếu có)"></textarea>
 
         </div>
 
@@ -1663,6 +1751,8 @@ footer strong{
 
 <script>
 
+var submitted = false;
+
 /*
 ====================================================
 TRACK CTA CLICK
@@ -1676,13 +1766,6 @@ document
     button.addEventListener(
         'click',
         function(){
-
-            /*
-            GA4 EVENT
-
-            Nếu bạn đã cài Google Analytics 4,
-            event này sẽ được ghi nhận.
-            */
 
             if(typeof gtag === 'function'){
 
