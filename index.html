@@ -24,6 +24,18 @@ content="Đăng ký tư vấn miễn phí – lựa chọn giải pháp thanh to
 
 <style>
 
+/* ==================================================
+   1. KHAI BÁO FONT OTF TỪ GITHUB
+================================================== */
+@font-face {
+    font-family: 'CustomFontOTF';
+    /* Hãy thay đường dẫn URL bên dưới bằng đường dẫn thực tế đến file .otf trên GitHub của bạn */
+    src: url('https://raw.githubusercontent.com/ten-user/ten-repo/main/ten-file.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 *{
     margin:0;
     padding:0;
@@ -45,11 +57,12 @@ html{
     scroll-behavior:smooth;
 }
 
+/* 2. ÁP DỤNG FONT CHO TOÀN BỘ TRANG */
+body, input, select, textarea, button {
+    font-family: 'CustomFontOTF', Arial, Helvetica, sans-serif;
+}
+
 body{
-    font-family:
-        Arial,
-        Helvetica,
-        sans-serif;
     color:var(--black);
     background:white;
     line-height:1.55;
@@ -493,8 +506,6 @@ textarea{
     outline:none;
 
     transition:.2s;
-
-    font-family: inherit;
 
     background-color: #fff;
 }
@@ -1024,7 +1035,7 @@ footer strong{
             clamp(
                 38px,
                 11vw,
-                52px;
+                52px
             );
 
         letter-spacing:-1.5px;
