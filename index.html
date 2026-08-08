@@ -31,8 +31,9 @@ content="Đăng ký tư vấn miễn phí – lựa chọn giải pháp thanh to
 }
 
 :root{
-    --red:#e60012;
-    --red-dark:#b8000e;
+    /* ĐÃ ĐỔI TẤT CẢ MÀU ĐỎ SANG BLUE */
+    --blue:#0066ff;
+    --blue-dark:#0047b3;
     --black:#111111;
     --gray:#666;
     --light:#f7f7f8;
@@ -66,6 +67,64 @@ a{
 
 
 /* ==================================================
+   FLOATING WIDGETS (TEL & ZALO GÓC PHẢI)
+================================================== */
+
+.floating-contact {
+    position: fixed;
+    right: 20px;
+    bottom: 80px;
+    z-index: 99999;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.contact-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+}
+
+.contact-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.35);
+}
+
+.btn-tel {
+    background: #25d366;
+    animation: pulse-green 2s infinite;
+}
+
+.btn-zalo {
+    background: #0088FF;
+    font-size: 11px;
+    letter-spacing: -0.5px;
+}
+
+/* Hiệu ứng nhấp nháy cho nút hotline */
+@keyframes pulse-green {
+    0% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+    }
+}
+
+
+/* ==================================================
    TOP BAR
 ================================================== */
 
@@ -79,7 +138,7 @@ a{
 }
 
 .top-bar span{
-    color:#ff4757;
+    color:var(--blue);
 }
 
 
@@ -92,13 +151,13 @@ a{
     background:
     radial-gradient(
         circle at 90% 0%,
-        rgba(230,0,18,.18),
+        rgba(0, 102, 255, .15),
         transparent 35%
     ),
     linear-gradient(
         135deg,
         #fff 0%,
-        #fff6f7 100%
+        #f0f5ff 100%
     );
 
     padding:
@@ -131,13 +190,13 @@ a{
 
     gap:7px;
 
-    background:#fff0f1;
+    background:#e6f0ff;
 
     border:
         1px solid
-        #ffd0d4;
+        #b3d1ff;
 
-    color:var(--red);
+    color:var(--blue);
 
     padding:
         7px
@@ -172,7 +231,7 @@ a{
 }
 
 .hero h1 span{
-    color:var(--red);
+    color:var(--blue);
 }
 
 
@@ -258,7 +317,7 @@ a{
         0
         25px;
 
-    background:var(--red);
+    background:var(--blue);
 
     color:white;
 
@@ -272,14 +331,14 @@ a{
         0
         12px
         30px
-        rgba(230,0,18,.25);
+        rgba(0,102,255,.25);
 
     transition:.2s;
 }
 
 .cta:hover{
 
-    background:var(--red-dark);
+    background:var(--blue-dark);
 
     transform:translateY(-2px);
 }
@@ -367,11 +426,11 @@ a{
 
 .offer-box{
 
-    background:#fff7f7;
+    background:#f0f5ff;
 
     border:
         1px solid
-        #ffd9dc;
+        #b3d1ff;
 
     border-radius:10px;
 
@@ -382,7 +441,7 @@ a{
 
 .offer-title{
 
-    color:var(--red);
+    color:var(--blue);
 
     font-size:13px;
 
@@ -461,14 +520,14 @@ input:focus,
 select:focus,
 textarea:focus{
 
-    border-color:var(--red);
+    border-color:var(--blue);
 
     box-shadow:
         0
         0
         0
         3px
-        rgba(230,0,18,.08);
+        rgba(0,102,255,.08);
 }
 
 
@@ -545,7 +604,7 @@ textarea:focus{
 
     display:block;
 
-    color:var(--red);
+    color:var(--blue);
 
     font-size:30px;
 
@@ -591,7 +650,7 @@ textarea:focus{
 
     display:block;
 
-    color:var(--red);
+    color:var(--blue);
 
     font-size:12px;
 
@@ -713,7 +772,7 @@ textarea:focus{
 
 .service-number{
 
-    color:var(--red);
+    color:var(--blue);
 
     font-size:12px;
 
@@ -740,7 +799,7 @@ textarea:focus{
 
 .service a{
 
-    color:var(--red);
+    color:var(--blue);
 
     font-size:13px;
 
@@ -788,7 +847,7 @@ textarea:focus{
 
     border-radius:50%;
 
-    background:var(--red);
+    background:var(--blue);
 
     color:white;
 
@@ -819,8 +878,8 @@ textarea:focus{
     background:
         linear-gradient(
             135deg,
-            #b8000e,
-            #e60012
+            #0047b3,
+            #0066ff
         );
 
     color:white;
@@ -866,7 +925,7 @@ textarea:focus{
 
     background:white;
 
-    color:var(--red);
+    color:var(--blue);
 
     box-shadow:none;
 }
@@ -933,7 +992,7 @@ footer strong{
 
     min-height:48px;
 
-    background:var(--red);
+    background:var(--blue);
 
     color:white;
 
@@ -1048,6 +1107,17 @@ footer strong{
 
 
 <body>
+
+
+<!-- NÚT GỌI ĐIỆN VÀ ZALO TRƯỢT CỐ ĐỊNH Ở GÓC PHẢI -->
+<div class="floating-contact">
+    <a href="tel:0968122893" class="contact-btn btn-tel" title="Gọi ngay: 0968122893">
+        📞
+    </a>
+    <a href="https://zalo.me/0968122893" target="_blank" class="contact-btn btn-zalo" title="Chat Zalo: 0968122893">
+        ZALO
+    </a>
+</div>
 
 
 <!-- ==================================================
@@ -1764,7 +1834,7 @@ footer strong{
      FOOTER
 ================================================== -->
 
-<footer>
+footer>
 
 <div class="container">
 
