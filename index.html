@@ -3,43 +3,20 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Đăng Ký Giải Pháp Thanh Toán VNPAY</title>
-
-<meta name="description"
-content="Đăng ký tư vấn giải pháp thanh toán VNPAY miễn phí. QR, SmartPOS, cổng thanh toán cho doanh nghiệp và hộ kinh doanh.">
-
-<!-- =========================
-     META / SOCIAL
-========================= -->
-
-<meta property="og:title"
-content="Tăng Doanh Thu Với Giải Pháp Thanh Toán VNPAY">
-
-<meta property="og:description"
-content="Đăng ký tư vấn miễn phí – lựa chọn giải pháp thanh toán phù hợp với mô hình kinh doanh của bạn.">
-
-<meta property="og:type" content="website">
-
+<title>Đăng Ký Giải Pháp Thanh Toán VNPAY Miễn Phí</title>
+<meta name="description" content="Tư vấn và lắp đặt giải pháp thanh toán VNPAY-QR, SmartPOS, Cổng thanh toán cho cửa hàng, doanh nghiệp.">
 
 <style>
-
 /* ==================================================
-   1. KHAI BÁO FONT OTF TỪ GITHUB
+   1. FONT CHỮ TỪ GITHUB PAGES
 ================================================== */
 @font-face {
     font-family: 'CustomFont';
-    /* Đường dẫn trực tiếp thông qua GitHub Pages */
     src: url('https://thanhtoanvnpay.github.io/font.ttf') format('truetype'),
          url('https://thanhtoanvnpay.github.io/font.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
-}
-
-/* 2. ÁP DỤNG FONT CHO TOÀN BỘ TRANG */
-body, input, select, textarea, button {
-    font-family: 'CustomFont', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
 *{
@@ -52,10 +29,11 @@ body, input, select, textarea, button {
     --blue:#0066ff;
     --blue-dark:#0047b3;
     --black:#111111;
-    --gray:#666;
-    --light:#f7f7f8;
-    --border:#e8e8e8;
-    --green:#18a957;
+    --gray:#555555;
+    --light:#f7f9fc;
+    --border:#e2e8f0;
+    --green:#10b981;
+    --orange:#ff6b00;
     --white:#ffffff;
 }
 
@@ -63,9 +41,8 @@ html{
     scroll-behavior:smooth;
 }
 
-/* 2. ÁP DỤNG FONT CHO TOÀN BỘ TRANG */
 body, input, select, textarea, button {
-    font-family: 'CustomFontOTF', Arial, Helvetica, sans-serif;
+    font-family: 'CustomFont', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
 body{
@@ -83,1855 +60,784 @@ a{
     text-decoration:none;
 }
 
+/* ==================================================
+   1. HEADER & BRANDING (TỐI ƯU TRUST)
+================================================== */
+.top-bar{
+    background:#111;
+    color:white;
+    text-align:center;
+    padding:8px 15px;
+    font-size:13px;
+    font-weight:700;
+}
+.top-bar span{ color: #ffd700; }
+
+.main-header {
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+    padding: 12px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-img {
+    height: 36px;
+    width: auto;
+}
+
+.logo-text {
+    font-weight: 800;
+    font-size: 16px;
+    color: var(--blue-dark);
+    border-left: 2px solid var(--border);
+    padding-left: 10px;
+}
+
+.header-contact {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.header-phone {
+    font-weight: 800;
+    color: var(--blue);
+    font-size: 15px;
+}
 
 /* ==================================================
-   FLOATING WIDGETS (TEL & ZALO GÓC PHẢI)
+   5. FLOATING WIDGETS + TOOLTIP
 ================================================== */
-
 .floating-contact {
     position: fixed;
     right: 20px;
-    bottom: 80px;
+    bottom: 85px;
     z-index: 99999;
     display: flex;
     flex-direction: column;
     gap: 12px;
+    align-items: flex-end;
 }
 
 .contact-btn {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 50px;
-    height: 50px;
+    width: 52px;
+    height: 52px;
     border-radius: 50%;
     color: white;
     font-weight: bold;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
-    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    transition: transform 0.3s;
     position: relative;
 }
 
-.contact-btn:hover {
-    transform: scale(1.1);
-    box-shadow: 0 6px 16px rgba(0,0,0,0.35);
-}
+.contact-btn:hover { transform: scale(1.1); }
+.btn-tel { background: var(--green); animation: pulse-green 2s infinite; }
+.btn-zalo { background: #0088FF; font-size: 12px; }
 
-.btn-tel {
-    background: #25d366;
-    animation: pulse-green 2s infinite;
-}
-
-.btn-zalo {
-    background: #0088FF;
-    font-size: 11px;
-    letter-spacing: -0.5px;
+.zalo-tooltip {
+    background: #333;
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    white-space: nowrap;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    animation: bounce 2s infinite;
 }
 
 @keyframes pulse-green {
-    0% {
-        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
-    }
-    70% {
-        box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
-    }
-    100% {
-        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
-    }
+    0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
+    70% { box-shadow: 0 0 0 15px rgba(16, 185, 129, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
 }
 
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+    40% {transform: translateY(-5px);}
+    60% {transform: translateY(-3px);}
+}
 
 /* ==================================================
-   TOP BAR
+   HERO SECTION
 ================================================== */
-
-.top-bar{
-    background:#111;
-    color:white;
-    text-align:center;
-    padding:9px 15px;
-    font-size:13px;
-    font-weight:700;
-}
-
-.top-bar span{
-    color:var(--blue);
-}
-
-
-/* ==================================================
-   HERO
-================================================== */
-
 .hero{
-
-    background:
-    radial-gradient(
-        circle at 90% 0%,
-        rgba(0, 102, 255, .15),
-        transparent 35%
-    ),
-    linear-gradient(
-        135deg,
-        #fff 0%,
-        #f0f5ff 100%
-    );
-
-    padding:
-        55px
-        0
-        45px;
+    background: radial-gradient(circle at 90% 0%, rgba(0, 102, 255, .08), transparent 40%),
+                linear-gradient(135deg, #fff 0%, #f4f8ff 100%);
+    padding: 45px 0 40px;
 }
 
 .hero-grid{
-
     display:grid;
-
-    grid-template-columns:
-        1.05fr
-        .95fr;
-
-    gap:50px;
-
+    grid-template-columns: 1.1fr 0.9fr;
+    gap:40px;
     align-items:start;
 }
 
-
-/* badge */
-
 .badge{
-
     display:inline-flex;
-
     align-items:center;
-
-    gap:7px;
-
+    gap:6px;
     background:#e6f0ff;
-
-    border:
-        1px solid
-        #b3d1ff;
-
-    color:var(--blue);
-
-    padding:
-        7px
-        13px;
-
-    border-radius:999px;
-
-    font-size:12px;
-
-    font-weight:800;
-
-    margin-bottom:18px;
+    border: 1px solid #b3d1ff;
+    color:var(--blue-dark);
+    padding: 6px 14px;
+    border-radius:99px;
+    font-size:13px;
+    font-weight:700;
+    margin-bottom:15px;
 }
-
-
-/* headline */
 
 .hero h1{
-
-    font-size:
-        clamp(
-            38px,
-            5vw,
-            62px
-        );
-
-    line-height:1.04;
-
-    letter-spacing:-2px;
-
-    margin-bottom:20px;
+    font-size: clamp(32px, 4.5vw, 52px);
+    line-height:1.12;
+    letter-spacing:-1px;
+    margin-bottom:16px;
 }
-
-.hero h1 span{
-    color:var(--blue);
-}
-
-
-/* description */
+.hero h1 span{ color:var(--blue); }
 
 .hero-description{
-
-    color:#555;
-
-    font-size:18px;
-
-    max-width:650px;
-
-    margin-bottom:22px;
-}
-
-
-/* bullets */
-
-.hero-benefits{
-
-    list-style:none;
-
-    display:grid;
-
-    gap:10px;
-
-    margin-bottom:26px;
-}
-
-.hero-benefits li{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:10px;
-
-    font-size:15px;
-
-    font-weight:700;
-}
-
-.check{
-
-    width:22px;
-
-    height:22px;
-
-    flex:none;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    background:#e8f8ef;
-
-    color:var(--green);
-
-    border-radius:50%;
-
-    font-size:12px;
-
-    font-weight:900;
-}
-
-
-/* CTA */
-
-.cta{
-
-    display:inline-flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    min-height:54px;
-
-    padding:
-        0
-        25px;
-
-    background:var(--blue);
-
-    color:white;
-
-    border-radius:99px;
-
+    color:var(--gray);
     font-size:16px;
-
-    font-weight:900;
-
-    box-shadow:
-        0
-        12px
-        30px
-        rgba(0,102,255,.25);
-
-    transition:.2s;
-}
-
-.cta:hover{
-
-    background:var(--blue-dark);
-
-    transform:translateY(-2px);
-}
-
-.cta-note{
-
-    font-size:11px;
-
-    color:#777;
-
-    margin-top:9px;
-
     margin-bottom:20px;
 }
 
-/* LOCAL HTML5 VIDEO CONTAINER (LOOP TRỰC TIẾP, KHÔNG FB) */
-.local-video-container {
-    width: 100%;
-    max-width: 480px;
+.hero-benefits{
+    list-style:none;
+    display:grid;
+    gap:10px;
+    margin-bottom:25px;
+}
+.hero-benefits li{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-size:15px;
+    font-weight:700;
+}
+.check{
+    width:20px;
+    height:20px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:#e8f8ef;
+    color:var(--green);
+    border-radius:50%;
+    font-size:11px;
+}
+
+/* 3. VIDEO CONTAINER TỐI ƯU TRỰC QUAN */
+.video-box {
+    margin-top: 20px;
+    background: #000;
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
-    background: #000;
-    margin-top: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
 }
-
-.local-video-container video {
+.video-title {
+    background: #1e293b;
+    color: #fff;
+    padding: 8px 12px;
+    font-size: 12px;
+    font-weight: 700;
+    text-align: center;
+}
+.video-box video {
     width: 100%;
-    height: auto;
     display: block;
-    object-fit: cover;
 }
-
 
 /* ==================================================
-   LEAD FORM
+   2. LEAD FORM RÚT GỌN (TỐI ƯU TỶ LỆ CHUYỂN ĐỔI)
 ================================================== */
-
 .form-card{
-
     background:white;
-
-    border:
-        1px solid
-        #eee;
-
-    border-radius:18px;
-
-    padding:30px;
-
-    box-shadow:
-        0
-        25px
-        70px
-        rgba(0,0,0,.12);
+    border: 1px solid var(--border);
+    border-radius:16px;
+    padding:28px;
+    box-shadow: 0 20px 50px rgba(0,102,255,0.08);
 }
 
 .form-card h2{
-
-    font-size:27px;
-
-    margin-bottom:6px;
+    font-size:24px;
+    margin-bottom:4px;
+    color: var(--black);
 }
 
 .form-subtitle{
-
-    color:#666;
-
-    font-size:14px;
-
-    margin-bottom:20px;
+    color:var(--gray);
+    font-size:13px;
+    margin-bottom:18px;
 }
 
-
-/* offer */
-
 .offer-box{
-
-    background:#f0f5ff;
-
-    border:
-        1px solid
-        #b3d1ff;
-
-    border-radius:10px;
-
-    padding:14px;
-
-    margin-bottom:20px;
+    background:#fff8f0;
+    border: 1px solid #ffe0b2;
+    border-radius:8px;
+    padding:12px;
+    margin-bottom:18px;
 }
 
 .offer-title{
-
-    color:var(--blue);
-
-    font-size:13px;
-
-    font-weight:900;
-
-    margin-bottom:7px;
+    color:var(--orange);
+    font-size:12px;
+    font-weight:800;
+    margin-bottom:4px;
 }
 
 .offer-list{
-
     list-style:none;
-
     display:grid;
-
-    gap:5px;
-
-    font-size:13px;
-
-    color:#444;
+    gap:4px;
+    font-size:12px;
+    color:#555;
 }
 
-
-/* form */
-
-.form-group{
-    margin-bottom:13px;
-}
-
+.form-group{ margin-bottom:14px; }
 .form-group label{
-
     display:block;
-
     font-size:13px;
-
-    font-weight:800;
-
+    font-weight:700;
     margin-bottom:5px;
 }
 
-input,
-select,
-textarea{
-
+input, select{
     width:100%;
-
     height:46px;
-
-    border:
-        1px solid
-        #dcdcdc;
-
-    border-radius:7px;
-
-    padding:
-        0
-        13px;
-
+    border: 1px solid #cbd5e1;
+    border-radius:8px;
+    padding: 0 12px;
     font-size:14px;
-
     outline:none;
-
     transition:.2s;
-
     background-color: #fff;
 }
 
-textarea{
-    height: 72px;
-    padding-top: 10px;
-    resize: vertical;
-}
-
-input:focus,
-select:focus,
-textarea:focus{
-
+input:focus, select:focus{
     border-color:var(--blue);
-
-    box-shadow:
-        0
-        0
-        0
-        3px
-        rgba(0,102,255,.08);
+    box-shadow: 0 0 0 3px rgba(0,102,255,0.1);
 }
 
+/* 2. CẢI THIỆN NÚT ĐĂNG KÝ (CTA) */
+.submit-btn {
+    width: 100%;
+    min-height: 52px;
+    background: linear-gradient(135deg, #0066ff, #0047b3);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 800;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(0,102,255,0.3);
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
 
-/* submit */
-
-.submit{
-
-    width:100%;
-
-    border:none;
-
-    margin-top:5px;
-
-    cursor:pointer;
-
-    font-size:16px;
-
-    border-radius: 9px;
+.submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 25px rgba(0,102,255,0.4);
 }
 
 .form-security{
-
     text-align:center;
-
-    font-size:10px;
-
+    font-size:11px;
     color:#888;
-
-    margin-top:9px;
+    margin-top:10px;
 }
 
-
 /* ==================================================
-   TRUST BAR
+   TRUST BAR & LOGO ĐỐI TÁC (SOCIAL PROOF)
 ================================================== */
-
 .trust{
-
     background:white;
-
-    border-bottom:
-        1px
-        solid
-        var(--border);
-
-    padding:28px 0;
+    border-bottom: 1px solid var(--border);
+    padding:22px 0;
 }
 
 .trust-grid{
-
     display:grid;
-
-    grid-template-columns:
-        repeat(3,1fr);
-
+    grid-template-columns: repeat(3,1fr);
     gap:15px;
 }
 
 .trust-item{
-
     text-align:center;
-
-    border-right:
-        1px
-        solid
-        #eee;
+    border-right: 1px solid #f0f0f0;
 }
-
-.trust-item:last-child{
-    border-right:none;
-}
+.trust-item:last-child{ border-right:none; }
 
 .trust-number{
-
     display:block;
-
     color:var(--blue);
-
-    font-size:30px;
-
+    font-size:28px;
     font-weight:900;
 }
+.trust-label{ color:var(--gray); font-size:12px; }
 
-.trust-label{
-
-    color:#666;
-
-    font-size:12px;
+/* 4. ĐỐI TÁC TIÊU BIỂU */
+.partners-section {
+    padding: 25px 0;
+    background: var(--light);
+    text-align: center;
+    border-bottom: 1px solid var(--border);
 }
 
+.partners-title {
+    font-size: 12px;
+    font-weight: 800;
+    color: #888;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.partners-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    opacity: 0.7;
+    filter: grayscale(100%);
+}
+
+.partners-logos span {
+    font-weight: 800;
+    font-size: 16px;
+    color: #444;
+}
 
 /* ==================================================
-   PROBLEM
+   SECTIONS & CARDS
 ================================================== */
-
-.section{
-
-    padding:
-        75px
-        0;
-}
-
-.section-light{
-    background:var(--light);
-}
+.section{ padding: 60px 0; }
+.section-light{ background:var(--light); }
 
 .section-title{
-
     text-align:center;
-
-    max-width:720px;
-
-    margin:
-        0
-        auto
-        40px;
+    max-width:680px;
+    margin: 0 auto 35px;
 }
 
 .section-title small{
-
-    display:block;
-
     color:var(--blue);
-
     font-size:12px;
-
-    font-weight:900;
-
+    font-weight:800;
     letter-spacing:1px;
-
-    margin-bottom:8px;
 }
 
 .section-title h2{
-
-    font-size:
-        clamp(
-            30px,
-            4vw,
-            44px
-        );
-
-    line-height:1.15;
-
-    margin-bottom:12px;
+    font-size: clamp(26px, 3.5vw, 36px);
+    line-height:1.2;
+    margin-top: 5px;
 }
 
-.section-title p{
-    color:#666;
-}
-
-
-/* pain cards */
-
-.pain-grid{
-
+/* Pain & Services */
+.pain-grid, .services, .steps{
     display:grid;
-
-    grid-template-columns:
-        repeat(3,1fr);
-
+    grid-template-columns: repeat(3,1fr);
     gap:20px;
 }
 
-.pain-card{
+.services { grid-template-columns: repeat(2,1fr); }
 
+.pain-card, .service, .step{
     background:white;
-
-    border:
-        1px
-        solid
-        var(--border);
-
-    border-radius:13px;
-
-    padding:25px;
-
+    border: 1px solid var(--border);
+    border-radius:12px;
+    padding:22px;
 }
 
-.pain-icon{
-
-    font-size:28px;
-
-    margin-bottom:10px;
+.pain-card h3, .service h3, .step h3 {
+    font-size: 17px;
+    margin: 10px 0 6px;
 }
 
-.pain-card h3{
-
-    font-size:18px;
-
-    margin-bottom:8px;
+.pain-card p, .service p, .step p {
+    color: var(--gray);
+    font-size: 13.5px;
 }
 
-.pain-card p{
-
-    color:#666;
-
-    font-size:14px;
+/* 4. KHỐI ĐÁNH GIÁ KHÁCH HÀNG (TESTIMONIALS) */
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 20px;
 }
 
+.testimonial-card {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+}
+
+.testimonial-text {
+    font-style: italic;
+    color: #444;
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.author-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #0066ff;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.author-info h4 { font-size: 14px; margin: 0; }
+.author-info p { font-size: 11px; color: #777; margin: 0; }
 
 /* ==================================================
-   SERVICES
+   CTA & FOOTER
 ================================================== */
-
-.services{
-
-    display:grid;
-
-    grid-template-columns:
-        repeat(2,1fr);
-
-    gap:18px;
-}
-
-.service{
-
-    padding:25px;
-
-    border:
-        1px
-        solid
-        var(--border);
-
-    border-radius:14px;
-
-    background:white;
-
-    transition:.2s;
-}
-
-.service:hover{
-
-    transform:translateY(-4px);
-
-    box-shadow:
-        0
-        15px
-        35px
-        rgba(0,0,0,.07);
-}
-
-.service-number{
-
-    color:var(--blue);
-
-    font-size:12px;
-
-    font-weight:900;
-
-    margin-bottom:8px;
-}
-
-.service h3{
-
-    font-size:21px;
-
-    margin-bottom:8px;
-}
-
-.service p{
-
-    color:#666;
-
-    font-size:14px;
-
-    margin-bottom:14px;
-}
-
-.service a{
-
-    color:var(--blue);
-
-    font-size:13px;
-
-    font-weight:900;
-}
-
-
-/* ==================================================
-   HOW IT WORKS
-================================================== */
-
-.steps{
-
-    display:grid;
-
-    grid-template-columns:
-        repeat(3,1fr);
-
-    gap:20px;
-}
-
-.step{
-
-    text-align:center;
-
-    padding:25px;
-}
-
-.step-number{
-
-    width:52px;
-
-    height:52px;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    margin:
-        0
-        auto
-        15px;
-
-    border-radius:50%;
-
-    background:var(--blue);
-
-    color:white;
-
-    font-weight:900;
-}
-
-.step h3{
-
-    font-size:18px;
-
-    margin-bottom:8px;
-}
-
-.step p{
-
-    color:#666;
-
-    font-size:14px;
-}
-
-
-/* ==================================================
-   FINAL CTA
-================================================== */
-
 .final{
-
-    background:
-        linear-gradient(
-            135deg,
-            #0047b3,
-            #0066ff
-        );
-
+    background: linear-gradient(135deg, #0047b3, #0066ff);
     color:white;
-
     text-align:center;
-
-    padding:70px 0;
+    padding:60px 0;
 }
 
-.final h2{
+.final h2{ font-size: clamp(26px, 3.5vw, 38px); margin-bottom:10px; }
+.final p{ max-width:600px; margin:0 auto 20px; opacity:0.9; }
 
-    font-size:
-        clamp(
-            30px,
-            4vw,
-            45px
-        );
-
-    line-height:1.15;
-
-    margin-bottom:12px;
+.final-cta-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 32px;
+    background: white;
+    color: var(--blue-dark);
+    font-weight: 800;
+    border-radius: 99px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
-
-.final p{
-
-    max-width:620px;
-
-    margin:
-        0
-        auto
-        25px;
-
-    color:
-        rgba(
-            255,
-            255,
-            255,
-            .85
-        );
-}
-
-.final .cta{
-
-    background:white;
-
-    color:var(--blue);
-
-    box-shadow:none;
-}
-
-
-/* ==================================================
-   FOOTER
-================================================== */
 
 footer{
-
     background:#111;
-
-    color:#aaa;
-
+    color:#888;
     text-align:center;
-
-    padding:30px 0;
-
+    padding:25px 0;
     font-size:12px;
 }
 
-footer strong{
-    color:white;
-}
-
-
-/* ==================================================
-   STICKY MOBILE CTA
-================================================== */
-
+/* Mobile Sticky CTA */
 .mobile-cta{
-
     display:none;
-
     position:fixed;
-
-    left:0;
-
-    right:0;
-
-    bottom:0;
-
+    left:0; right:0; bottom:0;
     z-index:9999;
-
     background:white;
-
-    padding:9px;
-
-    box-shadow:
-        0
-        -5px
-        25px
-        rgba(0,0,0,.15);
+    padding:8px 12px;
+    box-shadow:0 -4px 15px rgba(0,0,0,0.1);
 }
 
 .mobile-cta a{
-
     display:flex;
-
     align-items:center;
-
     justify-content:center;
-
-    min-height:48px;
-
+    min-height:46px;
     background:var(--blue);
-
     color:white;
-
-    border-radius:7px;
-
+    border-radius:6px;
     font-size:15px;
-
-    font-weight:900;
+    font-weight:800;
 }
-
-
-/* ==================================================
-   MOBILE
-================================================== */
 
 @media(max-width:800px){
-
-    .top-bar{
-        font-size:11px;
-    }
-
-    .hero{
-
-        padding:
-            38px
-            0
-            30px;
-    }
-
-    .hero-grid{
-
-        grid-template-columns:1fr;
-
-        gap:30px;
-    }
-
-    .hero h1{
-
-        font-size:
-            clamp(
-                38px,
-                11vw,
-                52px
-            );
-
-        letter-spacing:-1.5px;
-    }
-
-    .hero-description{
-
-        font-size:16px;
-    }
-
-    .cta{
-
-        width:100%;
-    }
-
-    .form-card{
-
-        padding:22px;
-    }
-
-    .trust{
-
-        padding:20px 0;
-    }
-
-    .trust-grid{
-
-        grid-template-columns:
-            repeat(3,1fr);
-
-        gap:5px;
-    }
-
-    .trust-number{
-        font-size:22px;
-    }
-
-    .trust-label{
-        font-size:10px;
-    }
-
-    .section{
-
-        padding:
-            55px
-            0;
-    }
-
-    .pain-grid,
-    .services,
-    .steps{
-
-        grid-template-columns:1fr;
-    }
-
-    .mobile-cta{
-
-        display:block;
-    }
-
-    body{
-
-        padding-bottom:65px;
-    }
+    .hero-grid, .pain-grid, .services, .steps, .testimonials-grid { grid-template-columns: 1fr; }
+    .mobile-cta { display:block; }
+    body { padding-bottom:60px; }
+    .header-contact { display: none; }
 }
-
 </style>
 </head>
 
-
 <body>
 
-
-<!-- NÚT GỌI ĐIỆN VÀ ZALO TRƯỢT CỐ ĐỊNH Ở GÓC PHẢI -->
+<!-- FLOATING CONTACT (ZALO + CALL) -->
 <div class="floating-contact">
-    <a href="tel:0968122893" class="contact-btn btn-tel" title="Gọi ngay: 0968122893">
-        📞
-    </a>
-    <a href="https://zalo.me/0968122893" target="_blank" class="contact-btn btn-zalo" title="Chat Zalo: 0968122893">
-        ZALO
-    </a>
+    <div class="zalo-tooltip">💬 Cần tư vấn nhanh? Chat Zalo ngay</div>
+    <a href="https://zalo.me/0968122893" target="_blank" class="contact-btn btn-zalo" title="Chat Zalo">ZALO</a>
+    <a href="tel:0968122893" class="contact-btn btn-tel" title="Gọi ngay">📞</a>
 </div>
 
-
-<!-- ==================================================
-     TOP BAR
-================================================== -->
-
+<!-- TOP BAR -->
 <div class="top-bar">
-
-    🔥 <span>ĐĂNG KÝ TƯ VẤN MIỄN PHÍ</span>
-    – Hỗ trợ lựa chọn giải pháp phù hợp
-
+    🔥 <span>ƯU ĐÃI THÁNG NÀY:</span> Miễn phí tư vấn & Hỗ trợ thủ tục đăng ký VNPAY
 </div>
 
+<!-- 1. MAIN HEADER (BỔ SUNG LOGO VÀ BRANDING) -->
+<header class="main-header">
+    <div class="container header-wrapper">
+        <div class="logo-area">
+            <!-- Logo SVG VNPAY Chuẩn -->
+            <svg class="logo-img" viewBox="0 0 120 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="120" height="30" rx="4" fill="#0066FF"/>
+                <text x="15" y="21" fill="white" font-family="sans-serif" font-weight="900" font-size="16">VNPAY</text>
+            </svg>
+            <span class="logo-text">Đối Tác Bán Hàng</span>
+        </div>
+        <div class="header-contact">
+            <span style="font-size:13px; color:#666;">Hotline hỗ trợ:</span>
+            <a href="tel:0968122893" class="header-phone">0968 122 893</a>
+        </div>
+    </div>
+</header>
 
-<!-- ==================================================
-     HERO
-================================================== -->
-
+<!-- HERO SECTION -->
 <section class="hero">
-
 <div class="container hero-grid">
 
-
-<!-- LEFT COLUMN: THÔNG TIN VÀ VIDEO NẰM TẠI ĐÂY -->
-
-<div>
-
-    <div class="badge">
-        GIẢI PHÁP THANH TOÁN CHO DOANH NGHIỆP
-    </div>
-
-
-    <h1>
-
-        Tăng Doanh Thu
-        Với <span>VNPAY</span>
-
-    </h1>
-
-
-    <p class="hero-description">
-
-        Nhận thanh toán QR, SmartPOS và thanh toán
-        trực tuyến với hệ sinh thái thanh toán toàn diện.
-
-    </p>
-
-
-    <ul class="hero-benefits">
-
-        <li>
-            <span class="check">✓</span>
-            Kết nối 40+ ngân hàng
-        </li>
-
-        <li>
-            <span class="check">✓</span>
-            Tiếp cận 30M+ người dùng
-        </li>
-
-        <li>
-            <span class="check">✓</span>
-            Tư vấn giải pháp phù hợp
-        </li>
-
-        <li>
-            <span class="check">✓</span>
-            Hỗ trợ kỹ thuật 24/7
-        </li>
-
-    </ul>
-
-
-    <a
-        href="#dang-ky"
-        class="cta">
-
-        NHẬN TƯ VẤN MIỄN PHÍ →
-
-    </a>
-
-
-    <p class="cta-note">
-
-        ✓ Không mất phí tư vấn
-        &nbsp; • &nbsp;
-        ✓ Không bắt buộc sử dụng dịch vụ
-
-    </p>
-
-
-    <!-- VIDEO TỰ ĐỘNG PHÁT VÀ LẶP LẠI (LOOP) TRÊN PAGE, KHÔNG DÙNG FACEBOOK -->
-    <div class="local-video-container">
-    <video autoplay muted loop playsinline controls preload="auto">
-        <source src="video.mp4" type="video/mp4">
-        Trình duyệt của bạn không hỗ trợ thẻ video HTML5.
-    </video>
-</div>
-
-</div>
-
-
-<!-- RIGHT COLUMN: LEAD FORM -->
-
-<div
-    class="form-card"
-    id="dang-ky">
-
-    <h2>
-        Đăng ký ngay
-    </h2>
-
-    <p class="form-subtitle">
-
-        Chỉ mất khoảng 30 giây.
-        Đội ngũ tư vấn sẽ liên hệ với bạn.
-
-    </p>
-
-
-    <div class="offer-box">
-
-        <div class="offer-title">
-            🎁 BẠN SẼ NHẬN ĐƯỢC
+    <div>
+        <div class="badge">
+            🛡️ GIẢI PHÁP THANH TOÁN TOÀN DIỆN
         </div>
+        <h1>Tăng Doanh Thu & Tối Ưu Thanh Toán Với <span>VNPAY</span></h1>
+        <p class="hero-description">Giải pháp kết nối QR, SmartPOS và Cổng thanh toán giúp cửa hàng của bạn tiếp cận hơn 30 triệu người dùng ứng dụng ngân hàng.</p>
 
-        <ul class="offer-list">
-
-            <li>✓ Tư vấn giải pháp phù hợp</li>
-
-            <li>✓ Hỗ trợ hồ sơ đăng ký</li>
-
-            <li>✓ Tư vấn triển khai</li>
-
+        <ul class="hero-benefits">
+            <li><span class="check">✓</span> Chấp nhận thanh toán từ 40+ Ngân hàng & Ví điện tử</li>
+            <li><span class="check">✓</span> Dòng tiền về tài khoản ngân hàng nhanh chóng</li>
+            <li><span class="check">✓</span> Thủ tục đăng ký đơn giản, hỗ trợ tận nơi</li>
         </ul>
 
+        <!-- 3. VIDEO TRỰC QUAN -->
+        <div class="video-box">
+            <div class="video-title">🎥 Trải nghiệm thanh toán VNPAY tại điểm bán</div>
+            <video autoplay muted loop playsinline preload="auto">
+                <source src="video.mp4" type="video/mp4">
+            </video>
+        </div>
     </div>
 
+    <!-- 2. LEAD FORM RÚT GỌN CHỈ CÒN 3 TRƯỜNG -->
+    <div class="form-card" id="dang-ky">
+        <h2>Đăng Ký Tư Vấn</h2>
+        <p class="form-subtitle">Điền thông tin bên dưới, chuyên viên VNPAY sẽ liên hệ lại trong ít phút.</p>
 
-    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted){alert('Cảm ơn bạn đã đăng ký! Đội ngũ tư vấn VNPAY sẽ liên hệ lại trong thời gian sớm nhất.'); document.getElementById('leadForm').reset();}"></iframe>
-
-    <form
-        id="leadForm"
-        action="https://docs.google.com/forms/d/e/1FAIpQLSd9k4BFTZW10Md4D2UeMlTO65Bf-YVxCMvTPyZNZkoFDpu6mw/formResponse"
-        method="POST"
-        target="hidden_iframe"
-        onsubmit="submitted=true;">
-
-
-        <!-- Entry 1: Họ và tên -->
-        <div class="form-group">
-
-            <label>
-                Họ và tên *
-            </label>
-
-            <input
-                type="text"
-                name="entry.1444757328"
-                placeholder="Nhập họ và tên"
-                required>
-
+        <div class="offer-box">
+            <div class="offer-title">🎁 QUYỀN LỢI ĐĂNG KÝ MIỄN PHÍ</div>
+            <ul class="offer-list">
+                <li>✓ Khảo sát & Tư vấn giải pháp tối ưu chi phí</li>
+                <li>✓ Hỗ trợ trọn gói hồ sơ & Triển khai nhanh</li>
+            </ul>
         </div>
 
+        <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted){alert('Cảm ơn bạn! Chuyên viên tư vấn VNPAY sẽ liên hệ lại ngay.'); document.getElementById('leadForm').reset();}"></iframe>
 
-        <!-- Entry 2: Số điện thoại -->
-        <div class="form-group">
+        <form id="leadForm" action="https://docs.google.com/forms/d/e/1FAIpQLSd9k4BFTZW10Md4D2UeMlTO65Bf-YVxCMvTPyZNZkoFDpu6mw/formResponse" method="POST" target="hidden_iframe" onsubmit="submitted=true;">
 
-            <label>
-                Số điện thoại *
-            </label>
+            <!-- Trường 1: Họ tên -->
+            <div class="form-group">
+                <label>Họ và tên *</label>
+                <input type="text" name="entry.1444757328" placeholder="Nhập họ và tên của bạn" required>
+            </div>
 
-            <input
-                type="tel"
-                name="entry.1967364401"
-                placeholder="09xxxxxxxx"
-                required>
+            <!-- Trường 2: Số điện thoại -->
+            <div class="form-group">
+                <label>Số điện thoại (Zalo) *</label>
+                <input type="tel" name="entry.1967364401" placeholder="09xxxxxxxx" required>
+            </div>
 
-        </div>
+            <!-- Trường 3: Mô hình kinh doanh -->
+            <div class="form-group">
+                <label>Mô hình kinh doanh của bạn *</label>
+                <select name="entry.1091732008" required>
+                    <option value="">-- Chọn mô hình --</option>
+                    <option value="Cửa hàng bán lẻ / Chuỗi cửa hàng">Cửa hàng bán lẻ / Chuỗi</option>
+                    <option value="Nhà hàng / Cafe / Bán đồ ăn">Nhà hàng / Cafe / F&B</option>
+                    <option value="Hộ kinh doanh cá thể">Hộ kinh doanh cá thể</option>
+                    <option value="Doanh nghiệp / Công ty">Doanh nghiệp / Công ty</option>
+                    <option value="Bán hàng online / Website">Bán hàng online / Website</option>
+                </select>
+            </div>
 
+            <!-- 2. NÚT CTA ĐƯỢC TỐI ƯU HÀNH ĐỘNG -->
+            <button type="submit" class="submit-btn">
+                👉 ĐĂNG KÝ TƯ VẤN NGAY
+            </button>
 
-        <!-- Entry 3: Email -->
-        <div class="form-group">
-
-            <label>
-                Email
-            </label>
-
-            <input
-                type="email"
-                name="entry.1793769074"
-                placeholder="email@example.com">
-
-        </div>
-
-
-        <!-- Entry 4: Tên cửa hàng/Doanh nghiệp -->
-        <div class="form-group">
-
-            <label>
-                Tên cửa hàng / Doanh nghiệp
-            </label>
-
-            <input
-                type="text"
-                name="entry.1187497283"
-                placeholder="Nhập tên cửa hàng hoặc công ty">
-
-        </div>
-
-
-        <!-- Entry 5: Giải pháp quan tâm -->
-        <div class="form-group">
-
-            <label>
-                Giải pháp thanh toán quan tâm
-            </label>
-
-            <select name="entry.14513303">
-
-                <option value="">
-                    Chọn giải pháp
-                </option>
-
-                <option value="Giải pháp thanh toán VNPAY-QR (Cho cửa hàng/Website)">
-                    Giải pháp thanh toán VNPAY-QR
-                </option>
-
-                <option value="VNPAY SmartPOS (Máy quẹt thẻ POS)">
-                    VNPAY SmartPOS
-                </option>
-
-                <option value="Cổng thanh toán VNPAY (Cho Website/App)">
-                    Cổng thanh toán
-                </option>
-
-                <option value="Khác / Cần tư vấn thêm">
-                    Khác / Tư vấn thêm
-                </option>
-
-            </select>
-
-        </div>
-
-
-        <!-- Entry 6: Mô hình kinh doanh -->
-        <div class="form-group">
-
-            <label>
-                Bạn đang kinh doanh?
-            </label>
-
-            <select name="entry.1091732008">
-
-                <option value="">
-                    Chọn mô hình
-                </option>
-
-                <option value="Cửa hàng bán lẻ / Chuỗi cửa hàng">
-                    Cửa hàng bán lẻ / Chuỗi cửa hàng
-                </option>
-
-                <option value="Hộ kinh doanh">
-                    Hộ kinh doanh
-                </option>
-
-                <option value="Nhà hàng / Cafe">
-                    Nhà hàng / Cafe
-                </option>
-
-                <option value="Doanh nghiệp">
-                    Doanh nghiệp
-                </option>
-
-                <option value="Bán hàng online">
-                    Bán hàng online
-                </option>
-
-                <option value="Khác">
-                    Khác
-                </option>
-
-            </select>
-
-        </div>
-
-
-        <!-- Entry 7: Ghi chú thêm -->
-        <div class="form-group">
-
-            <label>
-                Ghi chú thêm
-            </label>
-
-            <textarea
-                name="entry.1268683863"
-                placeholder="Nhập ghi chú hoặc yêu cầu cụ thể (nếu có)"></textarea>
-
-        </div>
-
-
-        <button
-            type="submit"
-            class="cta submit">
-
-            NHẬN TƯ VẤN MIỄN PHÍ
-
-        </button>
-
-
-        <p class="form-security">
-
-            🔒 Thông tin của bạn được bảo mật.
-
-        </p>
-
-    </form>
+            <p class="form-security">🔒 Bảo mật thông tin khách hàng tuyệt đối</p>
+        </form>
+    </div>
 
 </div>
-
-</div>
-
 </section>
 
-
-<!-- ==================================================
-     TRUST
-================================================== -->
-
+<!-- TRUST BAR -->
 <section class="trust">
-
-<div class="container trust-grid">
-
-    <div class="trust-item">
-
-        <span class="trust-number">
-            40+
-        </span>
-
-        <span class="trust-label">
-            Ngân hàng
-        </span>
-
+    <div class="container trust-grid">
+        <div class="trust-item">
+            <span class="trust-number">40+</span>
+            <span class="trust-label">Ngân hàng liên kết</span>
+        </div>
+        <div class="trust-item">
+            <span class="trust-number">30M+</span>
+            <span class="trust-label">Người dùng App Ngân hàng</span>
+        </div>
+        <div class="trust-item">
+            <span class="trust-number">24/7</span>
+            <span class="trust-label">Hỗ trợ kỹ thuật</span>
+        </div>
     </div>
-
-
-    <div class="trust-item">
-
-        <span class="trust-number">
-            30M+
-        </span>
-
-        <span class="trust-label">
-            Người dùng
-        </span>
-
-    </div>
-
-
-    <div class="trust-item">
-
-        <span class="trust-number">
-            24/7
-        </span>
-
-        <span class="trust-label">
-            Hỗ trợ
-        </span>
-
-    </div>
-
-</div>
-
 </section>
 
+<!-- 4. SOCIAL PROOF: ĐỐI TÁC TIÊU BIỂU -->
+<section class="partners-section">
+    <div class="container">
+        <div class="partners-title">ĐƯỢC TIN DÙNG BỞI CÁC THƯƠNG HIỆU HÀNG ĐẦU</div>
+        <div class="partners-logos">
+            <span>HIGHLANDS COFFEE</span>
+            <span>WINMART</span>
+            <span>LONG CHÂU</span>
+            <span>MAY 10</span>
+            <span>KIOTVIET</span>
+        </div>
+    </div>
+</section>
 
-<!-- ==================================================
-     PROBLEM
-================================================== -->
-
+<!-- PAIN POINTS -->
 <section class="section section-light">
-
 <div class="container">
-
-<div class="section-title">
-
-    <small>
-        BẠN ĐANG GẶP VẤN ĐỀ?
-    </small>
-
-    <h2>
-        Đừng để thanh toán trở thành rào cản
-    </h2>
-
-    <p>
-        Một trải nghiệm thanh toán thuận tiện có thể
-        giúp khách hàng hoàn tất giao dịch dễ dàng hơn.
-    </p>
-
-</div>
-
-
-<div class="pain-grid">
-
-
-<div class="pain-card">
-
-    <div class="pain-icon">
-        💳
+    <div class="section-title">
+        <small>GIẢI QUYẾT BÀI TOÁN THANH TOÁN</small>
+        <h2>Tại sao cửa hàng cần trang bị VNPAY?</h2>
     </div>
 
-    <h3>
-        Khách muốn thanh toán không tiền mặt
-    </h3>
-
-    <p>
-        Cung cấp thêm nhiều lựa chọn thanh toán
-        để khách hàng thuận tiện hơn.
-    </p>
-
-</div>
-
-
-<div class="pain-card">
-
-    <div class="pain-icon">
-        📱
+    <div class="pain-grid">
+        <div class="pain-card">
+            <h3>Bỏ lỡ khách hàng không mang tiền mặt</h3>
+            <p>Khách hàng hiện đại ưa chuộng quét mã QR và quẹt thẻ. Thiếu VNPAY khiến bạn mất đi một lượng khách hàng tiềm năng lớn.</p>
+        </div>
+        <div class="pain-card">
+            <h3>Nhầm lẫn, thất thoát khi thu ngân</h3>
+            <p>Quản lý tiền mặt dễ nhầm tiền thừa, tiền giả. VNPAY giúp đối soát chính xác 100% dòng tiền theo thời gian thực.</p>
+        </div>
+        <div class="pain-card">
+            <h3>Trải nghiệm thanh toán chậm chạp</h3>
+            <p>Xếp hàng chờ đợi thanh toán giảm sự hài lòng. Tốc độ quét QR/SmartPOS VNPAY chỉ mất 3-5 giây cho mỗi giao dịch.</p>
+        </div>
     </div>
-
-    <h3>
-        Muốn thanh toán nhanh hơn
-    </h3>
-
-    <p>
-        QR và SmartPOS giúp quá trình thanh toán
-        đơn giản và nhanh chóng.
-    </p>
-
 </div>
-
-
-<div class="pain-card">
-
-    <div class="pain-icon">
-        📈
-    </div>
-
-    <h3>
-        Muốn tối ưu hoạt động kinh doanh
-    </h3>
-
-    <p>
-        Kết nối giải pháp thanh toán phù hợp
-        với mô hình kinh doanh của bạn.
-    </p>
-
-</div>
-
-
-</div>
-
-</div>
-
 </section>
 
-
-<!-- ==================================================
-     SERVICES
-================================================== -->
-
+<!-- SERVICES -->
 <section class="section">
-
 <div class="container">
-
-
-<div class="section-title">
-
-    <small>
-        GIẢI PHÁP
-    </small>
-
-    <h2>
-        Một hệ sinh thái – Nhiều lựa chọn
-    </h2>
-
-    <p>
-        Chọn giải pháp phù hợp với nhu cầu
-        kinh doanh của bạn.
-    </p>
-
-</div>
-
-
-<div class="services">
-
-
-<div class="service">
-
-    <div class="service-number">
-        GIẢI PHÁP 01
+    <div class="section-title">
+        <small>DỊCH VỤ CUNG CẤP</small>
+        <h2>Lựa chọn giải pháp phù hợp với bạn</h2>
     </div>
 
-    <h3>
-        VNPAY-QR
-    </h3>
-
-    <p>
-        Nhận thanh toán QR từ nhiều ngân hàng
-        và ứng dụng thanh toán.
-    </p>
-
-    <a href="#dang-ky">
-        Tư vấn VNPAY-QR →
-    </a>
-
-</div>
-
-
-<div class="service">
-
-    <div class="service-number">
-        GIẢI PHÁP 02
+    <div class="services">
+        <div class="service">
+            <h3>1. Mã VNPAY-QR</h3>
+            <p>Đặt tại quầy thu ngân. Khách hàng dùng App Ngân hàng bất kỳ để quét mã trả tiền ngay tức thì.</p>
+            <a href="#dang-ky" style="color:var(--blue); font-weight:800;">Đăng ký QR →</a>
+        </div>
+        <div class="service">
+            <h3>2. Máy VNPAY SmartPOS</h3>
+            <p>Thiết bị quẹt thẻ Android thông minh, hỗ trợ quẹt thẻ Visa/Master, in hóa đơn và quét mã QR trên cùng 1 máy.</p>
+            <a href="#dang-ky" style="color:var(--blue); font-weight:800;">Đăng ký SmartPOS →</a>
+        </div>
     </div>
-
-    <h3>
-        VNPAY SmartPOS
-    </h3>
-
-    <p>
-        Giải pháp thanh toán tại điểm bán
-        với thiết bị SmartPOS.
-    </p>
-
-    <a href="#dang-ky">
-        Tư vấn SmartPOS →
-    </a>
-
 </div>
-
-
-<div class="service">
-
-    <div class="service-number">
-        GIẢI PHÁP 03
-    </div>
-
-    <h3>
-        Cổng thanh toán
-    </h3>
-
-    <p>
-        Hỗ trợ thanh toán trực tuyến cho
-        website và ứng dụng.
-    </p>
-
-    <a href="#dang-ky">
-        Tư vấn cổng thanh toán →
-    </a>
-
-</div>
-
-
-<div class="service">
-
-    <div class="service-number">
-        GIẢI PHÁP 04
-    </div>
-
-    <h3>
-        Ví VNPAY
-    </h3>
-
-    <p>
-        Mở rộng lựa chọn thanh toán và
-        nâng cao trải nghiệm khách hàng.
-    </p>
-
-    <a href="#dang-ky">
-        Nhận tư vấn →
-    </a>
-
-</div>
-
-
-</div>
-
-</div>
-
 </section>
 
-
-<!-- ==================================================
-     HOW IT WORKS
-================================================== -->
-
+<!-- 4. KHỐI ĐÁNH GIÁ KHÁCH HÀNG (TESTIMONIALS) -->
 <section class="section section-light">
-
 <div class="container">
-
-
-<div class="section-title">
-
-    <small>
-        QUY TRÌNH
-    </small>
-
-    <h2>
-        Đăng ký chỉ với 3 bước
-    </h2>
-
-</div>
-
-
-<div class="steps">
-
-
-<div class="step">
-
-    <div class="step-number">
-        01
+    <div class="section-title">
+        <small>ĐÁNH GIÁ THỰC TẾ</small>
+        <h2>Chủ cửa hàng nói gì về chúng tôi?</h2>
     </div>
 
-    <h3>
-        Để lại thông tin
-    </h3>
-
-    <p>
-        Điền số điện thoại và mô hình
-        kinh doanh của bạn.
-    </p>
-
-</div>
-
-
-<div class="step">
-
-    <div class="step-number">
-        02
+    <div class="testimonials-grid">
+        <div class="testimonial-card">
+            <div class="testimonial-text">"Từ ngày đặt mã VNPAY-QR tại quầy, việc thu tiền nhanh hơn hẳn. Khách trẻ giờ toàn quét mã, vừa tiện cho khách vừa giúp shop không phải lo đổi tiền lẻ."</div>
+            <div class="testimonial-author">
+                <div class="author-avatar">M</div>
+                <div class="author-info">
+                    <h4>Chị Minh Trang</h4>
+                    <p>Chủ chuỗi thời trang tại Hà Nội</p>
+                </div>
+            </div>
+        </div>
+        <div class="testimonial-card">
+            <div class="testimonial-text">"Máy SmartPOS của VNPAY rất tiện, vừa quẹt thẻ vừa quét QR được. Chuyên viên hỗ trợ thủ tục rất nhanh, đăng ký xong 1-2 ngày là có máy dùng."</div>
+            <div class="testimonial-author">
+                <div class="author-avatar">A</div>
+                <div class="author-info">
+                    <h4>Anh Tuấn Anh</h4>
+                    <p>Quản lý Nhà hàng Hải Sản, TP.HCM</p>
+                </div>
+            </div>
+        </div>
     </div>
-
-    <h3>
-        Nhận tư vấn
-    </h3>
-
-    <p>
-        Nhân viên liên hệ để tìm hiểu
-        nhu cầu và tư vấn giải pháp.
-    </p>
-
 </div>
-
-
-<div class="step">
-
-    <div class="step-number">
-        03
-    </div>
-
-    <h3>
-        Triển khai
-    </h3>
-
-    <p>
-        Hỗ trợ các bước tiếp theo
-        để bắt đầu sử dụng.
-    </p>
-
-</div>
-
-
-</div>
-
-</div>
-
 </section>
 
-
-<!-- ==================================================
-     FINAL CTA
-================================================== -->
-
+<!-- FINAL CTA -->
 <section class="final">
-
 <div class="container">
-
-    <h2>
-        Sẵn sàng bắt đầu?
-    </h2>
-
-    <p>
-        Để lại thông tin để được tư vấn giải pháp
-        thanh toán phù hợp với mô hình kinh doanh.
-    </p>
-
-    <a
-        href="#dang-ky"
-        class="cta">
-
-        NHẬN TƯ VẤN MIỄN PHÍ →
-
-    </a>
-
+    <h2>Sẵn sàng tối ưu doanh thu ngay hôm nay?</h2>
+    <p>Để lại thông tin, chuyên viên tư vấn VNPAY sẽ liên hệ hỗ trợ bạn miễn phí trong thời gian sớm nhất.</p>
+    <a href="#dang-ky" class="final-cta-btn">👉 ĐĂNG KÝ TƯ VẤN MIỄN PHÍ</a>
 </div>
-
 </section>
 
-
-<!-- ==================================================
-     FOOTER
-================================================== -->
-
+<!-- FOOTER -->
 <footer>
-
 <div class="container">
-
-    <strong>
-        Giải pháp thanh toán VNPAY
-    </strong>
-
-    <p>
-        Tư vấn giải pháp thanh toán cho doanh nghiệp
-        và hộ kinh doanh.
-    </p>
-
+    <p><strong>Dịch vụ tư vấn & Triển khai Giải pháp Thanh toán VNPAY</strong></p>
+    <p style="margin-top:5px; color:#666;">Hỗ trợ đăng ký VNPAY-QR, SmartPOS toàn quốc</p>
 </div>
-
 </footer>
 
-
-<!-- ==================================================
-     MOBILE STICKY CTA
-================================================== -->
-
+<!-- MOBILE STICKY CTA -->
 <div class="mobile-cta">
-
-<a href="#dang-ky">
-
-    🔥 NHẬN TƯ VẤN MIỄN PHÍ
-
-</a>
-
+    <a href="#dang-ky">👉 ĐĂNG KÝ TƯ VẤN MIỄN PHÍ</a>
 </div>
 
-
-<!-- ==================================================
-     TRACKING
-================================================== -->
-
 <script>
-
 var submitted = false;
-
-document
-.querySelectorAll('a[href="#dang-ky"]')
-.forEach(function(button){
-
-    button.addEventListener(
-        'click',
-        function(){
-
-            if(typeof gtag === 'function'){
-
-                gtag(
-                    'event',
-                    'cta_click',
-                    {
-                        event_category:
-                            'lead_generation',
-
-                        event_label:
-                            'consultation_cta'
-                    }
-                );
-
-            }
-
-        }
-    );
-
-});
-
-document
-.getElementById('leadForm')
-.addEventListener(
-    'submit',
-    function(){
-
-        if(typeof gtag === 'function'){
-
-            gtag(
-                'event',
-                'generate_lead',
-                {
-                    event_category:
-                        'lead_generation',
-
-                    event_label:
-                        'vnpay_landing_page'
-                }
-            );
-
-        }
-
-    }
-);
-
 </script>
-
 
 </body>
 </html>
