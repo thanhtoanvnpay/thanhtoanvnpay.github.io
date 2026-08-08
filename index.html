@@ -1,980 +1,557 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="vi" class="scroll-smooth">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Đăng Ký Giải Pháp Thanh Toán VNPAY Miễn Phí</title>
-<meta name="description" content="Tư vấn và lắp đặt giải pháp thanh toán VNPAY-QR, SmartPOS, PhonePOS, Cổng thanh toán cho cửa hàng, doanh nghiệp.">
-
-<style>
-/* ==================================================
-   1. KHAI BÁO FONT CHỮ TỪ GITHUB PAGES
-================================================== */
-@font-face {
-    font-family: 'CustomFont';
-    src: url('https://thanhtoanvnpay.github.io/font.ttf') format('truetype'),
-         url('https://thanhtoanvnpay.github.io/font.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-:root{
-    --blue:#0066ff;
-    --blue-dark:#0047b3;
-    --black:#111111;
-    --gray:#555555;
-    --light:#f7f9fc;
-    --border:#e2e8f0;
-    --green:#10b981;
-    --orange:#ff6b00;
-    --white:#ffffff;
-}
-
-html{
-    scroll-behavior:smooth;
-}
-
-body, input, select, textarea, button {
-    font-family: 'CustomFont', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-}
-
-body{
-    color:var(--black);
-    background:white;
-    line-height:1.55;
-}
-
-.container{
-    width:min(1080px,92%);
-    margin:auto;
-}
-
-a{
-    text-decoration:none;
-}
-
-/* ==================================================
-   HEADER & BRANDING
-================================================== */
-.top-bar{
-    background:#111;
-    color:white;
-    text-align:center;
-    padding:8px 15px;
-    font-size:13px;
-    font-weight:700;
-}
-.top-bar span{ color: #ffd700; }
-
-.main-header {
-    background: var(--white);
-    border-bottom: 1px solid var(--border);
-    padding: 10px 0;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-.header-wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo-area {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-.logo-img {
-    height: 42px;
-    width: auto;
-    max-width: 160px;
-    object-fit: contain;
-    display: block;
-}
-
-.logo-text {
-    font-weight: 800;
-    font-size: 15px;
-    color: var(--blue-dark);
-    border-left: 2px solid var(--border);
-    padding-left: 12px;
-}
-
-.header-contact {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-.header-phone {
-    font-weight: 800;
-    color: var(--blue);
-    font-size: 15px;
-}
-
-/* ==================================================
-   FLOATING WIDGETS
-================================================== */
-.floating-contact {
-    position: fixed;
-    right: 20px;
-    bottom: 85px;
-    z-index: 99999;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    align-items: flex-end;
-}
-
-.contact-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 52px;
-    height: 52px;
-    border-radius: 50%;
-    color: white;
-    font-weight: bold;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-    transition: transform 0.3s;
-    position: relative;
-}
-
-.contact-btn:hover { transform: scale(1.1); }
-.btn-tel { background: var(--green); animation: pulse-green 2s infinite; }
-.btn-zalo { background: #0088FF; font-size: 12px; }
-
-.zalo-tooltip {
-    background: #333;
-    color: #fff;
-    padding: 6px 12px;
-    border-radius: 20px;
-    font-size: 12px;
-    white-space: nowrap;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-    animation: bounce 2s infinite;
-}
-
-@keyframes pulse-green {
-    0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
-    70% { box-shadow: 0 0 0 15px rgba(16, 185, 129, 0); }
-    100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
-}
-
-@keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
-    40% {transform: translateY(-5px);}
-    60% {transform: translateY(-3px);}
-}
-
-/* ==================================================
-   HERO SECTION
-================================================== */
-.hero{
-    background: radial-gradient(circle at 90% 0%, rgba(0, 102, 255, .08), transparent 40%),
-                linear-gradient(135deg, #fff 0%, #f4f8ff 100%);
-    padding: 40px 0;
-}
-
-.hero-grid{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    align-items: flex-start;
-    max-width: 1080px;
-    margin: 0 auto;
-}
-
-.hero-left {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 100%;
-}
-
-.hero-right {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-}
-
-.badge{
-    display:inline-flex;
-    align-items:center;
-    gap:6px;
-    background:#e6f0ff;
-    border: 1px solid #b3d1ff;
-    color:var(--blue-dark);
-    padding: 6px 14px;
-    border-radius:99px;
-    font-size:13px;
-    font-weight:700;
-    margin-bottom:15px;
-}
-
-.hero h1{
-    font-size: clamp(28px, 3.5vw, 42px);
-    line-height:1.2;
-    letter-spacing:-0.5px;
-    margin-bottom:16px;
-}
-.hero h1 span{ color:var(--blue); }
-
-.hero-description{
-    color:var(--gray);
-    font-size:15px;
-    margin-bottom:20px;
-}
-
-.hero-benefits{
-    list-style:none;
-    display:grid;
-    gap:10px;
-    margin-bottom:20px;
-}
-.hero-benefits li{
-    display:flex;
-    align-items:center;
-    gap:10px;
-    font-size:14.5px;
-    font-weight:700;
-}
-.check{
-    width:20px;
-    height:20px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    background:#e8f8ef;
-    color:var(--green);
-    border-radius:50%;
-    font-size:11px;
-}
-
-/* KHỐI VIDEO DỌC */
-.video-box {
-    margin-top: 20px;
-    background: #000;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
-    width: 100%;
-    max-width: 360px;
-    margin-left: 0;
-    margin-right: auto;
-}
-.video-title {
-    background: #1e293b;
-    color: #fff;
-    padding: 8px 12px;
-    font-size: 12px;
-    font-weight: 700;
-    text-align: center;
-}
-.video-box video {
-    width: 100%;
-    height: 350px;
-    object-fit: cover;
-    display: block;
-}
-
-/* ==================================================
-   LEAD FORM & TRUST IN HERO RIGHT
-================================================== */
-.form-card{
-    width: 100%;
-    max-width: 460px;
-    background:white;
-    border: 1px solid var(--border);
-    border-radius:16px;
-    padding:28px;
-    box-shadow: 0 15px 35px rgba(0,102,255,0.1);
-}
-
-.form-card h2{
-    font-size:24px;
-    margin-bottom:4px;
-    color: var(--black);
-}
-
-.form-subtitle{
-    color:var(--gray);
-    font-size:13px;
-    margin-bottom:18px;
-}
-
-.offer-box{
-    background:#fff8f0;
-    border: 1px solid #ffe0b2;
-    border-radius:8px;
-    padding:12px;
-    margin-bottom:18px;
-}
-
-.offer-title{
-    color:var(--orange);
-    font-size:12px;
-    font-weight:800;
-    margin-bottom:4px;
-}
-
-.offer-list{
-    list-style:none;
-    display:grid;
-    gap:4px;
-    font-size:12px;
-    color:#555;
-}
-
-.form-group{ margin-bottom:14px; }
-.form-group label{
-    display:block;
-    font-size:13px;
-    font-weight:700;
-    margin-bottom:5px;
-}
-
-input, select{
-    width:100%;
-    height:46px;
-    border: 1px solid #cbd5e1;
-    border-radius:8px;
-    padding: 0 12px;
-    font-size:14px;
-    outline:none;
-    transition:.2s;
-    background-color: #fff;
-}
-
-input:focus, select:focus{
-    border-color:var(--blue);
-    box-shadow: 0 0 0 3px rgba(0,102,255,0.1);
-}
-
-.submit-btn {
-    width: 100%;
-    min-height: 52px;
-    background: linear-gradient(135deg, #0066ff, #0047b3);
-    color: white;
-    border: none;
-    border-radius: 8px;
-    font-size: 16px;
-    font-weight: 800;
-    cursor: pointer;
-    box-shadow: 0 8px 20px rgba(0,102,255,0.3);
-    transition: transform 0.2s, box-shadow 0.2s;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-}
-
-.submit-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 12px 25px rgba(0,102,255,0.4);
-}
-
-.form-security{
-    text-align:center;
-    font-size:11px;
-    color:#888;
-    margin-top:10px;
-}
-
-.hero-trust-grid {
-    width: 100%;
-    max-width: 460px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-    background: white;
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 15px 10px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
-}
-
-.trust-item{
-    text-align:center;
-    border-right: 1px solid #f0f0f0;
-}
-.trust-item:last-child{ border-right:none; }
-
-.trust-number{
-    display:block;
-    color:var(--blue);
-    font-size:22px;
-    font-weight:900;
-}
-.trust-label{ 
-    color:var(--gray); 
-    font-size:11px; 
-    line-height: 1.2;
-}
-
-/* ==================================================
-   ĐỐI TÁC TIÊU BIỂU
-================================================== */
-.partners-section {
-    padding: 22px 0;
-    background: var(--light);
-    text-align: center;
-    border-bottom: 1px solid var(--border);
-    border-top: 1px solid var(--border);
-}
-
-.partners-title {
-    font-size: 11px;
-    font-weight: 800;
-    color: #888;
-    letter-spacing: 1px;
-    margin-bottom: 12px;
-    text-transform: uppercase;
-}
-
-.partners-logos {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-    flex-wrap: wrap;
-    opacity: 0.7;
-}
-
-.partners-logos span {
-    font-weight: 800;
-    font-size: 15px;
-    color: #444;
-}
-
-/* ==================================================
-   SECTIONS & CARDS
-================================================== */
-.section{ padding: 55px 0; }
-.section-light{ background:var(--light); }
-
-.section-title{
-    text-align:center;
-    max-width:680px;
-    margin: 0 auto 35px;
-}
-
-.section-title small{
-    color:var(--blue);
-    font-size:12px;
-    font-weight:800;
-    letter-spacing:1px;
-}
-
-.section-title h2{
-    font-size: clamp(26px, 3.5vw, 36px);
-    line-height:1.2;
-    margin-top: 5px;
-}
-
-.pain-grid, .steps{
-    display:grid;
-    grid-template-columns: repeat(3,1fr);
-    gap:20px;
-}
-
-/* KHU VỰC 1: DỊCH VỤ CUNG CẤP (4 ĐẦU MỤC) */
-.services { 
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-}
-
-.pain-card, .service, .step{
-    background:white;
-    border: 1px solid var(--border);
-    border-radius:12px;
-    padding:24px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.service-sub {
-    color: var(--blue);
-    font-weight: 700;
-    font-size: 13px;
-    margin-bottom: 4px;
-}
-
-.pain-card h3, .service h3, .step h3 {
-    font-size: 18px;
-    margin: 4px 0 8px;
-    color: var(--black);
-}
-
-.pain-card p, .service p, .step p {
-    color: var(--gray);
-    font-size: 14px;
-    margin-bottom: 15px;
-}
-
-.service-link {
-    color: var(--blue);
-    font-weight: 800;
-    font-size: 14px;
-    display: inline-block;
-}
-
-/* KHU VỰC 2: TESTIMONIALS (4 NHẬN XÉT) */
-.testimonials-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-}
-
-.testimonial-card {
-    background: #fff;
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 22px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.03);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.testimonial-text {
-    font-style: italic;
-    color: #444;
-    font-size: 14px;
-    margin-bottom: 16px;
-    line-height: 1.6;
-}
-
-.testimonial-author {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-/* CSS CHO CẢ ANH ĐẠI DIỆN VÀ CHỮ CÁI THAY THẾ */
-.author-avatar {
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    background: #0066ff;
-    color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    font-size: 16px;
-    flex-shrink: 0;
-}
-
-.author-avatar-img {
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    object-fit: cover;
-    flex-shrink: 0;
-    border: 1px solid var(--border);
-}
-
-.author-info h4 { font-size: 14px; margin: 0; color: var(--black); }
-.author-info p { font-size: 12px; color: #777; margin: 0; }
-
-/* ==================================================
-   CTA & FOOTER
-================================================== */
-.final{
-    background: linear-gradient(135deg, #0047b3, #0066ff);
-    color:white;
-    text-align:center;
-    padding:55px 0;
-}
-
-.final h2{ font-size: clamp(26px, 3.5vw, 38px); margin-bottom:10px; }
-.final p{ max-width:600px; margin:0 auto 20px; opacity:0.9; }
-
-.final-cta-btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 14px 32px;
-    background: white;
-    color: var(--blue-dark);
-    font-weight: 800;
-    border-radius: 99px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-}
-
-footer{
-    background:#111;
-    color:#888;
-    text-align:center;
-    padding:25px 0;
-    font-size:12px;
-}
-
-/* MOBILE RESPONSIVE */
-.mobile-cta{
-    display:none;
-    position:fixed;
-    left:0; right:0; bottom:0;
-    z-index:9999;
-    background:white;
-    padding:8px 12px;
-    box-shadow:0 -4px 15px rgba(0,0,0,0.1);
-}
-
-.mobile-cta a{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    min-height:46px;
-    background:var(--blue);
-    color:white;
-    border-radius:6px;
-    font-size:15px;
-    font-weight:800;
-}
-
-@media(max-width:800px){
-    .hero-grid, .pain-grid, .services, .steps, .testimonials-grid { grid-template-columns: 1fr; }
-    .mobile-cta { display:block; }
-    body { padding-bottom:60px; }
-    .header-contact { display: none; }
-    .video-box { max-width: 100%; }
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giải Pháp Thanh Toán VNPAY - Tăng Doanh Thu Cho Cửa Hàng & Doanh Nghiệp</title>
+    <meta name="description" content="Đăng ký lắp đặt VNPAY-QR, SmartPOS, PhonePOS và Cổng thanh toán chính hãng. Hỗ trợ thủ tục nhanh chóng, chiết khấu hấp dẫn, dòng tiền về tài khoản ngay lập tức.">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        vnpayBlue: '#0055A5',
+                        vnpayRed: '#ED1C24',
+                        vnpayDark: '#0A2540',
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
 </head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-vnpayBlue selection:text-white">
 
-<body>
-
-<!-- FLOATING CONTACT (ZALO + CALL) -->
-<div class="floating-contact">
-    <div class="zalo-tooltip">💬 Cần tư vấn nhanh? Chat Zalo ngay</div>
-    <a href="https://zalo.me/0968122893" target="_blank" class="contact-btn btn-zalo" title="Chat Zalo">ZALO</a>
-    <a href="tel:0968122893" class="contact-btn btn-tel" title="Gọi ngay">📞</a>
-</div>
-
-<!-- TOP BAR -->
-<div class="top-bar">
-    🔥 <span>ƯU ĐÃI THÁNG NÀY:</span> Miễn phí tư vấn & Hỗ trợ thủ tục đăng ký VNPAY
-</div>
-
-<!-- HEADER THƯƠNG HIỆU -->
-<header class="main-header">
-    <div class="container header-wrapper">
-        <div class="logo-area">
-            <img 
-                src="https://thanhtoanvnpay.github.io/100kb.jpg" 
-                alt="Logo VNPAY" 
-                class="logo-img"
-                onerror="this.onerror=null; this.src='https://raw.githubusercontent.com/thanhtoanvnpay/thanhtoanvnpay.github.io/main/100kb.jpg';"
-            >
-            <span class="logo-text">Đối Tác Bán Hàng</span>
-        </div>
-        <div class="header-contact">
-            <span style="font-size:13px; color:#666;">Hotline hỗ trợ:</span>
-            <a href="tel:0968122893" class="header-phone">0968 122 893</a>
-        </div>
-    </div>
-</header>
-
-<!-- HERO SECTION -->
-<section class="hero">
-<div class="container hero-grid">
-
-    <!-- CỘT BÊN TRÁI: TIÊU ĐỀ + ƯU ĐIỂM + VIDEO -->
-    <div class="hero-left">
-        <div class="badge">
-            🛡️ GIẢI PHÁP THANH TOÁN TOÀN DIỆN
-        </div>
-        <h1>Tăng Doanh Thu & Tối Ưu Thanh Toán Với <span>VNPAY</span></h1>
-        <p class="hero-description">Giải pháp kết nối QR, SmartPOS, PhonePOS và Cổng thanh toán giúp cửa hàng của bạn tiếp cận hơn 30 triệu người dùng ứng dụng ngân hàng.</p>
-
-        <ul class="hero-benefits">
-            <li><span class="check">✓</span> Chấp nhận thanh toán từ 40+ Ngân hàng & Ví điện tử</li>
-            <li><span class="check">✓</span> Dòng tiền về tài khoản ngân hàng nhanh chóng</li>
-            <li><span class="check">✓</span> Thủ tục đăng ký đơn giản, hỗ trợ tận nơi</li>
-        </ul>
-
-        <div class="video-box">
-            <div class="video-title">🎥 Trải nghiệm thanh toán VNPAY tại điểm bán</div>
-            <video loop playsinline controls preload="auto">
-                <source src="video.mp4" type="video/mp4">
-            </video>
-        </div>
+    <!-- Top Urgent Notice Bar -->
+    <div class="bg-gradient-to-r from-vnpayRed to-orange-600 text-white text-xs sm:text-sm py-2 px-4 text-center font-medium shadow-inner">
+        🔥 <span class="font-bold underline uppercase">Ưu đãi tháng này:</span> Miễn phí khảo sát, tư vấn giải pháp &amp; Hỗ trợ thủ tục đăng ký VNPAY trọn gói!
     </div>
 
-    <!-- CỘT BÊN PHẢI: FORM ĐĂNG KÝ + KHỐI THÔNG SỐ -->
-    <div class="hero-right">
-        <div class="form-card" id="dang-ky">
-            <h2>Đăng Ký Tư Vấn</h2>
-            <p class="form-subtitle">Điền thông tin bên dưới, chuyên viên VNPAY sẽ liên hệ lại trong ít phút.</p>
-
-            <div class="offer-box">
-                <div class="offer-title">🎁 QUYỀN LỢI ĐĂNG KÝ MIỄN PHÍ</div>
-                <ul class="offer-list">
-                    <li>✓ Khảo sát & Tư vấn giải pháp tối ưu chi phí</li>
-                    <li>✓ Hỗ trợ trọn gói hồ sơ & Triển khai nhanh</li>
-                </ul>
+    <!-- Header / Navbar -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Logo & Badge -->
+            <div class="flex items-center space-x-3">
+                <img src="https://thanhtoanvnpay.github.io/100kb.jpg" alt="Logo VNPAY" class="h-11 w-auto object-contain rounded">
+                <div class="hidden sm:block border-l border-slate-200 pl-3">
+                    <span class="block text-xs font-bold text-vnpayBlue uppercase tracking-wider">Đối Tác Bán Hàng</span>
+                    <span class="block text-[11px] text-slate-500 font-medium">Đại lý ủy quyền chính thức</span>
+                </div>
             </div>
 
-            <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted){alert('Cảm ơn bạn! Chuyên viên tư vấn VNPAY sẽ liên hệ lại ngay.'); document.getElementById('leadForm').reset();}"></iframe>
+            <!-- Consultant Info / Hotline -->
+            <div class="flex items-center space-x-4">
+                <div class="hidden md:flex items-center space-x-2 bg-blue-50 px-3 py-1.5 rounded-full border border-blue-100">
+                    <div class="w-2.5 h-2.5 rounded-full bg-green-500 animate-ping"></div>
+                    <span class="text-xs text-slate-700 font-medium">Hỗ trợ 24/7: <strong class="text-vnpayBlue font-bold">0968 122 893</strong></span>
+                </div>
+                <a href="#dang-ky" class="bg-vnpayBlue hover:bg-blue-700 text-white font-semibold px-4 py-2.5 rounded-xl text-sm shadow-md hover:shadow-lg transition transform active:scale-95 flex items-center space-x-2">
+                    <i class="fa-solid fa-file-signature"></i>
+                    <span>Đăng Ký Ngay</span>
+                </a>
+            </div>
+        </div>
+    </header>
 
-            <form id="leadForm" action="https://docs.google.com/forms/d/e/1FAIpQLSd9k4BFTZW10Md4D2UeMlTO65Bf-YVxCMvTPyZNZkoFDpu6mw/formResponse" method="POST" target="hidden_iframe" onsubmit="submitted=true;">
+    <!-- Hero Section -->
+    <section class="relative overflow-hidden bg-gradient-to-b from-blue-900 via-vnpayBlue to-blue-800 text-white py-16 lg:py-24">
+        <!-- Background subtle glow -->
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left: Content & Video Preview -->
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-white/20 text-blue-200 text-xs font-semibold uppercase tracking-wider">
+                        <i class="fa-solid fa-shield-halved text-amber-400"></i>
+                        <span>Giải pháp thanh toán toàn diện VNPAY</span>
+                    </div>
 
-                <div class="form-group">
-                    <label>Họ và tên *</label>
-                    <input type="text" name="entry.1444757328" placeholder="Nhập họ và tên của bạn" required>
+                    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight">
+                        Tăng Doanh Thu &amp; Tối Ưu Thanh Toán Với <span class="text-amber-300 underline decoration-amber-400/50 decoration-4">VNPAY</span>
+                    </h1>
+
+                    <p class="text-blue-100 text-base sm:text-lg leading-relaxed font-normal max-w-2xl">
+                        Giải pháp kết nối QR, SmartPOS, PhonePOS và Cổng thanh toán giúp cửa hàng của bạn tiếp cận hơn <strong class="text-white font-bold">30 triệu người dùng</strong> ứng dụng ngân hàng và ví điện tử.
+                    </p>
+
+                    <ul class="space-y-3 text-sm sm:text-base text-blue-50 font-medium pt-2">
+                        <li class="flex items-center space-x-3">
+                            <i class="fa-solid fa-circle-check text-green-400 text-lg"></i>
+                            <span>Chấp nhận thanh toán từ <strong class="text-white">40+ Ngân hàng &amp; Ví điện tử</strong> hàng đầu</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <i class="fa-solid fa-circle-check text-green-400 text-lg"></i>
+                            <span>Dòng tiền đối soát chính xác 100%, về tài khoản ngân hàng nhanh chóng</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <i class="fa-solid fa-circle-check text-green-400 text-lg"></i>
+                            <span>Thủ tục đăng ký cực kỳ đơn giản, nhân viên hỗ trợ triển khai tận nơi</span>
+                        </li>
+                    </ul>
+
+                    <!-- Video Demo Box -->
+                    <div class="pt-4">
+                        <div class="bg-white/10 backdrop-blur-md p-2 rounded-2xl border border-white/20 max-w-lg shadow-xl">
+                            <div class="flex items-center space-x-2 text-xs font-semibold text-blue-200 px-2 py-1 mb-1">
+                                <i class="fa-solid fa-video text-red-400 animate-pulse"></i>
+                                <span>Trải nghiệm thực tế thanh toán VNPAY tại điểm bán</span>
+                            </div>
+                            <video controls loop playsinline preload="auto" class="w-full h-48 sm:h-56 object-cover rounded-xl shadow-inner">
+                                <source src="video.mp4" type="video/mp4">
+                                Trình duyệt của bạn không hỗ trợ video.
+                            </video>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="form-group">
-                    <label>Số điện thoại (Zalo) *</label>
-                    <input type="tel" name="entry.1967364401" placeholder="09xxxxxxxx" required>
+                <!-- Right: High Conversion Form (Anchor #dang-ky) -->
+                <div class="lg:col-span-5" id="dang-ky">
+                    <div class="bg-white text-slate-800 rounded-3xl shadow-2xl p-6 sm:p-8 border border-slate-100 relative overflow-hidden">
+                        
+                        <!-- Ribbon badge -->
+                        <div class="absolute top-0 right-0 bg-gradient-to-l from-amber-500 to-amber-600 text-white text-[11px] font-bold px-4 py-1 rounded-bl-xl uppercase tracking-wider shadow">
+                            Miễn Phí Tư Vấn
+                        </div>
+
+                        <div class="mb-6">
+                            <h2 class="text-2xl font-bold text-slate-900">Đăng Ký Tư Vấn Nhanh</h2>
+                            <p class="text-slate-500 text-sm mt-1">Điền thông tin bên dưới, chuyên viên VNPAY sẽ liên hệ lại trong vòng <strong class="text-vnpayBlue">10 phút</strong>.</p>
+                        </div>
+
+                        <!-- Form -->
+                        <form id="consultationForm" onsubmit="handleFormSubmit(event)" class="space-y-4">
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Họ và tên chủ cửa hàng <span class="text-red-500">*</span></label>
+                                <div class="relative">
+                                    <span class="absolute inset-y-0 left-0 pl-3 flex items-center text-slate-400"><i class="fa-solid fa-user"></i></span>
+                                    <input type="text" id="cusName" required placeholder="Ví dụ: Nguyễn Văn A" class="w-full pl-10 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-vnpayBlue focus:bg-white transition">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Số điện thoại liên hệ (Zalo) <span class="text-red-500">*</span></label>
+                                <div class="relative">
+                                    <span class="absolute inset-y-0 left-0 pl-3 flex items-center text-slate-400"><i class="fa-solid fa-phone"></i></span>
+                                    <input type="tel" id="cusPhone" required placeholder="Ví dụ: 0912345678" class="w-full pl-10 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-vnpayBlue focus:bg-white transition">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Dịch vụ quan tâm</label>
+                                <div class="relative">
+                                    <span class="absolute inset-y-0 left-0 pl-3 flex items-center text-slate-400"><i class="fa-solid fa-store"></i></span>
+                                    <select id="cusService" class="w-full pl-10 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-vnpayBlue focus:bg-white transition">
+                                        <option value="VNPAY-QR">Mã VNPAY-QR (Đặt tại quầy thu ngân)</option>
+                                        <option value="SmartPOS">Máy VNPAY SmartPOS (Quẹt thẻ & Quét QR)</option>
+                                        <option value="PhonePOS">VNPAY PhonePOS (Biến điện thoại thành máy POS)</option>
+                                        <option value="CongThanhToan">Cổng thanh toán Website / App Online</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- Trust perks inside form -->
+                            <div class="bg-blue-50/70 border border-blue-100 rounded-xl p-3 text-xs text-slate-600 space-y-1">
+                                <div class="font-bold text-vnpayBlue flex items-center space-x-1.5">
+                                    <i class="fa-solid fa-gift text-amber-500"></i>
+                                    <span>Quyền lợi khi đăng ký qua Đối tác chính thức:</span>
+                                </div>
+                                <p>✓ Khảo sát &amp; Tư vấn giải pháp tối ưu phí tốt nhất</p>
+                                <p>✓ Hỗ trợ trọn gói hồ sơ, bàn giao thiết bị tận nơi nhanh chóng</p>
+                            </div>
+
+                            <button type="submit" class="w-full bg-gradient-to-r from-vnpayBlue to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold py-3.5 px-4 rounded-xl shadow-lg hover:shadow-xl transition transform active:scale-[0.99] flex items-center justify-center space-x-2">
+                                <span>GỬI ĐĂNG KÝ NGAY</span>
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </form>
+
+                        <!-- Success state message box (hidden by default) -->
+                        <div id="successMessage" class="hidden text-center py-10 space-y-4">
+                            <div class="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto text-3xl shadow-inner">
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900">Đăng ký thành công!</h3>
+                            <p class="text-slate-600 text-sm max-w-xs mx-auto">
+                                Cảm ơn <strong id="displayName" class="text-vnpayBlue"></strong> đã đăng ký. Chuyên viên VNPAY sẽ liên hệ hỗ trợ bạn qua số điện thoại <strong id="displayPhone"></strong> trong ít phút tới.
+                            </p>
+                            <button onclick="resetForm()" class="text-sm text-vnpayBlue font-bold underline hover:text-blue-800">Đăng ký yêu cầu khác</button>
+                        </div>
+
+                        <!-- Dedicated Consultant Badge -->
+                        <div class="mt-6 pt-4 border-t border-slate-100 flex items-center space-x-3">
+                            <div class="relative">
+                                <img src="https://thanhtoanvnpay.github.io/100kb.jpg" alt="Chuyên viên" class="w-10 h-10 rounded-full object-cover border-2 border-vnpayBlue shadow">
+                                <span class="absolute bottom-0 right-0 w-3 h-3 bg-green-500 border-2 border-white rounded-full"></span>
+                            </div>
+                            <div>
+                                <h4 class="text-xs font-bold text-slate-900">Hỗ trợ trực tiếp 24/7</h4>
+                                <p class="text-[11px] text-slate-500">Hotline/Zalo: <a href="https://zalo.me/0968122893" target="_blank" class="text-vnpayBlue font-bold hover:underline">0968.122.893</a></p>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
 
-                <div class="form-group">
-                    <label>Mô hình kinh doanh của bạn *</label>
-                    <select name="entry.1091732008" required>
-                        <option value="">-- Chọn mô hình --</option>
-                        <option value="Cửa hàng bán lẻ / Chuỗi cửa hàng">Cửa hàng bán lẻ / Chuỗi</option>
-                        <option value="Nhà hàng / Cafe / Bán đồ ăn">Nhà hàng / Cafe / F&B</option>
-                        <option value="Hộ kinh doanh cá thể">Hộ kinh doanh cá thể</option>
-                        <option value="Doanh nghiệp / Công ty">Doanh nghiệp / Công ty</option>
-                        <option value="Bán hàng online / Website">Bán hàng online / Website</option>
-                    </select>
+            </div>
+        </div>
+
+        <!-- Quick Stats Bar -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-16">
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 text-center">
+                <div>
+                    <div class="text-3xl lg:text-4xl font-extrabold text-amber-300">40+</div>
+                    <div class="text-xs sm:text-sm text-blue-100 uppercase tracking-wider mt-1">Ngân hàng liên kết</div>
+                </div>
+                <div class="border-t sm:border-t-0 sm:border-l border-white/20 pt-4 sm:pt-0">
+                    <div class="text-3xl lg:text-4xl font-extrabold text-amber-300">30M+</div>
+                    <div class="text-xs sm:text-sm text-blue-100 uppercase tracking-wider mt-1">Người dùng App Ngân hàng</div>
+                </div>
+                <div class="border-t sm:border-t-0 sm:border-l border-white/20 pt-4 sm:pt-0">
+                    <div class="text-3xl lg:text-4xl font-extrabold text-amber-300">24/7</div>
+                    <div class="text-xs sm:text-sm text-blue-100 uppercase tracking-wider mt-1">Hỗ trợ kỹ thuật &amp; Đối soát</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trusted Brands Section -->
+    <section class="py-10 bg-white border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-6">Được tin dùng bởi các thương hiệu hàng đầu Việt Nam</p>
+            <div class="flex flex-wrap justify-center items-center gap-8 sm:gap-16 text-slate-600 font-extrabold tracking-wider text-base sm:text-lg opacity-75">
+                <span class="hover:opacity-100 transition">HIGHLANDS COFFEE</span>
+                <span class="hover:opacity-100 transition">WINMART</span>
+                <span class="hover:opacity-100 transition">LONG CHÂU</span>
+                <span class="hover:opacity-100 transition">MAY 10</span>
+                <span class="hover:opacity-100 transition">KIOTVIET</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Solving Section -->
+    <section class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                <span class="text-xs font-bold text-vnpayBlue uppercase tracking-widest bg-blue-100 px-3 py-1 rounded-full">Giải Quyết Bài Toán Thanh Toán</span>
+                <h2 class="text-3xl font-extrabold text-slate-900">Tại sao cửa hàng của bạn cần trang bị VNPAY ngay?</h2>
+                <p class="text-slate-600 text-sm sm:text-base">Khắc phục triệt để các rủi ro khi thu tiền mặt truyền thống, tối ưu vận hành và gia tăng doanh số.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-white p-8 rounded-3xl shadow-sm hover:shadow-xl transition border border-slate-100 space-y-4 group">
+                    <div class="w-14 h-14 bg-red-50 text-vnpayRed rounded-2xl flex items-center justify-center text-2xl group-hover:bg-vnpayRed group-hover:text-white transition">
+                        <i class="fa-solid fa-wallet"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900">Bỏ lỡ khách không mang tiền mặt</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Khách hàng hiện đại ngày nay chỉ quen dùng QR code và quẹt thẻ. Thiếu VNPAY đồng nghĩa với việc bạn đang nhường khách hàng cho đối thủ.</p>
                 </div>
 
-                <button type="submit" class="submit-btn">
-                    👉 ĐĂNG KÝ TƯ VẤN NGAY
-                </button>
+                <!-- Card 2 -->
+                <div class="bg-white p-8 rounded-3xl shadow-sm hover:shadow-xl transition border border-slate-100 space-y-4 group">
+                    <div class="w-14 h-14 bg-blue-50 text-vnpayBlue rounded-2xl flex items-center justify-center text-2xl group-hover:bg-vnpayBlue group-hover:text-white transition">
+                        <i class="fa-solid fa-scale-balanced"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900">Nhầm lẫn &amp; thất thoát khi thu ngân</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Thu tiền mặt dễ dẫn đến nhầm tiền thừa hoặc tiền giả. VNPAY tự động đối soát chính xác 100% dòng tiền theo thời gian thực trực tiếp trên app.</p>
+                </div>
 
-                <p class="form-security">🔒 Bảo mật thông tin khách hàng tuyệt đối</p>
-            </form>
-        </div>
-
-        <div class="hero-trust-grid">
-            <div class="trust-item">
-                <span class="trust-number">40+</span>
-                <span class="trust-label">Ngân hàng liên kết</span>
-            </div>
-            <div class="trust-item">
-                <span class="trust-number">30M+</span>
-                <span class="trust-label">Người dùng App Ngân hàng</span>
-            </div>
-            <div class="trust-item">
-                <span class="trust-number">24/7</span>
-                <span class="trust-label">Hỗ trợ kỹ thuật</span>
+                <!-- Card 3 -->
+                <div class="bg-white p-8 rounded-3xl shadow-sm hover:shadow-xl transition border border-slate-100 space-y-4 group">
+                    <div class="w-14 h-14 bg-amber-50 text-amber-600 rounded-2xl flex items-center justify-center text-2xl group-hover:bg-amber-500 group-hover:text-white transition">
+                        <i class="fa-solid fa-bolt"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900">Trải nghiệm thanh toán chậm chạp</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Xếp hàng chờ đợi làm giảm sự hài lòng của khách hàng vào giờ cao điểm. Tốc độ quét mã QR hoặc SmartPOS VNPAY chỉ từ 3-5 giây cho một giao dịch.</p>
+                </div>
             </div>
         </div>
+    </section>
 
-    </div>
+    <!-- Services Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                <span class="text-xs font-bold text-vnpayBlue uppercase tracking-widest bg-blue-100 px-3 py-1 rounded-full">Dịch Vụ Cung Cấp</span>
+                <h2 class="text-3xl font-extrabold text-slate-900">Lựa chọn giải pháp phù hợp với mô hình kinh doanh</h2>
+                <p class="text-slate-600 text-sm sm:text-base">Dù bạn mở quán cà phê, nhà hàng, cửa hàng bán lẻ hay website TMĐT, chúng tôi đều có giải pháp tối ưu.</p>
+            </div>
 
-</div>
-</section>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                
+                <!-- Service 1 -->
+                <div class="bg-slate-50 border border-slate-200/80 rounded-3xl p-6 flex flex-col justify-between hover:border-vnpayBlue transition group">
+                    <div class="space-y-4">
+                        <div class="w-12 h-12 bg-blue-600 text-white rounded-xl flex items-center justify-center font-bold text-lg shadow">
+                            01
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900 group-hover:text-vnpayBlue transition">Mã VNPAY-QR</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">Đặt bảng QR tại quầy thu ngân. Khách hàng dùng bất kỳ App Ngân hàng nào hoặc ví điện tử để quét mã thanh toán tức thì.</p>
+                    </div>
+                    <div class="pt-6 mt-6 border-t border-slate-200">
+                        <a href="#dang-ky" class="text-vnpayBlue text-sm font-bold flex items-center space-x-1 group-hover:translate-x-1 transition">
+                            <span>Đăng ký QR ngay</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
 
-<!-- ĐỐI TÁC TIÊU BIỂU -->
-<section class="partners-section">
-    <div class="container">
-        <div class="partners-title">ĐƯỢC TIN DÙNG BỞI CÁC THƯƠNG HIỆU HÀNG ĐẦU</div>
-        <div class="partners-logos">
-            <span>HIGHLANDS COFFEE</span>
-            <span>WINMART</span>
-            <span>LONG CHÂU</span>
-            <span>MAY 10</span>
-            <span>KIOTVIET</span>
+                <!-- Service 2 -->
+                <div class="bg-slate-50 border border-slate-200/80 rounded-3xl p-6 flex flex-col justify-between hover:border-vnpayBlue transition group">
+                    <div class="space-y-4">
+                        <div class="w-12 h-12 bg-blue-600 text-white rounded-xl flex items-center justify-center font-bold text-lg shadow">
+                            02
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900 group-hover:text-vnpayBlue transition">Máy VNPAY SmartPOS</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">Thiết bị quẹt thẻ Android thông minh, hỗ trợ quẹt thẻ Visa/Master, in hóa đơn liền mạch và quét mã QR trên cùng một thiết bị cầm tay.</p>
+                    </div>
+                    <div class="pt-6 mt-6 border-t border-slate-200">
+                        <a href="#dang-ky" class="text-vnpayBlue text-sm font-bold flex items-center space-x-1 group-hover:translate-x-1 transition">
+                            <span>Đăng ký SmartPOS ngay</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-slate-50 border border-slate-200/80 rounded-3xl p-6 flex flex-col justify-between hover:border-vnpayBlue transition group">
+                    <div class="space-y-4">
+                        <div class="w-12 h-12 bg-blue-600 text-white rounded-xl flex items-center justify-center font-bold text-lg shadow">
+                            03
+                        </div>
+                        <span class="inline-block text-[10px] font-extrabold uppercase bg-amber-100 text-amber-800 px-2 py-0.5 rounded">Hot trend</span>
+                        <h3 class="text-lg font-bold text-slate-900 group-hover:text-vnpayBlue transition">VNPAY PhonePOS</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">Biến chiếc điện thoại di động thông thường của bạn thành máy POS nhận thanh toán thẻ và QR, không cần đầu tư máy móc cồng kềnh.</p>
+                    </div>
+                    <div class="pt-6 mt-6 border-t border-slate-200">
+                        <a href="#dang-ky" class="text-vnpayBlue text-sm font-bold flex items-center space-x-1 group-hover:translate-x-1 transition">
+                            <span>Đăng ký PhonePOS ngay</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="bg-slate-50 border border-slate-200/80 rounded-3xl p-6 flex flex-col justify-between hover:border-vnpayBlue transition group">
+                    <div class="space-y-4">
+                        <div class="w-12 h-12 bg-blue-600 text-white rounded-xl flex items-center justify-center font-bold text-lg shadow">
+                            04
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900 group-hover:text-vnpayBlue transition">Cổng Thanh Toán Online</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">Giải pháp "may đo" toàn diện cho website và ứng dụng di động, giúp doanh nghiệp TMĐT tăng tỷ lệ chốt đơn và tối ưu doanh thu.</p>
+                    </div>
+                    <div class="pt-6 mt-6 border-t border-slate-200">
+                        <a href="#dang-ky" class="text-vnpayBlue text-sm font-bold flex items-center space-x-1 group-hover:translate-x-1 transition">
+                            <span>Đăng ký Cổng thanh toán</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- PAIN POINTS -->
-<section class="section section-light">
-<div class="container">
-    <div class="section-title">
-        <small>GIẢI QUYẾT BÀI TOÁN THANH TOÁN</small>
-        <h2>Tại sao cửa hàng cần trang bị VNPAY?</h2>
-    </div>
+    <!-- FAQ Section (New trust booster addressing objections) -->
+    <section class="py-20 bg-slate-50 border-t border-slate-200/60">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 space-y-3">
+                <span class="text-xs font-bold text-vnpayBlue uppercase tracking-widest bg-blue-100 px-3 py-1 rounded-full">Câu Hỏi Thường Gặp</span>
+                <h2 class="text-3xl font-extrabold text-slate-900">Giải đáp thắc mắc trước khi đăng ký</h2>
+                <p class="text-slate-600 text-sm sm:text-base">Tổng hợp thông tin quan trọng giúp chủ cửa hàng an tâm hợp tác.</p>
+            </div>
 
-    <div class="pain-grid">
-        <div class="pain-card">
-            <h3>Bỏ lỡ khách hàng không mang tiền mặt</h3>
-            <p>Khách hàng hiện đại ưa chuộng quét mã QR và quẹt thẻ. Thiếu VNPAY khiến bạn mất đi một lượng khách hàng tiềm năng lớn.</p>
+            <div class="space-y-4">
+                <!-- FAQ 1 -->
+                <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200">
+                    <h3 class="font-bold text-slate-900 text-base flex items-center justify-between cursor-pointer">
+                        <span><i class="fa-solid fa-circle-question text-vnpayBlue mr-2"></i> Thủ tục đăng ký VNPAY cần những giấy tờ gì?</span>
+                    </h3>
+                    <p class="text-slate-600 text-sm mt-3 pl-6 leading-relaxed">
+                        Tùy theo mô hình hộ kinh doanh cá thể hay doanh nghiệp, thủ tục rất gọn nhẹ. Thường chỉ cần: Ảnh chụp CCCD của chủ cửa hàng, Giấy phép kinh doanh (nếu có) và thông tin tài khoản ngân hàng nhận tiền. Chuyên viên của chúng tôi sẽ hỗ trợ soạn thảo hồ sơ từ A-Z.
+                    </p>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200">
+                    <h3 class="font-bold text-slate-900 text-base flex items-center justify-between cursor-pointer">
+                        <span><i class="fa-solid fa-circle-question text-vnpayBlue mr-2"></i> Thời gian duyệt hồ sơ và lắp đặt thiết bị mất bao lâu?</span>
+                    </h3>
+                    <p class="text-slate-600 text-sm mt-3 pl-6 leading-relaxed">
+                        Thời gian duyệt hồ sơ và kích hoạt mã QR thường chỉ từ 1-2 ngày làm việc. Đối với máy SmartPOS hoặc thiết bị chuyên dụng, kỹ thuật viên sẽ bàn giao và hướng dẫn trực tiếp tận nơi cho cửa hàng của bạn.
+                    </p>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200">
+                    <h3 class="font-bold text-slate-900 text-base flex items-center justify-between cursor-pointer">
+                        <span><i class="fa-solid fa-circle-question text-vnpayBlue mr-2"></i> Phí chiết khấu (MDR) và chi phí lắp đặt như thế nào?</span>
+                    </h3>
+                    <p class="text-slate-600 text-sm mt-3 pl-6 leading-relaxed">
+                        Hiện tại, chương trình đăng ký qua đại lý đối tác được áp dụng chính sách hỗ trợ chi phí ưu đãi tốt nhất. Mức phí chiết khấu sẽ được chuyên viên tư vấn chi tiết dựa trên lĩnh vực kinh doanh cụ thể của cửa hàng sau khi nhận thông tin đăng ký.
+                    </p>
+                </div>
+            </div>
         </div>
-        <div class="pain-card">
-            <h3>Nhầm lẫn, thất thoát khi thu ngân</h3>
-            <p>Quản lý tiền mặt dễ nhầm tiền thừa, tiền giả. VNPAY giúp đối soát chính xác 100% dòng tiền theo thời gian thực.</p>
-        </div>
-        <div class="pain-card">
-            <h3>Trải nghiệm thanh toán chậm chạp</h3>
-            <p>Xếp hàng chờ đợi thanh toán giảm sự hài lòng. Tốc độ quét QR/SmartPOS VNPAY chỉ mất 3-5 giây cho mỗi giao dịch.</p>
-        </div>
-    </div>
-</div>
-</section>
+    </section>
 
-<!-- SERVICES (KHU VỰC VÀNG - ĐÃ THÊM ĐỦ 4 ĐẦU MỤC) -->
-<section class="section">
-<div class="container">
-    <div class="section-title">
-        <small>DỊCH VỤ CUNG CẤP</small>
-        <h2>Lựa chọn giải pháp phù hợp với bạn</h2>
-    </div>
+    <!-- Testimonials Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                <span class="text-xs font-bold text-vnpayBlue uppercase tracking-widest bg-blue-100 px-3 py-1 rounded-full">Đánh Giá Thực Tế</span>
+                <h2 class="text-3xl font-extrabold text-slate-900">Chủ cửa hàng nói gì về chúng tôi?</h2>
+            </div>
 
-    <div class="services">
-        <div class="service">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                
+                <!-- Review 1 -->
+                <div class="bg-slate-50 p-6 rounded-3xl border border-slate-200/80 flex flex-col justify-between space-y-4">
+                    <div class="text-amber-400 text-sm space-x-0.5">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-slate-700 text-sm italic leading-relaxed">"Từ ngày đặt mã VNPAY-QR tại quầy, việc thu tiền nhanh hơn hẳn. Khách trẻ giờ toàn quét mã, vừa tiện cho khách vừa giúp shop không phải lo đổi tiền lẻ."</p>
+                    <div class="flex items-center space-x-3 pt-4 border-t border-slate-200">
+                        <img src="https://raw.githubusercontent.com/thanhtoanvnpay/thanhtoanvnpay.github.io/main/MT.jpg" alt="Chị Minh Trang" class="w-11 h-11 rounded-full object-cover shadow">
+                        <div>
+                            <h4 class="font-bold text-slate-900 text-xs">Chị Minh Trang</h4>
+                            <p class="text-[11px] text-slate-500">Chủ chuỗi thời trang tại Hà Nội</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="bg-slate-50 p-6 rounded-3xl border border-slate-200/80 flex flex-col justify-between space-y-4">
+                    <div class="text-amber-400 text-sm space-x-0.5">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-slate-700 text-sm italic leading-relaxed">"Máy SmartPOS của VNPAY rất tiện, vừa quẹt thẻ vừa quét QR được. Chuyên viên hỗ trợ thủ tục rất nhanh, đăng ký xong 1-2 ngày là có máy dùng."</p>
+                    <div class="flex items-center space-x-3 pt-4 border-t border-slate-200">
+                        <img src="https://raw.githubusercontent.com/thanhtoanvnpay/thanhtoanvnpay.github.io/main/TA.jpeg" alt="Anh Tuấn Anh" class="w-11 h-11 rounded-full object-cover shadow">
+                        <div>
+                            <h4 class="font-bold text-slate-900 text-xs">Anh Tuấn Anh</h4>
+                            <p class="text-[11px] text-slate-500">Quản lý Nhà hàng Hải Sản, TP.HCM</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="bg-slate-50 p-6 rounded-3xl border border-slate-200/80 flex flex-col justify-between space-y-4">
+                    <div class="text-amber-400 text-sm space-x-0.5">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-slate-700 text-sm italic leading-relaxed">"Giải pháp PhonePOS quá tuyệt vời! Mình bán hàng hội chợ lưu động không cần mang máy móc cồng kềnh, chỉ cần dùng ngay điện thoại là quẹt thẻ nhận tiền luôn."</p>
+                    <div class="flex items-center space-x-3 pt-4 border-t border-slate-200">
+                        <img src="https://raw.githubusercontent.com/thanhtoanvnpay/thanhtoanvnpay.github.io/main/HY.jpg" alt="Chị Hoàng Yến" class="w-11 h-11 rounded-full object-cover shadow">
+                        <div>
+                            <h4 class="font-bold text-slate-900 text-xs">Chị Hoàng Yến</h4>
+                            <p class="text-[11px] text-slate-500">Chủ cửa hàng Nông sản sạch</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 4 -->
+                <div class="bg-slate-50 p-6 rounded-3xl border border-slate-200/80 flex flex-col justify-between space-y-4">
+                    <div class="text-amber-400 text-sm space-x-0.5">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-slate-700 text-sm italic leading-relaxed">"Website bán hàng tích hợp Cổng thanh toán VNPAY giúp tỷ lệ hủy đơn giảm hẳn. Khách hàng yên tâm vì thanh toán rất an toàn và tiện lợi."</p>
+                    <div class="flex items-center space-x-3 pt-4 border-t border-slate-200">
+                        <img src="https://raw.githubusercontent.com/thanhtoanvnpay/thanhtoanvnpay.github.io/main/QD.png" alt="Anh Quốc Dũng" class="w-11 h-11 rounded-full object-cover shadow">
+                        <div>
+                            <h4 class="font-bold text-slate-900 text-xs">Anh Quốc Dũng</h4>
+                            <p class="text-[11px] text-slate-500">CEO Công ty Mỹ phẩm Natural</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Bottom CTA Banner -->
+    <section class="py-20 bg-gradient-to-r from-blue-900 via-vnpayBlue to-blue-800 text-white text-center relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-6">
+            <h2 class="text-3xl sm:text-4xl font-extrabold">Sẵn sàng tối ưu doanh thu ngay hôm nay?</h2>
+            <p class="text-blue-100 text-base sm:text-lg max-w-2xl mx-auto">Để lại thông tin, chuyên viên tư vấn VNPAY sẽ liên hệ hỗ trợ bạn hoàn toàn miễn phí trong thời gian sớm nhất.</p>
             <div>
-                <h3>1. Mã VNPAY-QR</h3>
-                <p>Đặt tại quầy thu ngân. Khách hàng dùng App Ngân hàng bất kỳ để quét mã trả tiền ngay tức thì.</p>
+                <a href="#dang-ky" class="inline-flex items-center space-x-2 bg-amber-400 hover:bg-amber-300 text-slate-900 font-extrabold px-8 py-4 rounded-2xl text-base shadow-xl transition transform hover:-translate-y-1">
+                    <i class="fa-solid fa-rocket"></i>
+                    <span>ĐĂNG KÝ TƯ VẤN MIỄN PHÍ</span>
+                </a>
             </div>
-            <a href="#dang-ky" class="service-link">Đăng ký QR →</a>
         </div>
+    </section>
 
-        <div class="service">
-            <div>
-                <h3>2. Máy VNPAY SmartPOS</h3>
-                <p>Thiết bị quẹt thẻ Android thông minh, hỗ trợ quẹt thẻ Visa/Master, in hóa đơn và quét mã QR trên cùng 1 máy.</p>
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
+            <div class="flex items-center justify-center space-x-2">
+                <img src="https://thanhtoanvnpay.github.io/100kb.jpg" alt="Logo VNPAY" class="h-8 w-auto rounded opacity-80">
+                <span class="text-white font-bold tracking-wider">VNPAY - ĐỐI TÁC BÁN HÀNG</span>
             </div>
-            <a href="#dang-ky" class="service-link">Đăng ký SmartPOS →</a>
-        </div>
-
-        <div class="service">
-            <div>
-                <div class="service-sub">Biến điện thoại thành POS đầu tiên ở Việt Nam</div>
-                <h3>3. VNPAY PhonePOS</h3>
-                <p>Tận dụng thiết bị di động cá nhân để thực hiện thanh toán, không cần tới thiết bị riêng biệt.</p>
+            <p class="text-sm font-medium text-slate-300">Dịch vụ tư vấn &amp; Triển khai Giải pháp Thanh toán VNPAY chính hãng</p>
+            <p class="text-xs text-slate-500 max-w-lg mx-auto">Hỗ trợ đăng ký VNPAY-QR, SmartPOS, PhonePOS &amp; Cổng thanh toán toàn quốc. Hotline/Zalo: 0968.122.893</p>
+            <div class="pt-6 border-t border-slate-800 text-xs text-slate-600">
+                &copy; 2026 thanhtoanvnpay.github.io. All rights reserved.
             </div>
-            <a href="#dang-ky" class="service-link">Đăng ký PhonePOS →</a>
         </div>
+    </footer>
 
-        <div class="service">
-            <div>
-                <h3>4. Cổng thanh toán VNPAY</h3>
-                <p>Giải pháp “may đo” toàn diện giúp nhà bán hàng tăng trưởng doanh thu mạnh mẽ nhờ khả năng chấp nhận đa dạng hình thức thanh toán.</p>
-            </div>
-            <a href="#dang-ky" class="service-link">Đăng ký Cổng thanh toán →</a>
-        </div>
+    <!-- Floating Action Buttons (Zalo Chat & Call) -->
+    <div class="fixed bottom-6 right-6 z-50 flex flex-col space-y-3">
+        <!-- Zalo Button with pulse -->
+        <a href="https://zalo.me/0968122893" target="_blank" title="Chat Zalo Tư Vấn" class="relative group flex items-center bg-blue-600 text-white p-3.5 rounded-full shadow-2xl hover:bg-blue-700 transition transform hover:scale-110">
+            <span class="absolute -top-1 -right-1 flex h-3 w-3">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
+            </span>
+            <span class="max-w-0 overflow-hidden whitespace-nowrap group-hover:max-w-xs transition-all duration-300 ease-in-out font-bold text-xs px-0 group-hover:px-2">
+                Chat Zalo Nhanh
+            </span>
+            <i class="fa-solid fa-comment-dots text-xl"></i>
+        </a>
+
+        <!-- Hotline Call Button -->
+        <a href="tel:0968122893" title="Gọi ngay Hotline" class="flex items-center bg-green-600 text-white p-3.5 rounded-full shadow-2xl hover:bg-green-700 transition transform hover:scale-110">
+            <i class="fa-solid fa-phone-volume text-xl"></i>
+        </a>
     </div>
-</div>
-</section>
 
-<!-- KHỐI ĐÁNH GIÁ KHÁCH HÀNG (KHU VỰC ĐỎ - ĐÃ THÊM ĐỦ 4 ĐÁNH GIÁ) -->
-<section class="section section-light">
-<div class="container">
-    <div class="section-title">
-        <small>ĐÁNH GIÁ THỰC TẾ</small>
-        <h2>Chủ cửa hàng nói gì về chúng tôi?</h2>
-    </div>
+    <!-- Script for Form Handling & Interactive States -->
+    <script>
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            
+            const name = document.getElementById('cusName').value;
+            const phone = document.getElementById('cusPhone').value;
+            
+            // Set values to display in success box
+            document.getElementById('displayName').innerText = name;
+            document.getElementById('displayPhone').innerText = phone;
+            
+            // Hide form, show success message
+            document.getElementById('consultationForm').classList.add('hidden');
+            document.getElementById('successMessage').classList.remove('hidden');
+            
+            // In real deployment, you can integrate fetch/AJAX here to send lead data to Google Sheets or Telegram/Zalo webhook.
+        }
 
-    <div class="testimonials-grid">
-        <!-- Nhận xét 1 -->
-<div class="testimonial-card">
-    <div class="testimonial-text">"Từ ngày đặt mã VNPAY-QR tại quầy, việc thu tiền nhanh hơn hẳn. Khách trẻ giờ toàn quét mã, vừa tiện cho khách vừa giúp shop không phải lo đổi tiền lẻ."</div>
-    <div class="testimonial-author">
-        <img 
-            src="https://raw.githubusercontent.com/thanhtoanvnpay/thanhtoanvnpay.github.io/main/MT.jpg" 
-            class="author-avatar-img" 
-            alt="Chị Minh Trang"
-            onerror="this.onerror=null; this.src='https://thanhtoanvnpay.github.io/MT.jpg';"
-        >
-        <div class="author-info">
-            <h4>Chị Minh Trang</h4>
-            <p>Chủ chuỗi thời trang tại Hà Nội</p>
-        </div>
-    </div>
-</div>
-
-        <!-- Nhận xét 2 -->
-<div class="testimonial-card">
-    <div class="testimonial-text">"Máy SmartPOS của VNPAY rất tiện, vừa quẹt thẻ vừa quét QR được. Chuyên viên hỗ trợ thủ tục rất nhanh, đăng ký xong 1-2 ngày là có máy dùng."</div>
-    <div class="testimonial-author">
-        <img 
-            src="https://raw.githubusercontent.com/thanhtoanvnpay/thanhtoanvnpay.github.io/main/TA.jpeg" 
-            class="author-avatar-img" 
-            alt="Anh Tuấn Anh"
-            onerror="this.onerror=null; this.src='https://thanhtoanvnpay.github.io/TA.jpeg';"
-        >
-        <div class="author-info">
-            <h4>Anh Tuấn Anh</h4>
-            <p>Quản lý Nhà hàng Hải Sản, TP.HCM</p>
-        </div>
-    </div>
-</div>
-
-        <!-- Nhận xét 3 -->
-<div class="testimonial-card">
-    <div class="testimonial-text">"Giải pháp PhonePOS quá tuyệt vời! Mình bán hàng hội chợ lưu động không cần mang máy móc cồng kềnh, chỉ cần dùng ngay chiếc điện thoại di động là quẹt thẻ nhận tiền được luôn."</div>
-    <div class="testimonial-author">
-        <img 
-            src="https://raw.githubusercontent.com/thanhtoanvnpay/thanhtoanvnpay.github.io/main/HY.jpg" 
-            class="author-avatar-img" 
-            alt="Chị Hoàng Yến"
-            onerror="this.onerror=null; this.src='https://thanhtoanvnpay.github.io/HY.jpg';"
-        >
-        <div class="author-info">
-            <h4>Chị Hoàng Yến</h4>
-            <p>Chủ cửa hàng Nông sản sạch</p>
-        </div>
-    </div>
-</div>
-
-        <!-- Nhận xét 4 -->
-<div class="testimonial-card">
-    <div class="testimonial-text">"Website bán hàng trực tuyến của bên mình tích hợp Cổng thanh toán VNPAY giúp tỷ lệ hủy đơn giảm hẳn. Khách hàng yên tâm vì thanh toán rất an toàn và tiện lợi."</div>
-    <div class="testimonial-author">
-        <img 
-            src="https://raw.githubusercontent.com/thanhtoanvnpay/thanhtoanvnpay.github.io/main/QD.png" 
-            class="author-avatar-img" 
-            alt="Anh Quốc Dũng"
-            onerror="this.onerror=null; this.src='https://thanhtoanvnpay.github.io/QD.png';"
-        >
-        <div class="author-info">
-            <h4>Anh Quốc Dũng</h4>
-            <p>CEO Công ty Mỹ phẩm Natural</p>
-        </div>
-    </div>
-</div>
-
-    </div>
-</div>
-</section>
-
-<!-- FINAL CTA -->
-<section class="final">
-<div class="container">
-    <h2>Sẵn sàng tối ưu doanh thu ngay hôm nay?</h2>
-    <p>Để lại thông tin, chuyên viên tư vấn VNPAY sẽ liên hệ hỗ trợ bạn miễn phí trong thời gian sớm nhất.</p>
-    <a href="#dang-ky" class="final-cta-btn">👉 ĐĂNG KÝ TƯ VẤN MIỄN PHÍ</a>
-</div>
-</section>
-
-<!-- FOOTER -->
-<footer>
-<div class="container">
-    <p><strong>Dịch vụ tư vấn & Triển khai Giải pháp Thanh toán VNPAY</strong></p>
-    <p style="margin-top:5px; color:#666;">Hỗ trợ đăng ký VNPAY-QR, SmartPOS, PhonePOS & Cổng thanh toán toàn quốc</p>
-</div>
-</footer>
-
-<!-- MOBILE STICKY CTA -->
-<div class="mobile-cta">
-    <a href="#dang-ky">👉 ĐĂNG KÝ TƯ VẤN MIỄN PHÍ</a>
-</div>
-
-<script>
-var submitted = false;
-</script>
-
+        function resetForm() {
+            document.getElementById('consultationForm').reset();
+            document.getElementById('consultationForm').classList.remove('hidden');
+            document.getElementById('successMessage').classList.add('hidden');
+        }
+    </script>
 </body>
 </html>
