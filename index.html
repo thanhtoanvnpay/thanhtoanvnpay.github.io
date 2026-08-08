@@ -178,7 +178,7 @@ a{
 }
 
 /* ==================================================
-   HERO SECTION (CHIA 2 CỘT SONG SONG CHUẨN BỐ CỤC)
+   HERO SECTION (CÂN ĐỐI 2 CỘT CHUẨN)
 ================================================== */
 .hero{
     background: radial-gradient(circle at 90% 0%, rgba(0, 102, 255, .08), transparent 40%),
@@ -188,9 +188,24 @@ a{
 
 .hero-grid{
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Chia 2 cột bằng nhau */
+    grid-template-columns: 1fr 1fr;
     gap: 40px;
-    align-items: flex-start; /* Căn lề trên cùng cho 2 cột */
+    align-items: flex-start;
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+.hero-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.hero-right {
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .badge{
@@ -246,14 +261,17 @@ a{
     font-size:11px;
 }
 
-/* KHỐI VIDEO DỌC */
+/* KHỐI VIDEO DỌC CĂN THẲNG LỀ TRÁI */
 .video-box {
     margin-top: 20px;
     background: #000;
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 10px 25px rgba(0,0,0,0.12);
-    max-width: 320px;
+    width: 100%;
+    max-width: 360px;
+    margin-left: 0;
+    margin-right: auto;
 }
 .video-title {
     background: #1e293b;
@@ -271,14 +289,16 @@ a{
 }
 
 /* ==================================================
-   LEAD FORM (CỘT BÊN PHẢI)
+   LEAD FORM (BÊN PHẢI)
 ================================================== */
 .form-card{
+    width: 100%;
+    max-width: 460px;
     background:white;
     border: 1px solid var(--border);
     border-radius:16px;
     padding:28px;
-    box-shadow: 0 20px 50px rgba(0,102,255,0.08);
+    box-shadow: 0 15px 35px rgba(0,102,255,0.1);
 }
 
 .form-card h2{
@@ -623,11 +643,11 @@ footer{
     </div>
 </header>
 
-<!-- HERO SECTION: CẤU TRÚC 2 CỘT CHUẨN BỐ CỤC -->
+<!-- HERO SECTION: CẤU TRÚC 2 CỘT CÂN BẰNG -->
 <section class="hero">
 <div class="container hero-grid">
 
-    <!-- CỘT 1 (BÊN TRÁI): TIÊU ĐỀ + ƯU ĐIỂM + VIDEO -->
+    <!-- CỘT BÊN TRÁI: TIÊU ĐỀ + ƯU ĐIỂM + VIDEO -->
     <div class="hero-left">
         <div class="badge">
             🛡️ GIẢI PHÁP THANH TOÁN TOÀN DIỆN
@@ -649,7 +669,7 @@ footer{
         </div>
     </div>
 
-    <!-- CỘT 2 (BÊN PHẢI - KHU VỰC KHOANH VÀNG): FORM ĐĂNG KÝ -->
+    <!-- CỘT BÊN PHẢI: FORM ĐĂNG KÝ (KHU VỰC KHOANH VÀNG) -->
     <div class="hero-right">
         <div class="form-card" id="dang-ky">
             <h2>Đăng Ký Tư Vấn</h2>
