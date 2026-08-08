@@ -178,7 +178,7 @@ a{
 }
 
 /* ==================================================
-   HERO SECTION (CÂN ĐỐI 2 CỘT CHUẨN)
+   HERO SECTION
 ================================================== */
 .hero{
     background: radial-gradient(circle at 90% 0%, rgba(0, 102, 255, .08), transparent 40%),
@@ -205,7 +205,9 @@ a{
 .hero-right {
     width: 100%;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* Tạo khoảng cách giữa Form và Khối thông số bên dưới */
 }
 
 .badge{
@@ -261,7 +263,7 @@ a{
     font-size:11px;
 }
 
-/* KHỐI VIDEO DỌC CĂN THẲNG LỀ TRÁI */
+/* KHỐI VIDEO DỌC */
 .video-box {
     margin-top: 20px;
     background: #000;
@@ -289,7 +291,7 @@ a{
 }
 
 /* ==================================================
-   LEAD FORM (BÊN PHẢI)
+   LEAD FORM & TRUST IN HERO RIGHT
 ================================================== */
 .form-card{
     width: 100%;
@@ -391,19 +393,18 @@ input:focus, select:focus{
     margin-top:10px;
 }
 
-/* ==================================================
-   TRUST BAR & ĐỐI TÁC
-================================================== */
-.trust{
-    background:white;
-    border-bottom: 1px solid var(--border);
-    padding:22px 0;
-}
-
-.trust-grid{
-    display:grid;
-    grid-template-columns: repeat(3,1fr);
-    gap:15px;
+/* KHỐI THÔNG SỐ CHUYỂN VÀO BÊN DƯỚI FORM (KHU VỰC ĐỎ) */
+.hero-trust-grid {
+    width: 100%;
+    max-width: 460px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 15px 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
 }
 
 .trust-item{
@@ -415,16 +416,24 @@ input:focus, select:focus{
 .trust-number{
     display:block;
     color:var(--blue);
-    font-size:28px;
+    font-size:22px;
     font-weight:900;
 }
-.trust-label{ color:var(--gray); font-size:12px; }
+.trust-label{ 
+    color:var(--gray); 
+    font-size:11px; 
+    line-height: 1.2;
+}
 
+/* ==================================================
+   ĐỐI TÁC TIÊU BIỂU
+================================================== */
 .partners-section {
     padding: 22px 0;
     background: var(--light);
     text-align: center;
     border-bottom: 1px solid var(--border);
+    border-top: 1px solid var(--border);
 }
 
 .partners-title {
@@ -643,7 +652,7 @@ footer{
     </div>
 </header>
 
-<!-- HERO SECTION: CẤU TRÚC 2 CỘT CÂN BẰNG -->
+<!-- HERO SECTION -->
 <section class="hero">
 <div class="container hero-grid">
 
@@ -669,7 +678,7 @@ footer{
         </div>
     </div>
 
-    <!-- CỘT BÊN PHẢI: FORM ĐĂNG KÝ (KHU VỰC KHOANH VÀNG) -->
+    <!-- CỘT BÊN PHẢI: FORM ĐĂNG KÝ + KHỐI THÔNG SỐ (ĐÃ ĐƯA VÀO VỊ TRÍ ĐỎ) -->
     <div class="hero-right">
         <div class="form-card" id="dang-ky">
             <h2>Đăng Ký Tư Vấn</h2>
@@ -716,27 +725,26 @@ footer{
                 <p class="form-security">🔒 Bảo mật thông tin khách hàng tuyệt đối</p>
             </form>
         </div>
+
+        <!-- KHỐI THÔNG SỐ ĐÃ ĐƯỢC CHUYỂN VÀO ĐÂY -->
+        <div class="hero-trust-grid">
+            <div class="trust-item">
+                <span class="trust-number">40+</span>
+                <span class="trust-label">Ngân hàng liên kết</span>
+            </div>
+            <div class="trust-item">
+                <span class="trust-number">30M+</span>
+                <span class="trust-label">Người dùng App Ngân hàng</span>
+            </div>
+            <div class="trust-item">
+                <span class="trust-number">24/7</span>
+                <span class="trust-label">Hỗ trợ kỹ thuật</span>
+            </div>
+        </div>
+
     </div>
 
 </div>
-</section>
-
-<!-- TRUST BAR -->
-<section class="trust">
-    <div class="container trust-grid">
-        <div class="trust-item">
-            <span class="trust-number">40+</span>
-            <span class="trust-label">Ngân hàng liên kết</span>
-        </div>
-        <div class="trust-item">
-            <span class="trust-number">30M+</span>
-            <span class="trust-label">Người dùng App Ngân hàng</span>
-        </div>
-        <div class="trust-item">
-            <span class="trust-number">24/7</span>
-            <span class="trust-label">Hỗ trợ kỹ thuật</span>
-        </div>
-    </div>
 </section>
 
 <!-- ĐỐI TÁC TIÊU BIỂU -->
