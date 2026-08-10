@@ -47,8 +47,8 @@
         </div>
     </div>
 
-    <!-- Header / Navbar (Tối ưu sang trọng, không bị rớt dòng) -->
-    <header class="bg-white shadow-sm sticky top-0 z-50 py-3">
+    <!-- Header / Navbar (Đã tối ưu: Loại bỏ các mục khoanh đỏ & Tạo điểm nhấn cho khu vực khoanh vàng) -->
+    <header class="bg-white shadow-md sticky top-0 z-50 py-3">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-4">
             
             <!-- 1. LOGO & THƯƠNG HIỆU -->
@@ -60,57 +60,24 @@
                 </div>
             </a>
 
-            <!-- 2. DANH MỤC ĐẦU TRANG (Rõ ràng, không lo vỡ hàng) -->
-            <nav class="hidden lg:flex items-center gap-7 text-xs sm:text-sm font-semibold text-slate-700">
-                <a href="#giai-phap" class="hover:text-vnpayBlue transition whitespace-nowrap flex items-center gap-1.5">
-                    <i class="fa-solid fa-wand-magic-sparkles text-amber-500"></i>
-                    <span>Giải Pháp</span>
-                </a>
-                <a href="#dich-vu" class="hover:text-vnpayBlue transition whitespace-nowrap relative flex items-center gap-1.5">
-                    <i class="fa-solid fa-fire text-vnpayRed"></i>
-                    <span>Thiết Bị HOT</span>
-                    <span class="bg-vnpayRed text-white text-[9px] font-black px-1.5 py-0.2 rounded-full uppercase">NEW</span>
-                </a>
-                <a href="#uu-dai" class="hover:text-vnpayBlue transition whitespace-nowrap flex items-center gap-1.5">
-                    <i class="fa-solid fa-gift text-green-500"></i>
-                    <span>Đặc Quyền 0Đ</span>
-                </a>
-                <a href="#faq" class="hover:text-vnpayBlue transition whitespace-nowrap flex items-center gap-1.5">
-                    <i class="fa-solid fa-circle-question text-blue-500"></i>
-                    <span>Hỏi Đáp</span>
-                </a>
-            </nav>
-
-            <!-- 3. LIÊN KẾT PHỤ & HOTLINE & NÚT ĐĂNG KÝ -->
-            <div class="flex items-center gap-3 shrink-0">
+            <!-- 2. KHU VỰC ĐƯỢC TẠO ĐIỂM NHẤN (KHU VỰC KHOANH VÀNG) -->
+            <div class="flex items-center gap-3 bg-gradient-to-r from-blue-50 via-indigo-50 to-blue-50 px-4 py-1.5 rounded-2xl border-2 border-blue-200 shadow-md hover:shadow-lg transition duration-300">
                 
-                <!-- Biểu tượng Mạng xã hội nhỏ -->
-                <div class="hidden xl:flex items-center gap-1.5 pr-2 border-r border-slate-200">
-                    <a href="https://www.facebook.com/vnngsolutions.official" target="_blank" rel="noopener noreferrer" title="Facebook" class="w-7 h-7 flex items-center justify-center bg-slate-100 hover:bg-blue-600 hover:text-white text-slate-600 rounded-full transition text-xs">
-                        <i class="fa-brands fa-facebook-f"></i>
+                <!-- Biểu tượng Mạng xã hội -->
+                <div class="flex items-center gap-2 pr-2 border-r border-slate-300">
+                    <a href="https://www.facebook.com/vnngsolutions.official" target="_blank" rel="noopener noreferrer" title="Facebook" class="w-8 h-8 flex items-center justify-center bg-white hover:bg-blue-600 text-blue-600 hover:text-white rounded-full transition transform hover:scale-110 shadow-sm border border-slate-200">
+                        <i class="fa-brands fa-facebook-f text-sm"></i>
                     </a>
-                    <a href="https://www.tiktok.com/@vnngsolutions" target="_blank" rel="noopener noreferrer" title="TikTok" class="w-7 h-7 flex items-center justify-center bg-slate-100 hover:bg-black hover:text-white text-slate-600 rounded-full transition text-xs">
-                        <i class="fa-brands fa-tiktok"></i>
+                    <a href="https://www.tiktok.com/@vnngsolutions" target="_blank" rel="noopener noreferrer" title="TikTok" class="w-8 h-8 flex items-center justify-center bg-white hover:bg-black text-slate-900 hover:text-white rounded-full transition transform hover:scale-110 shadow-sm border border-slate-200">
+                        <i class="fa-brands fa-tiktok text-sm"></i>
                     </a>
                 </div>
 
                 <!-- Logo phụ tidingsk.github.io -->
-                <a href="https://tidingsk.github.io" target="_blank" rel="noopener noreferrer" class="hidden sm:flex items-center hover:opacity-85 transition" title="Liên kết đối tác">
-                    <img src="https://raw.githubusercontent.com/vnngsolutions/vnngsolutions.github.io/main/Logo.jpeg" alt="Logo tidingsk" class="h-9 w-auto object-contain rounded border border-slate-200 shadow-sm">
+                <a href="https://tidingsk.github.io" target="_blank" rel="noopener noreferrer" class="flex items-center hover:opacity-90 transition transform hover:scale-105" title="Liên kết đối tác">
+                    <img src="https://raw.githubusercontent.com/vnngsolutions/vnngsolutions.github.io/main/Logo.jpeg" alt="Logo tidingsk" class="h-9 w-auto object-contain rounded-lg border-2 border-white shadow-sm">
                 </a>
 
-                <!-- Hotline -->
-                <a href="tel:0968122893" class="hidden md:flex items-center gap-2 text-xs text-slate-600 hover:text-vnpayBlue font-medium px-2 py-1 bg-slate-50 rounded-full border border-slate-100">
-                    <div class="w-6 h-6 bg-blue-100 text-vnpayBlue rounded-full flex items-center justify-center text-xs">
-                        <i class="fa-solid fa-phone"></i>
-                    </div>
-                    <span class="pr-1">Hotline: <strong class="text-vnpayBlue text-xs sm:text-sm">0968.122.893</strong></span>
-                </a>
-
-                <!-- Nút Đăng ký CTA -->
-                <a href="#dang-ky" class="bg-vnpayBlue hover:bg-blue-800 text-white font-bold text-xs sm:text-sm px-4 py-2.5 rounded-xl shadow-sm transition transform active:scale-95 whitespace-nowrap">
-                    Đăng Ký Ngay
-                </a>
             </div>
 
         </div>
