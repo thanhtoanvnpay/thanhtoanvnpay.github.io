@@ -39,50 +39,51 @@
         <div>
             🔥 <span class="font-bold underline uppercase">Ưu đãi tháng này:</span> Miễn phí khảo sát, tư vấn giải pháp &amp; Hỗ trợ thủ tục đăng ký VNPAY trọn gói!
         </div>
+        <!-- Khung đếm ngược đếm động -->
         <div class="bg-black/20 backdrop-blur-md px-2.5 py-0.5 rounded-full border border-white/30 text-[11px] font-semibold flex items-center gap-1.5">
             <i class="fa-solid fa-clock text-amber-300 animate-pulse"></i>
-            <span>Miễn phí còn:</span>
+            <span>Kết thúc sau:</span>
             <span id="header-timer" class="font-extrabold text-amber-300 tracking-wider">04d 23h 59m 31s</span>
         </div>
     </div>
 
     <!-- Header / Navbar -->
-    <header class="bg-slate-900 text-white shadow-md sticky top-0 z-50 py-3 border-b border-slate-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-4">
+<header class="bg-slate-900 text-white shadow-md sticky top-0 z-50 py-2.5 sm:py-3 border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 flex items-center justify-between gap-2">
+        
+        <!-- 1. LOGO & THƯƠNG HIỆU -->
+        <a href="#" class="flex items-center gap-2 shrink-0">
+            <img alt="VNNG Solutions" src="https://raw.githubusercontent.com/thanhtoanvnpay/thanhtoanvnpay.github.io/main/VNNG.png" class="h-8 sm:h-10 w-auto object-contain shrink-0">
+            <div class="flex flex-col justify-center">
+                <span class="font-extrabold text-xs sm:text-base text-white tracking-tight leading-none">VNNG SOLUTIONS</span>
+                <span class="text-[8px] sm:text-[10px] text-slate-400 font-medium mt-0.5 leading-none">Giải pháp thanh toán VNPAY</span>
+            </div>
+        </a>
+
+        <!-- 2. KHU VỰC LIÊN KẾT ĐỐI TÁC (Đã sửa căn giữa chuẩn 100%) -->
+        <div class="flex items-center gap-2 bg-slate-800/80 px-2.5 py-1.5 rounded-2xl border border-slate-700 shadow-md shrink-0">
             
-            <!-- 1. LOGO & THƯƠNG HIỆU -->
-            <a href="#" class="flex items-center gap-3 shrink-0">
-                <img alt="VNNG Solutions" src="https://raw.githubusercontent.com/thanhtoanvnpay/thanhtoanvnpay.github.io/main/VNNG.png" class="h-10 w-auto object-contain">
-                <div class="flex flex-col">
-                    <span class="font-extrabold text-base text-white tracking-tight leading-none">VNNG SOLUTIONS</span>
-                    <span class="text-[10px] text-slate-400 font-medium mt-1">Giải pháp thanh toán VNPAY</span>
-                </div>
-            </a>
-
-            <!-- 2. KHU VỰC LIÊN KẾT -->
-            <div class="flex items-center gap-3 bg-slate-800/80 px-4 py-1.5 rounded-2xl border border-slate-700 shadow-md">
-                
-                <!-- Biểu tượng Mạng xã hội -->
-                <div class="flex items-center gap-2 pr-2 border-r border-slate-700">
-                    <a href="https://www.facebook.com/vnngsolutions.official" target="_blank" rel="noopener noreferrer" title="Facebook" class="w-8 h-8 flex items-center justify-center bg-slate-700 hover:bg-blue-600 text-blue-400 hover:text-white rounded-full transition transform hover:scale-110 shadow-sm border border-slate-600">
-                        <i class="fa-brands fa-facebook-f text-sm"></i>
-                    </a>
-                    <a href="https://www.tiktok.com/@vnngsolutions" target="_blank" rel="noopener noreferrer" title="TikTok" class="w-8 h-8 flex items-center justify-center bg-slate-700 hover:bg-black text-slate-200 hover:text-white rounded-full transition transform hover:scale-110 shadow-sm border border-slate-600">
-                        <i class="fa-brands fa-tiktok text-sm"></i>
-                    </a>
-                </div>
-
-                <!-- Logo phụ tidingsk.github.io -->
-<a href="https://tidingsk.github.io" target="_blank" rel="noopener noreferrer" class="flex items-center hover:opacity-90 transition transform hover:scale-105 shrink-0" title="Liên kết đối tác">
-    <img src="https://raw.githubusercontent.com/vnngsolutions/vnngsolutions.github.io/main/Logo.jpeg" 
-         alt="Logo tidingsk" 
-         class="w-9 h-9 aspect-square object-cover rounded-full border-2 border-slate-600 shadow-sm shrink-0">
-</a>
-
+            <!-- Biểu tượng Mạng xã hội -->
+            <div class="flex items-center gap-1.5 pr-2 border-r border-slate-600/80 my-auto">
+                <a href="https://www.facebook.com/vnngsolutions.official" target="_blank" rel="noopener noreferrer" title="Facebook" class="w-7 h-7 flex items-center justify-center bg-slate-700 hover:bg-blue-600 text-blue-400 hover:text-white rounded-full transition transform hover:scale-110 shadow-sm border border-slate-600 shrink-0">
+                    <i class="fa-brands fa-facebook-f text-xs"></i>
+                </a>
+                <a href="https://www.tiktok.com/@vnngsolutions" target="_blank" rel="noopener noreferrer" title="TikTok" class="w-7 h-7 flex items-center justify-center bg-slate-700 hover:bg-black text-slate-200 hover:text-white rounded-full transition transform hover:scale-110 shadow-sm border border-slate-600 shrink-0">
+                    <i class="fa-brands fa-tiktok text-xs"></i>
+                </a>
             </div>
 
+            <!-- Logo phụ tidingsk.github.io -->
+            <a href="https://tidingsk.github.io" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center hover:opacity-90 transition transform hover:scale-105 my-auto shrink-0" title="Liên kết đối tác">
+                <img src="https://raw.githubusercontent.com/vnngsolutions/vnngsolutions.github.io/main/Logo.jpeg" 
+                     alt="Logo tidingsk" 
+                     class="w-7 h-7 aspect-square object-cover rounded-full border-2 border-slate-600 shadow-sm shrink-0 block">
+            </a>
+
         </div>
-    </header>
+
+    </div>
+</header>
 
     <!-- Hero Section -->
     <section class="relative overflow-hidden bg-gradient-to-b from-slate-900 via-blue-950 to-slate-900 text-white py-16 lg:py-24" id="giai-phap">
@@ -572,6 +573,112 @@
             document.getElementById('consultationForm').classList.remove('hidden');
             document.getElementById('successMessage').classList.add('hidden');
         }
+
+        // BỘ ĐẾM THỜI GIAN ĐẾM NGƯỢC ĐỘNG (REAL-TIME COUNTDOWN TIMER)
+        (function startCountdown() {
+            // Mặc định thời gian đếm ngược: 5 ngày (tính bằng milisec)
+            const FIVE_DAYS_MS = (4 * 24 * 60 * 60 + 23 * 3600 + 59 * 60 + 31) * 1000;
+            
+            let targetTime = localStorage.getItem('vnpay_countdown_target');
+            const now = new Date().getTime();
+
+            if (!targetTime || now >= parseInt(targetTime, 10)) {
+                targetTime = now + FIVE_DAYS_MS;
+                localStorage.setItem('vnpay_countdown_target', targetTime);
+            } else {
+                targetTime = parseInt(targetTime, 10);
+            }
+
+            const timerElement = document.getElementById('header-timer');
+
+            function updateTimer() {
+                const currentTime = new Date().getTime();
+                const distance = targetTime - currentTime;
+
+                if (distance <= 0) {
+                    timerElement.innerText = "00d 00h 00m 00s";
+                    return;
+                }
+
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000Dưới đây là mã nguồn HTML, CSS và JavaScript hoàn chỉnh để đổi nhãn thành **"Kết thúc sau:"** cùng với **bộ đếm ngược thời gian thực (chạy động)**.
+
+### Mã HTML, CSS & JavaScript
+
+```html
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đếm ngược thời gian</title>
+    <style>
+        .promo-box {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            border: 1px solid #e0e0e0;
+            padding: 15px 20px;
+            border-radius: 8px;
+            display: inline-block;
+        }
+
+        .promo-label {
+            font-weight: bold;
+            color: #333;
+            margin-right: 8px;
+        }
+
+        .timer-display {
+            font-weight: bold;
+            color: #d9534f;
+            background-color: #fff0f0;
+            padding: 4px 8px;
+            border-radius: 4px;
+            border: 1px solid #ffcdd2;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="promo-box">
+        <span class="promo-label">Kết thúc sau:</span>
+        <span id="countdown" class="timer-display">00:00:00</span>
+    </div>
+
+    <script>
+        // Thiết lập thời gian đích (Ví dụ: 2 giờ 30 phút kể từ hiện tại)
+        // Bạn có thể đổi thành ngày cố định, ví dụ: new Date("2026-12-31T23:59:59").getTime();
+        const targetTime = new Date().getTime() + (2 * 60 * 60 * 1000) + (30 * 60 * 1000);
+
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const distance = targetTime - now;
+
+            if (distance < 0) {
+                document.getElementById("countdown").innerText = "Đã hết hạn";
+                clearInterval(timerInterval);
+                return;
+            }
+
+            // Tính toán giờ, phút, giây
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Định dạng thêm số 0 đằng trước nếu nhỏ hơn 10
+            const formatTime = (unit) => unit < 10 ? `0${unit}` : unit;
+
+            // Cập nhật giao diện
+            document.getElementById("countdown").innerText = 
+                `${formatTime(hours)}:${formatTime(minutes)}:${formatTime(seconds)}`;
+        }
+
+        // Chạy hàm ngay lập tức và thiết lập lặp lại mỗi 1 giây (1000ms)
+        updateCountdown();
+        const timerInterval = setInterval(updateCountdown, 1000);
     </script>
+
 </body>
 </html>
