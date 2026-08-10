@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thanh Toán VNPAY - Tăng Doanh Thu Cho Cửa Hàng & Doanh Nghiệp</title>
     
-    <!-- Thêm dòng này để hiển thị logo trên tab trình duyệt (Favicon) -->
+    <!-- Favicon -->
     <link rel="icon" type="image/jpeg" href="https://raw.githubusercontent.com/vnngsolutions/vnngsolutions.github.io/main/VNNG.png">
 
     <meta name="description" content="Đăng ký lắp đặt VNPAY-QR, SmartPOS, PhonePOS và Cổng thanh toán chính hãng. Hỗ trợ thủ tục nhanh chóng, chiết khấu hấp dẫn, dòng tiền về tài khoản ngay lập tức.">
@@ -29,6 +29,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Inter', sans-serif; }
+        
+        /* Hiệu ứng đếm ngược pulse nhẹ */
+        .countdown-box {
+            background: rgba(237, 28, 36, 0.08);
+            border: 1px dashed #ED1C24;
+        }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-800 antialiased selection:bg-vnpayBlue selection:text-white">
@@ -51,21 +57,63 @@
             </div>
         </div>
 
-        <!-- THÔNG TIN LIÊN HỆ & CTA -->
-        <div style="display: flex; align-items: center; gap: 20px;">
+        <!-- DANH MỤC THU HÚT & KÍCH THÍCH TÒ MÒ -->
+        <nav class="hidden lg:flex items-center gap-6 text-sm font-semibold text-slate-700">
+            <a href="#giai-phap" class="hover:text-vnpayBlue transition flex items-center gap-1.5 group">
+                <i class="fa-solid fa-wand-magic-sparkles text-amber-500 group-hover:rotate-12 transition transform"></i>
+                <span>Giải Pháp Đột Phá</span>
+            </a>
+            <a href="#dich-vu" class="hover:text-vnpayBlue transition flex items-center gap-1.5 relative group">
+                <i class="fa-solid fa-fire text-vnpayRed"></i>
+                <span>Thiết Bị HOT</span>
+                <span class="absolute -top-3 -right-3 bg-vnpayRed text-white text-[9px] font-extrabold px-1.5 py-0.5 rounded-full animate-bounce">NEW</span>
+            </a>
+            <a href="#uu-dai" class="hover:text-vnpayBlue transition flex items-center gap-1.5 group">
+                <i class="fa-solid fa-gift text-emerald-500 group-hover:scale-110 transition transform"></i>
+                <span>Đặc Quyền 0Đ</span>
+            </a>
+            <a href="#faq" class="hover:text-vnpayBlue transition flex items-center gap-1.5">
+                <i class="fa-solid fa-circle-question text-blue-500"></i>
+                <span>Hỏi Đáp Nhanh</span>
+            </a>
+        </nav>
+
+        <!-- THÔNG TIN LIÊN HỆ, MẠNG XÃ HỘI, DEMO ĐẾM NGƯỢC & CTA -->
+        <div style="display: flex; align-items: center; gap: 12px;">
+            
             <!-- Hotline -->
-            <div style="display: none; @media(min-width: 768px){display: flex;} align-items: center; gap: 8px; background: #f8f9fa; padding: 8px 14px; border-radius: 30px; border: 1px solid #eee;">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0052cc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-                <span style="font-size: 13px; color: #444;">Hỗ trợ 24/7: <strong style="color: #0052cc;">0968 122 893</strong></span>
+            <div style="display: none; @media(min-width: 1024px){display: flex;} align-items: center; gap: 8px; background: #f8f9fa; padding: 6px 12px; border-radius: 30px; border: 1px solid #eee;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0052cc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                <span style="font-size: 12px; color: #444;">Hotline: <strong style="color: #0052cc;">0968 122 893</strong></span>
             </div>
 
-            <!-- Thêm Logo vào vị trí khung đỏ với liên kết trỏ tới https://tidingsk.github.io -->
-            <a href="https://tidingsk.github.io" target="_blank" rel="noopener noreferrer" style="display: flex; align-items: center;">
-                <img src="https://raw.githubusercontent.com/vnngsolutions/vnngsolutions.github.io/main/Logo.jpeg" alt="Logo" style="height: 40px; width: auto; object-fit: contain; border-radius: 4px;">
+            <!-- NÚT FACEBOOK (Khu vực khoanh vàng) -->
+            <a href="https://www.facebook.com/vnngsolutions.official" target="_blank" rel="noopener noreferrer" title="Ghé thăm Facebook VNNG Solutions" class="w-9 h-9 flex items-center justify-center bg-blue-600 hover:bg-blue-700 text-white rounded-full transition shadow-sm hover:scale-105">
+                <i class="fa-brands fa-facebook-f text-base"></i>
+            </a>
+
+            <!-- NÚT TIKTOK (Khu vực khoanh xanh) -->
+            <a href="https://www.tiktok.com/@vnngsolutions" target="_blank" rel="noopener noreferrer" title="Ghé thăm TikTok VNNG Solutions" class="w-9 h-9 flex items-center justify-center bg-black hover:bg-slate-800 text-white rounded-full transition shadow-sm hover:scale-105">
+                <i class="fa-brands fa-tiktok text-base"></i>
+            </a>
+
+            <!-- KHU VỰC ĐẾM NGƯỢC KHUYẾN MÃI LẮP ĐẶT MIỄN PHÍ - LOOP 5 NGÀY (Khu vực khoanh đỏ) -->
+            <div class="countdown-box px-3 py-1 rounded-lg flex flex-col items-center justify-center">
+                <span class="text-[10px] font-extrabold text-vnpayRed uppercase tracking-tight flex items-center gap-1">
+                    <i class="fa-solid fa-clock animate-spin"></i> Miễn phí lắp đặt còn:
+                </span>
+                <div id="countdown-timer" class="text-xs font-black text-slate-900 tracking-wider">
+                    05d 00h 00m 00s
+                </div>
+            </div>
+
+            <!-- Logo Tidingsk -->
+            <a href="https://tidingsk.github.io" target="_blank" rel="noopener noreferrer" class="hidden sm:flex items-center">
+                <img src="https://raw.githubusercontent.com/vnngsolutions/vnngsolutions.github.io/main/Logo.jpeg" alt="Logo" style="height: 38px; width: auto; object-fit: contain; border-radius: 4px;">
             </a>
 
             <!-- Nút đăng ký nhanh -->
-            <a href="#dang-ky" style="background-color: #0052cc; color: white; padding: 10px 20px; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 14px; display: flex; align-items: center; gap: 6px; transition: background 0.2s;">
+            <a href="#dang-ky" style="background-color: #0052cc; color: white; padding: 9px 16px; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 13px; display: flex; align-items: center; gap: 6px; transition: background 0.2s;" class="hover:bg-blue-800 shadow-md">
                 <span>Đăng Ký Ngay</span>
             </a>
         </div>
@@ -73,7 +121,7 @@
 </header>
 
     <!-- Hero Section -->
-    <section class="relative overflow-hidden bg-gradient-to-b from-blue-900 via-vnpayBlue to-blue-800 text-white py-16 lg:py-24">
+    <section class="relative overflow-hidden bg-gradient-to-b from-blue-900 via-vnpayBlue to-blue-800 text-white py-16 lg:py-24" id="giai-phap">
         <!-- Background subtle glow -->
         <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px]"></div>
         
@@ -171,7 +219,7 @@
                             </div>
 
                             <!-- Trust perks inside form -->
-                            <div class="bg-blue-50/70 border border-blue-100 rounded-xl p-3 text-xs text-slate-600 space-y-1">
+                            <div class="bg-blue-50/70 border border-blue-100 rounded-xl p-3 text-xs text-slate-600 space-y-1" id="uu-dai">
                                 <div class="font-bold text-vnpayBlue flex items-center space-x-1.5">
                                     <i class="fa-solid fa-gift text-amber-500"></i>
                                     <span>Quyền lợi khi đăng ký ngay hôm nay:</span>
@@ -290,7 +338,7 @@
     </section>
 
     <!-- Services Section -->
-    <section class="py-20 bg-white">
+    <section class="py-20 bg-white" id="dich-vu">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
                 <span class="text-xs font-bold text-vnpayBlue uppercase tracking-widest bg-blue-100 px-3 py-1 rounded-full">Dịch Vụ Cung Cấp</span>
@@ -373,8 +421,8 @@
         </div>
     </section>
 
-    <!-- FAQ Section (New trust booster addressing objections) -->
-    <section class="py-20 bg-slate-50 border-t border-slate-200/60">
+    <!-- FAQ Section -->
+    <section class="py-20 bg-slate-50 border-t border-slate-200/60" id="faq">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16 space-y-3">
                 <span class="text-xs font-bold text-vnpayBlue uppercase tracking-widest bg-blue-100 px-3 py-1 rounded-full">Câu Hỏi Thường Gặp</span>
@@ -514,7 +562,6 @@
         </div>
         <p class="text-sm font-medium text-slate-300">Dịch vụ tư vấn &amp; Triển khai Giải pháp Thanh toán</p>
         <p class="text-xs text-slate-500 max-w-lg mx-auto">Hỗ trợ đăng ký VNPAY-QR, SmartPOS, PhonePOS &amp; Cổng thanh toán toàn quốc. Hotline/Zalo: 0968.122.893</p>
-        <!-- Dòng minh bạch thông tin đối tác được thêm vào đây -->
         <p style="font-size: 0.9em; font-style: italic; color: #888; margin-top: 15px;">
             * VNNG Solutions là đối tác độc lập hỗ trợ tư vấn và kết nối dịch vụ thanh toán số cho các hộ kinh doanh và doanh nghiệp.
         </p>
@@ -544,23 +591,20 @@
         </a>
     </div>
 
-    <!-- Script for Form Handling & Interactive States -->
+    <!-- Script Handling Loop Countdown & Form Actions -->
     <script>
+        // FORM SUBMIT HANDLER
         function handleFormSubmit(event) {
             event.preventDefault();
             
             const name = document.getElementById('cusName').value;
             const phone = document.getElementById('cusPhone').value;
             
-            // Set values to display in success box
             document.getElementById('displayName').innerText = name;
             document.getElementById('displayPhone').innerText = phone;
             
-            // Hide form, show success message
             document.getElementById('consultationForm').classList.add('hidden');
             document.getElementById('successMessage').classList.remove('hidden');
-            
-            // In real deployment, you can integrate fetch/AJAX here to send lead data to Google Sheets or Telegram/Zalo webhook.
         }
 
         function resetForm() {
@@ -568,6 +612,50 @@
             document.getElementById('consultationForm').classList.remove('hidden');
             document.getElementById('successMessage').classList.add('hidden');
         }
+
+        // DỒNG HỒ ĐẾM NGƯỢC 5 NGÀY TỰ ĐỘNG LẶP LẠI (LOOP)
+        function startFiveDayLoopCountdown() {
+            const LOOP_DURATION = 5 * 24 * 60 * 60 * 1000; // 5 ngày tính bằng milliseconds
+            let targetTime = localStorage.getItem('vnng_countdown_target');
+
+            const now = new Date().getTime();
+
+            // Nếu chưa có thời gian đích hoặc thời gian cũ đã hết hạn -> Thiết lập chu kỳ 5 ngày mới
+            if (!targetTime || now >= parseInt(targetTime)) {
+                targetTime = now + LOOP_DURATION;
+                localStorage.setItem('vnng_countdown_target', targetTime);
+            }
+
+            function updateTimer() {
+                const currentTime = new Date().getTime();
+                let diff = parseInt(targetTime) - currentTime;
+
+                // Khi hết 5 ngày -> Reset lại vòng đếm 5 ngày mới (Loop)
+                if (diff <= 0) {
+                    targetTime = currentTime + LOOP_DURATION;
+                    localStorage.setItem('vnng_countdown_target', targetTime);
+                    diff = LOOP_DURATION;
+                }
+
+                const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+                const dStr = String(days).padStart(2, '0');
+                const hStr = String(hours).padStart(2, '0');
+                const mStr = String(minutes).padStart(2, '0');
+                const sStr = String(seconds).padStart(2, '0');
+
+                document.getElementById('countdown-timer').innerText = `${dStr}d ${hStr}h ${mStr}m ${sStr}s`;
+            }
+
+            updateTimer();
+            setInterval(updateTimer, 1000);
+        }
+
+        // Chạy timer ngay khi tải trang
+        startFiveDayLoopCountdown();
     </script>
 </body>
 </html>
