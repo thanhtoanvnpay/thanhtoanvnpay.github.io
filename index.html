@@ -515,7 +515,7 @@
             document.getElementById('displayName').innerText = name;
             document.getElementById('displayPhone').innerText = phone;
             
-            // Đẩy sự kiện Chuyển đổi (Conversion) lên Google Tag Manager
+            // 1. Đẩy sự kiện Chuyển đổi lên Google Tag Manager (nếu dùng GTM)
             window.dataLayer = window.dataLayer || [];
             window.dataLayer.push({
                 'event': 'generate_lead',
@@ -523,10 +523,12 @@
                 'event_label': 'VNPAY Consultation Form'
             });
 
-            // Gửi trực tiếp tới Google Ads Tag (AW-18377569352)
+            // 2. Bắn sự kiện chuyển đổi chính xác về Google Ads (đầy đủ nhãn & giá trị)
             if (typeof gtag === 'function') {
                 gtag('event', 'conversion', {
-                    'send_to': 'AW-18377569352'
+                    'send_to': 'AW-18377569352/zvdGCKjB398cEMjojbtE',
+                    'value': 1.0,
+                    'currency': 'VND'
                 });
             }
 
