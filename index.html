@@ -13,6 +13,17 @@
     })(window,document,'script','dataLayer','GTM-MTD5RCLT');</script>
     <!-- End Google Tag Manager -->
 
+    <!-- Google Ads Tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18377569352"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'AW-18377569352');
+    </script>
+    <!-- End Google Ads Tag -->
+
     <!-- Favicon -->
     <link rel="icon" type="image/jpeg" href="https://raw.githubusercontent.com/vnngsolutions/vnngsolutions.github.io/main/VNNG.png">
 
@@ -511,6 +522,13 @@
                 'event_category': 'Form Submission',
                 'event_label': 'VNPAY Consultation Form'
             });
+
+            // Gửi trực tiếp tới Google Ads Tag (AW-18377569352)
+            if (typeof gtag === 'function') {
+                gtag('event', 'conversion', {
+                    'send_to': 'AW-18377569352'
+                });
+            }
 
             submitted = true;
         }
