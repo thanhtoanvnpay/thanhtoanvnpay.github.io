@@ -5,13 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Thanh Toán VNPAY - Tăng Doanh Thu Cho Cửa Hàng & Doanh Nghiệp</title>
     
-    <!-- Google Tag Manager (GTM) & Google Analytics 4 (GA4) Integration -->
-    <!-- LƯU Ý: Thay 'GTM-XXXXXXX' bằng Mã GTM ID thực tế của bạn trước khi xuất bản -->
+    <!-- Google Tag Manager (GTM) Integration -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
+    })(window,document,'script','dataLayer','GTM-MTD5RCLT');</script>
     <!-- End Google Tag Manager -->
 
     <!-- Favicon -->
@@ -35,11 +34,10 @@
         }
     </script>
     <!-- FontAwesome & Google Fonts -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/fontawesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Inter', sans-serif; }
-        /* Tối ưu chống zoom tự động trên iOS khi chọn input */
         @media screen and (max-width: 768px) {
             input, select, textarea { font-size: 16px !important; }
         }
@@ -48,7 +46,7 @@
 <body class="bg-slate-50 text-slate-800 antialiased selection:bg-vnpayBlue selection:text-white pb-16 md:pb-0">
 
     <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MTD5RCLT"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
 
@@ -57,7 +55,7 @@
         🔥 <span class="font-bold underline uppercase">Ưu đãi tháng này:</span> Miễn phí khảo sát, tư vấn giải pháp &amp; Hỗ trợ thủ tục đăng ký VNPAY trọn gói!
     </div>
 
-    <!-- Header / Navbar (Tối ưu giao diện mobile chống vỡ layout) -->
+    <!-- Header / Navbar -->
     <header class="bg-white sticky top-0 z-50 shadow-sm border-b border-slate-100 py-2.5">
         <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 flex justify-between items-center gap-2">
             
@@ -72,13 +70,11 @@
 
             <!-- THÔNG TIN LIÊN HỆ & CTA -->
             <div class="flex items-center space-x-2 sm:space-x-4 flex-shrink-0">
-                <!-- Hotline (Hiển thị từ tablet trở lên) -->
                 <div class="hidden md:flex items-center space-x-2 bg-slate-50 px-3.5 py-2 rounded-full border border-slate-200/80">
                     <i class="fa-solid fa-phone text-vnpayBlue text-xs"></i>
                     <span class="text-xs text-slate-600">Hỗ trợ 24/7: <strong class="text-vnpayBlue font-bold">0968 122 893</strong></span>
                 </div>
 
-                <!-- Nút đăng ký nhanh -->
                 <a href="#dang-ky" class="bg-vnpayBlue hover:bg-blue-700 text-white px-3 py-2 sm:px-5 sm:py-2.5 rounded-lg text-xs sm:text-sm font-bold shadow-md transition transform active:scale-95 flex items-center justify-center whitespace-nowrap">
                     <span>Đăng Ký Ngay</span>
                 </a>
@@ -93,7 +89,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
                 
-                <!-- Left: Content & Video Preview -->
+                <!-- Left Content -->
                 <div class="lg:col-span-7 space-y-5 sm:space-y-6">
                     <div class="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-md px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full border border-white/20 text-blue-200 text-xs font-semibold uppercase tracking-wider">
                         <i class="fa-solid fa-shield-halved text-amber-400"></i>
@@ -123,7 +119,7 @@
                         </li>
                     </ul>
 
-                    <!-- Video Demo Box -->
+                    <!-- Video Box -->
                     <div class="pt-2 sm:pt-4">
                         <div class="bg-white/10 backdrop-blur-md p-2 rounded-2xl border border-white/20 max-w-lg shadow-xl">
                             <div class="flex items-center space-x-2 text-xs font-semibold text-blue-200 px-2 py-1 mb-1">
@@ -138,11 +134,10 @@
                     </div>
                 </div>
 
-                <!-- Right: High Conversion Form (Anchor #dang-ky) -->
+                <!-- Right Form -->
                 <div class="lg:col-span-5" id="dang-ky">
                     <div class="bg-white text-slate-800 rounded-2xl sm:rounded-3xl shadow-2xl p-5 sm:p-8 border border-slate-100 relative overflow-hidden">
                         
-                        <!-- Ribbon badge -->
                         <div class="absolute top-0 right-0 bg-gradient-to-l from-amber-500 to-amber-600 text-white text-[10px] sm:text-[11px] font-bold px-3 py-1 sm:px-4 rounded-bl-xl uppercase tracking-wider shadow">
                             Miễn Phí Tư Vấn
                         </div>
@@ -152,10 +147,8 @@
                             <p class="text-slate-500 text-xs sm:text-sm mt-1">Điền thông tin bên dưới, chuyên viên sẽ liên hệ lại trong vòng <strong class="text-vnpayBlue">10 phút</strong>.</p>
                         </div>
 
-                        <!-- Iframe ẩn để xử lý gửi form không chuyển trang -->
                         <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted){showSuccess();}"></iframe>
 
-                        <!-- Form kết nối trực tiếp với Google Form -->
                         <form id="consultationForm" action="https://docs.google.com/forms/d/e/1FAIpQLSd9k4BFTZW10Md4D2UeMlTO65Bf-YVxCMvTPyZNZkoFDpu6mw/formResponse" method="POST" target="hidden_iframe" onsubmit="handleFormSubmit(event)" class="space-y-3.5 sm:space-y-4">
                             <div>
                                 <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Họ và tên người liên hệ <span class="text-red-500">*</span></label>
@@ -194,7 +187,6 @@
                                 </div>
                             </div>
 
-                            <!-- Trust perks inside form -->
                             <div class="bg-blue-50/70 border border-blue-100 rounded-xl p-3 text-xs text-slate-600 space-y-1">
                                 <div class="font-bold text-vnpayBlue flex items-center space-x-1.5">
                                     <i class="fa-solid fa-gift text-amber-500"></i>
@@ -210,7 +202,6 @@
                             </button>
                         </form>
 
-                        <!-- Success state message box -->
                         <div id="successMessage" class="hidden text-center py-8 space-y-4">
                             <div class="w-14 h-14 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto text-2xl shadow-inner">
                                 <i class="fa-solid fa-check"></i>
@@ -222,7 +213,6 @@
                             <button onclick="resetForm()" class="text-sm text-vnpayBlue font-bold underline hover:text-blue-800">Đăng ký yêu cầu khác</button>
                         </div>
 
-                        <!-- Dedicated Consultant Badge -->
                         <div class="mt-5 pt-4 border-t border-slate-100 flex items-center space-x-3">
                             <div class="relative">
                                 <img src="https://thanhtoanvnpay.github.io/100kb.jpg" alt="Chuyên viên" class="w-10 h-10 rounded-full object-cover border-2 border-vnpayBlue shadow">
@@ -240,7 +230,7 @@
             </div>
         </div>
 
-        <!-- Quick Stats Bar -->
+        <!-- Quick Stats -->
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-10 sm:mt-16">
             <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 bg-white/10 backdrop-blur-md rounded-2xl p-4 sm:p-6 border border-white/20 text-center">
                 <div>
@@ -259,7 +249,7 @@
         </div>
     </section>
 
-    <!-- Trusted Brands Section -->
+    <!-- Trusted Brands -->
     <section class="py-8 sm:py-10 bg-white border-b border-slate-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <p class="text-[11px] sm:text-xs font-bold text-slate-400 uppercase tracking-widest mb-4 sm:mb-6">Được tin dùng bởi các thương hiệu hàng đầu Việt Nam</p>
@@ -273,7 +263,7 @@
         </div>
     </section>
 
-    <!-- Problem Solving Section -->
+    <!-- Problem Solving -->
     <section class="py-12 sm:py-20 bg-slate-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-16 space-y-2 sm:space-y-3">
@@ -320,12 +310,9 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
-                
                 <div class="bg-slate-50 border border-slate-200/80 rounded-2xl sm:rounded-3xl p-6 flex flex-col justify-between hover:border-vnpayBlue transition group">
                     <div class="space-y-4">
-                        <div class="w-10 h-10 bg-blue-600 text-white rounded-xl flex items-center justify-center font-bold text-base shadow">
-                            01
-                        </div>
+                        <div class="w-10 h-10 bg-blue-600 text-white rounded-xl flex items-center justify-center font-bold text-base shadow">01</div>
                         <h3 class="text-base sm:text-lg font-bold text-slate-900 group-hover:text-vnpayBlue transition">Mã VNPAY-QR</h3>
                         <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">Đặt bảng QR tại quầy thu ngân. Khách hàng dùng bất kỳ App Ngân hàng nào hoặc ví điện tử để quét mã thanh toán tức thì.</p>
                     </div>
@@ -339,9 +326,7 @@
 
                 <div class="bg-slate-50 border border-slate-200/80 rounded-2xl sm:rounded-3xl p-6 flex flex-col justify-between hover:border-vnpayBlue transition group">
                     <div class="space-y-4">
-                        <div class="w-10 h-10 bg-blue-600 text-white rounded-xl flex items-center justify-center font-bold text-base shadow">
-                            02
-                        </div>
+                        <div class="w-10 h-10 bg-blue-600 text-white rounded-xl flex items-center justify-center font-bold text-base shadow">02</div>
                         <h3 class="text-base sm:text-lg font-bold text-slate-900 group-hover:text-vnpayBlue transition">Máy VNPAY SmartPOS</h3>
                         <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">Thiết bị quẹt thẻ Android thông minh, hỗ trợ quẹt thẻ Visa/Master, in hóa đơn liền mạch và quét mã QR trên cùng một thiết bị cầm tay.</p>
                     </div>
@@ -355,9 +340,7 @@
 
                 <div class="bg-slate-50 border border-slate-200/80 rounded-2xl sm:rounded-3xl p-6 flex flex-col justify-between hover:border-vnpayBlue transition group">
                     <div class="space-y-4">
-                        <div class="w-10 h-10 bg-blue-600 text-white rounded-xl flex items-center justify-center font-bold text-base shadow">
-                            03
-                        </div>
+                        <div class="w-10 h-10 bg-blue-600 text-white rounded-xl flex items-center justify-center font-bold text-base shadow">03</div>
                         <span class="inline-block text-[10px] font-extrabold uppercase bg-amber-100 text-amber-800 px-2 py-0.5 rounded">Hot trend</span>
                         <h3 class="text-base sm:text-lg font-bold text-slate-900 group-hover:text-vnpayBlue transition">VNPAY PhonePOS</h3>
                         <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">Biến chiếc điện thoại di động thông thường của bạn thành máy POS nhận thanh toán thẻ và QR, không cần đầu tư máy móc cồng kềnh.</p>
@@ -372,9 +355,7 @@
 
                 <div class="bg-slate-50 border border-slate-200/80 rounded-2xl sm:rounded-3xl p-6 flex flex-col justify-between hover:border-vnpayBlue transition group">
                     <div class="space-y-4">
-                        <div class="w-10 h-10 bg-blue-600 text-white rounded-xl flex items-center justify-center font-bold text-base shadow">
-                            04
-                        </div>
+                        <div class="w-10 h-10 bg-blue-600 text-white rounded-xl flex items-center justify-center font-bold text-base shadow">04</div>
                         <h3 class="text-base sm:text-lg font-bold text-slate-900 group-hover:text-vnpayBlue transition">Cổng Thanh Toán Online</h3>
                         <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">Giải pháp "may đo" toàn diện cho website và ứng dụng di động, giúp doanh nghiệp TMĐT tăng tỷ lệ chốt đơn và tối ưu doanh thu.</p>
                     </div>
@@ -385,7 +366,6 @@
                         </a>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
@@ -445,12 +425,10 @@
         </div>
     </section>
 
-    <!-- FOOTER CHUẨN ĐẠT TIÊU CHUẨN GOOGLE ADS -->
+    <!-- Footer -->
     <footer class="bg-slate-900 text-slate-400 py-10 sm:py-14 border-t border-slate-800 text-xs sm:text-sm">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8 pb-8 border-b border-slate-800">
-                
-                <!-- Cột 1: Thông tin thương hiệu -->
                 <div class="space-y-3">
                     <div class="flex items-center space-x-2">
                         <img src="https://raw.githubusercontent.com/vnngsolutions/vnngsolutions.github.io/main/VNNG.png" alt="Logo VNNG" class="h-8 w-auto rounded">
@@ -461,7 +439,6 @@
                     </p>
                 </div>
 
-                <!-- Cột 2: Thông tin pháp lý & Liên hệ -->
                 <div class="space-y-2">
                     <h3 class="text-white font-bold uppercase tracking-wider text-xs mb-3">Thông Tin Liên Hệ</h3>
                     <p><i class="fa-solid fa-building text-vnpayBlue mr-2"></i> <strong>Đơn vị:</strong> VNNG Solutions</p>
@@ -470,7 +447,6 @@
                     <p><i class="fa-solid fa-envelope text-vnpayBlue mr-2"></i> <strong>Email:</strong> vnngsolutions@gmail.com</p>
                 </div>
 
-                <!-- Cột 3: Liên kết chính sách chuẩn Google Ads -->
                 <div class="space-y-2">
                     <h3 class="text-white font-bold uppercase tracking-wider text-xs mb-3">Chính Sách &amp; Quy Định</h3>
                     <ul class="space-y-2 text-xs">
@@ -490,7 +466,6 @@
 
     <!-- Floating Action Buttons (PC / Tablet) -->
     <div class="hidden sm:flex fixed bottom-6 right-6 z-50 flex-col space-y-3">
-        <!-- Zalo Button -->
         <a href="https://zalo.me/0968122893" target="_blank" title="Chat Zalo Tư Vấn" class="relative group flex items-center bg-blue-600 text-white p-3.5 rounded-full shadow-2xl hover:bg-blue-700 transition transform hover:scale-110">
             <span class="absolute -top-1 -right-1 flex h-3 w-3">
               <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
@@ -502,13 +477,12 @@
             <i class="fa-solid fa-comment-dots text-xl"></i>
         </a>
 
-        <!-- Hotline Call Button -->
         <a href="tel:0968122893" title="Gọi ngay Hotline" class="flex items-center bg-green-600 text-white p-3.5 rounded-full shadow-2xl hover:bg-green-700 transition transform hover:scale-110">
             <i class="fa-solid fa-phone-volume text-xl"></i>
         </a>
     </div>
 
-    <!-- Mobile Sticky Bottom Call-To-Action Bar (Giúp tăng tỷ lệ gọi điện / đăng ký trên di động) -->
+    <!-- Mobile Sticky Bottom Bar -->
     <div class="sm:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-slate-200 z-50 p-2 grid grid-cols-2 gap-2 shadow-2xl">
         <a href="tel:0968122893" class="bg-green-600 active:bg-green-700 text-white py-2.5 rounded-xl font-bold text-xs flex items-center justify-center space-x-1.5">
             <i class="fa-solid fa-phone"></i>
@@ -520,7 +494,6 @@
         </a>
     </div>
 
-    <!-- Script xử lý gửi form ngầm & Đẩy sự kiện theo dõi sang Google Tag Manager / GA4 -->
     <script>
         var submitted = false;
 
@@ -531,7 +504,7 @@
             document.getElementById('displayName').innerText = name;
             document.getElementById('displayPhone').innerText = phone;
             
-            // Đẩy sự kiện Chuyển đổi (Conversion) lên Google Tag Manager / GA4
+            // Đẩy sự kiện Chuyển đổi (Conversion) lên Google Tag Manager
             window.dataLayer = window.dataLayer || [];
             window.dataLayer.push({
                 'event': 'generate_lead',
