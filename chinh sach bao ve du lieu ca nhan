@@ -1,0 +1,974 @@
+
+<!DOCTYPE html>
+<html lang="en" data-immersive-translate-page-theme="light">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>VNPAY - Chính sách bảo vệ dữ liệu cá nhân</title>
+    <style>
+        :root {
+            --link: #005baa;
+            --primary: #ED1C24;
+            --title-color: #3a3a3a;
+        }
+
+        a {
+            color: var(--link);
+        }
+
+        body {
+            font-family: "Inter", "SF Pro Display", -apple-system,
+                BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
+                "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 140%;
+            color: #666;
+            margin: 0 auto;
+        }
+
+        .main {
+            max-width: 900px;
+            box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.3);
+            -webkit-box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.3);
+            -moz-box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.3);
+            padding: 30px 50px;
+            margin: 30px auto;
+            background-image: url(https://vnpay.vn/assets/policy/img/logo-transparent.svg);
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-attachment: fixed;
+        }
+
+        h1 {
+            font-size: 20px;
+            text-transform: uppercase;
+            color: var(--title-color);
+            font-weight: 600;
+            line-height: 30px;
+            margin: 20px 0px 4px 0px;
+        }
+
+        .mb-6 {
+            margin-bottom: 24px;
+        }
+
+        h2 {
+            color: var(--primary);
+
+            margin-top: 0;
+
+            margin-bottom: 0;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        ul {
+            margin-left: 20px;
+        }
+
+        p,
+        ul {
+            margin-top: 5px;
+
+            margin-bottom: 5px;
+        }
+
+        b,
+        strong {
+            color: var(--title-color);
+        }
+
+        h2 {
+            font-size: 1.1em;
+
+            font-weight: 600;
+
+            margin: 1.6em 0 1em 0;
+        }
+
+        ul {
+            padding-left: 0;
+        }
+
+        ul>li {
+            margin-bottom: 5px;
+        }
+
+        ul>li>ul {
+            margin-bottom: 1em;
+        }
+
+        .note {
+            font-size: 16px;
+        }
+
+        img {
+            border: none;
+            max-width: 100%;
+            height: auto;
+        }
+
+        h4 {
+            margin-bottom: 15px;
+        }
+
+        /* css scroll to top */
+        .scroll-top {
+            width: 36px;
+            height: 36px;
+            position: fixed;
+            bottom: -20px;
+            right: 20px;
+            cursor: pointer;
+            z-index: 100;
+            background-color: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 6px;
+            opacity: 0;
+            box-shadow: 0 0.5rem 1.5rem 0.5rem rgb(0 0 0 / 8%);
+            transition: all 0.2s ease;
+        }
+
+        .scroll-top.show {
+            opacity: 0.3;
+            bottom: 40px;
+        }
+
+        .scroll-top .ic-arrow {
+            transform: rotate(-90deg);
+        }
+
+        @media (hover) {
+            .scroll-top.show:hover {
+                opacity: 1;
+            }
+        }
+
+        .scroll-top.show:focus,
+        .scroll-top.show:visited,
+        .scroll-top.show:active {
+            opacity: 1;
+        }
+
+        .table-wrap {
+            margin: 16px 0px;
+        }
+
+        table {
+            width: 100%;
+        }
+
+        table td {
+            padding: 5px 10px;
+        }
+
+        .head {
+            margin-bottom: 30px;
+        }
+
+        .head p {
+            margin: 0
+        }
+
+        .title {
+            color: var(--title-color);
+            font-size: 18.3px;
+            line-height: 28px;
+            margin: 0
+        }
+
+        .items-center {
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .row {
+            display: flex;
+        }
+
+        .text-uppercase {
+            text-transform: uppercase !important;
+        }
+
+        @media (max-width: 600px) {
+            .main {
+                padding: 20px;
+                margin: 0 auto;
+            }
+
+            .head {
+                text-align: center
+            }
+
+            .row-mb,
+            .row {
+                display: block;
+            }
+
+            .block-mb {
+                display: block;
+                width: 100%;
+            }
+
+            .table-wrap {
+                width: 100%;
+                overflow: scroll;
+            }
+
+            table td {
+                text-align: left;
+            }
+
+            table td:not(:first-child) {
+                min-width: 100px;
+            }
+        }
+
+        /* end: css scroll to top */
+    </style>
+</head>
+
+<body>
+
+    <div class="main">
+        <div class="head row items-center">
+            <div class="col">
+                <img class="img-fluid" src="./chinh-sach-bao-ve-du-lieu-ca-nhan_files/logo-vnpay.svg" alt="">
+            </div>
+            <div class="col">
+                <h3 class="text-uppercase title">Công ty cổ phần Giải pháp Thanh toán Việt
+                    Nam</h3>
+                <p style="font-size: 16.5px;">Tầng 8, số 22, phố Láng Hạ, phường Láng, Thành phố Hà Nội, Việt Nam</p>
+                <div class="row items-center">
+                    <div class="col">Hotline: 0968 122 893</div>
+                    <div class="col">Fax: 84 - 243 7764666</div>
+                </div>
+            </div>
+        </div>
+        <h1 class="text-center">
+            PERSONAL DATA PROTECTION POLICY FOR CUSTOMERS<br>
+            CHÍNH SÁCH BẢO VỆ DỮ LIỆU CÁ NHÂN DÀNH CHO KHÁCH HÀNG
+        </h1>
+        <div class="text-center mb-6">Thời điểm áp dụng từ: 10/01/2026</div>
+        <p> With Viet Nam Payment Solution Joint Stock Company (hereinafter referred to as "VNPAY"), protecting our
+            customers' personal data is of paramount importance. We constantly update and implement advanced
+            technological measures adhering to the most optimal security practices. These efforts are undertaken with
+            the highest level of diligence, sense of responsibility, and caution to safeguardyour rights and interests.
+        </p>
+        <p>
+            <em> Tại Công ty cổ phần Giải pháp Thanh toán Việt Nam (sau đây gọi tắt là "VNPAY"), bảo vệ Dữ liệu cá nhân
+                của Quý khách là công việc tối quan trọng và luôn được chúng tôi cập nhật, áp dụng các biện pháp công
+                nghệ tiên tiến, theo thông lệ bảo mật tối ưu nhất với nỗ lực, tinh thần trách nhiệm cũng như ý thức cẩn
+                trọng cao nhất nhằm đảm bảo quyền, lợi ích hợp pháp của Quý khách. </em>
+        </p>
+        <p> VNPAY hereby respectfully announces the Personal Data Protection Policy for Customers (hereinafter referred
+            to as the "Personal Data Protection Policy") issued by VNPAY and effective from January 10 <sup> th </sup> ,
+            2026. This Personal Data Protection Policy applies to VNPAY's activities related to the protection of your
+            personal data. </p>
+        <p>
+            <a id="_heading=h.tw9bfnig6qn7"></a>
+            <em> VNPAY xin trân trọng thông báo tới Quý khách bản Chính sách Bảo vệ Dữ liệu cá nhân dành cho Khách hàng
+                (sau đây gọi tắt là "Chính sách Bảo vệ Dữ liệu cá nhân") được VNPAY ban hành và có hiệu lực kể từ ngày
+                10/01/2026. Chính sách Bảo vệ Dữ liệu cá nhân này áp dụng đối với các hoạt động của VNPAY liên quan tới
+                việc bảo vệ Dữ liệu cá nhân của Quý khách. </em>
+        </p>
+        <h2 class="mt-10 mb-4 text-xl md:text-2xl font-semibold text-gray-900"> 1. GENERAL PROVISIONS <em> /CÁC QUY ĐỊNH
+                CHUNG </em>
+        </h2>
+        <p> By registering for or using VNPAY's products or services or by entering into agreements, and/or allowing
+            VNPAY to use and process your personal data, you accept all terms outlined in this Personal Data Protection
+            Policy. </p>
+        <p>
+            <em> Bằng việc đăng ký sử dụng, sử dụng các sản phẩm, dịch vụ của VNPAY, hoặc bằng việc xác lập các thỏa
+                thuận và/hoặc cho phép VNPAY sử dụng thông tin cá nhân, xử lý Dữ liệu cá nhân của Quý khách, Quý khách
+                chấp nhận toàn bộ các quy định được đề cập tại Chính sách Bảo vệ Dữ liệu cá nhân này. </em>
+        </p>
+        <p> VNPAY will only collect, use, store, and process your personal data in accordance with the provisions of:
+            (i) laws on personal data protection (including but not limited to the Law on Personal Data Protection No.
+            91/2025/QH15 dated June 26, 2025 and subordinate legislation guiding, amending, supplementing, or replacing
+            from time to time); (ii) this Personal Data Protection Policy; and (iii) any contracts or agreements between
+            you and VNPAY. </p>
+        <p>
+            <em> VNPAY chỉ thu thập, sử dụng, lưu trữ, xử lý Dữ liệu cá nhân của Quý khách phù hợp với quy định của (i)
+                pháp luật về bảo vệ Dữ liệu cá nhân (bao gồm nhưng không giới hạn Luật Bảo vệ Dữ liệu cá nhân số
+                91/2025/QH15 ngày 26 tháng 6 năm 2025 và các văn bản quy phạm pháp luật hướng dẫn, sửa đổi, bổ sung,
+                thay thế tại từng thời kỳ); (ii) Chính sách Bảo vệ Dữ liệu cá nhân này; và (iii) hợp đồng, thỏa thuận
+                khác giữa Quý khách và VNPAY. </em>
+        </p>
+        <p> By providing VNPAY with personal data of a third party (such as information about your spouse, children,
+            and/or parents and/or guardians, friends, beneficiaries, authorized persons, partners, guarantors, emergency
+            contacts, legal representatives, chief accountants, contact points, shareholders, or other individuals
+            related to you), you represent and warrant that you have fully informed the third party about the contents
+            of this Personal Data Protection Policy and obtained their lawful consent for VNPAY to process their
+            personal data for the purposes specified in this Personal Data Protection Policy. Additionally, you
+            understand that VNPAY is not obliged to re-verify this consent. </p>
+        <p>
+            <em> Bằng việc cung cấp cho VNPAY Dữ liệu cá nhân của một bên thứ ba (như thông tin vợ, chồng, con và/hoặc
+                cha mẹ và/hoặc người giám hộ, bạn bè, bên thụ hưởng, người được ủy quyền, đối tác, bên bảo đảm, người
+                liên hệ trong các trường hợp khẩn cấp, người đại diện theo pháp luật, kế toán trưởng, đầu mối liên hệ,
+                cổ đông hoặc cá nhân khác có liên quan đến Quý khách), Quý khách cam đoan và đảm bảo rằng Quý khách đã
+                cung cấp thông tin đầy đủ về nội dung của Chính sách Bảo vệ Dữ liệu cá nhân này cho bên thứ ba và có
+                được sự đồng ý hợp pháp của bên thứ ba đó để VNPAY xử lý các Dữ liệu cá nhân cho các mục đích được nêu
+                tại Chính sách Bảo vệ Dữ liệu cá nhân này. Đồng thời, Quý khách hiểu rằng, VNPAY sẽ không cần thẩm định
+                lại sự chấp thuận này. </em>
+        </p>
+        <p> Depending on VNPAY's role in each specific situation, whether as (i) personal data controller; (ii) personal
+            data processor; or (iii) personal data controller and processor, VNPAY will exercise the corresponding
+            rights and obligations as prescribed by applicable law. </p>
+        <p>
+            <em> Tùy thuộc vào vai trò của VNPAY trong từng tình huống cụ thể, là (i) Bên kiểm soát Dữ liệu cá nhân;
+                (ii) Bên xử lý Dữ liệu cá nhân; hoặc (iii) Bên kiểm soát và xử lý Dữ liệu cá nhân, VNPAY sẽ thực hiện
+                các quyền hạn và nghĩa vụ tương ứng theo quy định của pháp luật hiện hành. </em>
+        </p>
+        <p> VNPAY would like to note that the processing of necessary Personal Data is essential for VNPAY to fulfill
+            its quality commitments and ensure the safety and availability of its products and services. </p>
+        <p>
+            <em> VNPAY xin lưu ý rằng để VNPAY có thể thực hiện các cam kết về chất lượng và đảm bảo tính an toàn, sẵn
+                sàng của sản phẩm, dịch vụ, việc xử lý các Dữ liệu cá nhân cần thiết. </em>
+        </p>
+        <h2 class="mt-10 mb-4 text-xl md:text-2xl font-semibold text-gray-900"> 2. SCOPE AND CATEGORIESOF PERSONAL DATA
+            PROCESSED/ <em> PHẠM VI, LOẠI DỮ LIỆU CÁ NHÂN ĐƯỢC XỬ LÝ </em>
+        </h2>
+        <p> To fulfill your requests (including but not limited to requests for e-wallet services, other products, and
+            services) and/or to provide general information about VNPAY's products/utilities, VNPAY and the personal
+            data processors with whom VNPAY enters into an agreement will need to use your personal data (the processing
+            of Personal Data referred to in this Personal Data Protection Policy shall be understood to include, but not
+            limited to, the following activities: usage, sharing, disclosure, collection, recording, analysis,
+            aggregation, encryption, decryption, modification, erasure, destruction, de-identification, provision,
+            publication, transfer of Personal Data, and other activities impacting Personal Data). </p>
+        <p>
+            <em> Để có thể thực hiện các yêu cầu của Quý khách (bao gồm nhưng không giới hạn các yêu cầu cung cấp dịch
+                vụ ví điện tử, các sản phẩm và dịch vụ khác) và/hoặc cung cấp khái quát thông tin các sản phẩm/tiện ích
+                của VNPAY, VNPAY và bên xử lý Dữ liệu cá nhân mà VNPAY có thỏa thuận cần phải sử dụng Dữ liệu cá nhân
+                của Quý khách (Hoạt động xử lý Dữ liệu cá nhân được đề cập tại Chính sách Bảo vệ Dữ liệu cá nhân này
+                được hiểu là bao gồm nhưng không giới hạn các hoạt động: sử dụng, chia sẻ, tiết lộ, thu thập, phân tích,
+                tổng hợp, mã hóa, giải mã, chỉnh sửa, xóa, hủy, khử nhận dạng, cung cấp, công khai, chuyển giao Dữ liệu
+                cá nhân và hoạt động khác tác động đến Dữ liệu cá nhân). </em>
+        </p>
+        <p> Types of personal data VNPAY collects and processes may include sensitive personal data. The types of your
+            personal data that may be collected and processed are listed below and may vary depending on the time and
+            relationship between you and VNPAY (hereinafter referred to as the "Personal Data"): </p>
+        <p>
+            <em> Dữ liệu cá nhân của Quý khách được thu thập, xử lý có thể bao gồm cả Dữ liệu cá nhân nhạy cảm của Quý
+                khách. Các loại Dữ liệu cá nhân của Quý khách có thể được thu thập, xử lý là các loại thông tin được
+                liệt kê dưới đây và có thể thay đổi tùy thuộc vào từng thời điểm và mối quan hệ của Quý khách với VNPAY
+                (được gọi là "Dữ liệu cá nhân"): </em>
+        </p>
+        <p> (i) Basic Personal Data: Surname, middle name, and given name; other names (if any); Date of birth; Date of
+            death or date of missing; Gender; Place of birth, Place of registration of birth, place of permanent
+            residence, place of temporary residence, current residence, hometown, contact address; Nationality; Personal
+            image; Phone number, personal identification number, passport number, driver's license number, license plate
+            number; Marital status; Family relationship information (parents, spouse, children); Personal digital
+            account information; Personal data reflecting activities and activity history in cyberspace; other
+            information associated with a specific individual or which helps identify a specific individual that does
+            not fall within the scope of Sensitive Personal Data as prescribed in Section 2(ii) below. </p>
+        <p>
+            <em> (i) Dữ liệu cá nhân cơ bản: Họ, chữ đệm và tên khai sinh, tên gọi khác (nếu có); ngày, tháng, năm sinh;
+                ngày, tháng, năm chết hoặc mất tích; giới tính; nơi sinh, nơi đăng ký khai sinh, nơi thường trú, nơi
+                đăng ký tạm trú, nơi ở hiện tại, quê quán, địa chỉ liên hệ; quốc tịch; hình ảnh của cá nhân; số điện
+                thoại, số định danh cá nhân, số hộ chiếu, số giấy phép lái xe, số biển số xe; tình trạng hôn nhân; thông
+                tin về mối quan hệ gia đình (cha mẹ, con, vợ, chồng); thông tin về tài khoản số của cá nhân; các thông
+                tin khác gắn liền với một con người cụ thể hoặc giúp xác định một con người cụ thể không thuộc phạm vi
+                Dữ liệu cá nhân nhạy cảm theo quy định tại Mục 2(ii) dưới đây. </em>
+        </p>
+        <p> (ii) Sensitive Personal Data: Data revealing racial or ethnic origin; political opinions, religious or
+            philosophical beliefs; information on private life, personal secrets, and family secrets; health status;
+            biometric data, genetic characteristics; data revealing an individual's sex life or sexual orientation; data
+            concerning criminal offenses and law violations collected and stored by law enforcement agencies; an
+            individual's location identified via location-based services; username and password for an individual's
+            electronic identification account; images of Identity Cards, Citizen Identity Cards, or People's Identity
+            Cards; username and password of bank accounts; bank card information and bank account transaction history
+            data; financial and credit information; data on financial, securities, and insurance activities and
+            transaction history of the customer at credit institutions, foreign bank branches, payment intermediary
+            service providers, securities and insurance entities, and other authorized organizations; data tracking
+            behaviors and activities related to the use of telecommunications services, social networks, online media
+            services, and other services in cyberspace; other personal data specified by law as requiring
+            confidentiality or stringent security measures. </p>
+        <p>
+            <em> (ii) Dữ liệu cá nhân nhạy cảm: Dữ liệu tiết lộ nguồn gốc chủng tộc, nguồn gốc dân tộc; quan điểm chính
+                trị, tôn giáo, tín ngưỡng; thông tin về đời sống riêng tư, bí mật cá nhân, bí mật gia đình; tình trạng
+                sức khỏe; dữ liệu sinh trắc học, đặc điểm di truyền; dữ liệu tiết lộ đời sống tình dục, xu hướng tình
+                dục của cá nhân; dữ liệu về tội phạm, vi phạm pháp luật được thu thập, lưu trữ bởi các cơ quan thực thi
+                pháp luật; vị trí của cá nhân được xác định qua dịch vụ định vị; thông tin tên đăng nhập và mật khẩu
+                truy cập tài khoản định danh điện tử của cá nhân; hình ảnh thẻ căn cước, thẻ căn cước công dân, chứng
+                minh nhân dân; tên đăng nhập, mật khẩu truy cập của tài khoản ngân hàng; thông tin thẻ ngân hàng, dữ
+                liệu về lịch sử giao dịch của tài khoản ngân hàng; thông tin tài chính, tín dụng và các thông tin về
+                hoạt động, lịch sử giao dịch tài chính, chứng khoán, bảo hiểm của khách hàng tại các tổ chức tín dụng,
+                chi nhánh ngân hàng nước ngoài, tổ chức cung ứng dịch vụ trung gian thanh toán, chứng khoán, bảo hiểm,
+                các tổ chức được phép khác; dữ liệu theo dõi hành vi, hoạt động sử dụng dịch vụ viễn thông, mạng xã hội,
+                dịch vụ truyền thông trực tuyến và các dịch vụ khác trên không gian mạng; dữ liệu cá nhân khác được pháp
+                luật quy định cần giữ bí mật hoặc cần có biện pháp bảo mật chặt chẽ. </em>
+        </p>
+        <p> (iii) Information concerning the process of purchasing and using products, goods, and services, and other
+            information related to transactions between the Customer and VNPAY. </p>
+        <p>
+            <em> (iii) Các thông tin về quá trình mua, sử dụng sản phẩm, hàng hóa, dịch vụ của Quý khách và thông tin
+                khác liên quan đến giao dịch giữa Quý khách và VNPAY. </em>
+        </p>
+        <p> (iv) And other personal data as prescribed by law that you provide to VNPAY when registering for VNPAY's
+            products and services, as well as data generated during your use of the products and services. </p>
+        <p>
+            <em> (iv) Các dữ liệu cá nhân khác theo quy định của pháp luật được Quý khách cung cấp cho VNPAY khi đăng ký
+                sử dụng sản phẩm, dịch vụ cũng như dữ liệu phát sinh trong quá trình Quý khách sử dụng sản phẩm, dịch vụ
+                của VNPAY. </em>
+        </p>
+        <h2 class="mt-10 mb-4 text-xl md:text-2xl font-semibold text-gray-900"> 3. PURPOSES OF PERSONAL DATA PROCESSING/
+            <em> MỤC ĐÍCH XỬ LÝ DỮ LIỆU CÁ NHÂN </em>
+        </h2>
+        <p> VNPAY may collect and process your personal data and share results of the personal data processing for the
+            purposes related to the provision of products and services, including but not limited to: </p>
+        <p>
+            <em> VNPAY có thể thu thập, xử lý Dữ liệu cá nhân của Quý khách và chia sẻ kết quả xử lý Dữ liệu cá nhân cho
+                các mục đích liên quan tới việc cung cấp sản phẩm, dịch vụ, bao gồm nhưng không giới hạn: </em>
+        </p>
+        <p> (i) To evaluate and provide you with VNPAY's products and services, as well as products and services that
+            VNPAY cooperates with partners; </p>
+        <p>
+            <em> (i) Đánh giá và cung cấp các sản phẩm, dịch vụ của VNPAY và sản phẩm, dịch vụ VNPAY hợp tác với đối tác
+                cho Quý khách; </em>
+        </p>
+        <p> (ii) To identify, verify, and maintain accurate information about your identity; ensure the security and
+            safety of VNPAY's information systems and other due diligence requirements in accordance with the law; </p>
+        <p>
+            <em> (ii) Nhận biết, xác minh và duy trì thông tin chính xác về nhận biết Quý khách; đảm bảo an ninh và an
+                toàn hệ thống thông tin của VNPAY và các yêu cầu thẩm định khách hàng khác với Quý khách theo quy định
+                pháp luật; </em>
+        </p>
+        <p> (iii) To support you and update the your information when registering for and using the products and
+            services provided by VNPAY or VNPAY's partners; </p>
+        <p>
+            <em> (iii) Hỗ trợ Quý khách, cập nhật thông tin Quý khách khi đăng ký sử dụng, sử dụng sản phẩm, dịch vụ do
+                VNPAY hoặc đối tác của VNPAY cung cấp; </em>
+        </p>
+        <p> (iv) To fulfill obligations under contracts or agreements between you and VNPAY (if any); </p>
+        <p>
+            <em> (iv) Thực hiện các nghĩa vụ theo hợp đồng, thỏa thuận giữa VNPAY và Quý khách (nếu có); </em>
+        </p>
+        <p> (v) To assess risks, analyze trends, perform statistical analysis, and develop plans, including data
+            analysis on statistics, credit, and anti-money laundering; </p>
+        <p>
+            <em> (v) Đánh giá rủi ro, phân tích xu hướng, thống kê, lên kế hoạch, bao gồm phân tích xử lý dữ liệu về
+                thống kê, tín dụng và phòng chống rửa tiền; </em>
+        </p>
+        <p> (vi) To detect, prevent, and investigate crimes, attacks, or violations, including fraud, money laundering,
+            terrorism, financing the proliferation of weapons of mass destruction, bribery, corruption, or tax evasion;
+        </p>
+        <p>
+            <em> (vi) Phát hiện, ngăn chặn, và điều tra tội phạm, tấn công hoặc vi phạm bao gồm cả gian lận, rửa tiền,
+                khủng bố, tài trợ phổ biến vũ khí hủy diệt hàng loạt, hối lộ, tham nhũng hoặc trốn thuế; </em>
+        </p>
+        <p> (vii) To organize marketing and promotional activities, market research, public opinion surveys, brokerage,
+            product introductions, and advertising; to directly or indirectly conduct marketing of the products and
+            services to you, and conduct promotional programs, gift exchanges, prize awards, and gift deliveries. </p>
+        <p>
+            <em> (vii) Tổ chức giới thiệu và xúc tiến thương mại, nghiên cứu thị trường, thăm dò dư luận, môi giới, giới
+                thiệu sản phẩm, quảng cáo; liên hệ với Quý khách, tiếp thị trực tiếp, gián tiếp các sản phẩm, dịch vụ
+                với Quý khách, thực hiện các chương trình khuyến mại, đổi quà, trao thưởng, giao quà tặng; </em>
+        </p>
+        <p> (viii) To record your credibility in using services to improve the quality of the products and services, as
+            well as to organize loyalty customer programs to bring the best consumer benefits to you; </p>
+        <p>
+            <em> (viii) Ghi nhận tín nhiệm sử dụng dịch vụ của Quý khách để hỗ trợ cho việc cung cấp các sản phẩm, dịch
+                vụ của VNPAY cho Quý khách một cách tốt nhất, cũng như tổ chức các chương trình khách hàng thường xuyên,
+                khách hàng thân thiết, nhằm mang đến lợi ích tiêu dùng tốt nhất tới Quý khách; </em>
+        </p>
+        <p> (ix) To aggregate, analyze, research, and develop new products and services, and to provide you with
+            suitable products and services; </p>
+        <p>
+            <em> (ix) Tổng hợp, phân tích, nghiên cứu, phát triển các sản phẩm, dịch vụ mới và cung cấp các sản phẩm,
+                dịch vụ phù hợp cho Quý khách; </em>
+        </p>
+        <p> (x) To evaluate and improve the quality of the products and services that VNPAY provides to customers. To
+            develop new features and products, and to support payment and financial solutions related to VNPAY's
+            services; </p>
+        <p>
+            <em> (x) Đánh giá để cải thiện và nâng cao chất lượng sản phẩm, dịch vụ mà VNPAY cung cấp cho Quý khách.
+                Phát triển các tính năng và sản phẩm mới và hỗ trợ các giải pháp thanh toán và tài chính liên quan đến
+                các dịch vụ của VNPAY; </em>
+        </p>
+        <p> (xi) To verify your information to ensure the security of your account in response to inquiries,
+            investigations, and complaints. </p>
+        <p>
+            <em> (xi) Xác minh thông tin khách hàng nhằm bảo mật an toàn về tài khoản của Quý khách trong các yêu cầu
+                giải đáp thắc mắc, tra soát và khiếu nại. </em>
+        </p>
+        <p> (xii) To protect or enforce VNPAY's lawful rights and interests, including the right to collect fees,
+            recover and handle debts that you owe to VNPAY. </p>
+        <p>
+            <em> (xii) Bảo vệ hoặc thực thi các quyền và lợi ích hợp pháp của VNPAY, bao gồm quyền thu các khoản phí,
+                thu hồi và xử lý các khoản nợ mà Quý khách đang nợ VNPAY </em> .
+        </p>
+        <p> In cases where you have consented to VNPAY collecting and processing your personal data for the purposes of
+            marketing and advertising products, you agrees that VNPAY has the right to market and introduce products as
+            follows: </p>
+        <p>
+            <em> Trường hợp Quý khách đã đồng ý cho phép VNPAY thu thập, xử lý Dữ liệu cá nhân của mình cho mục đích
+                tiếp thị, giới thiệu sản phẩm, Quý khách đồng ý rằng VNPAY có quyền tiếp thị, giới thiệu sản phẩm theo
+                nội dung, hình thức, tần suất như sau: </em>
+        </p>
+        <p> (i) Scope: Marketing and introducing products of VNPAY and its partners. </p>
+        <p>
+            <em> (i) Nội dung: Tiếp thị, giới thiệu sản phẩm của VNPAY và đối tác. </em>
+        </p>
+        <p> (ii) Method: Through advertising messages, notifications on VNPAY's official websites, applications, or
+            other methods as regulated by law. </p>
+        <p>
+            <em> (ii) Phương thức: Qua tin nhắn quảng cáo, thông báo trên websites chính thức, ứng dụng của VNPAY hoặc
+                các phương thức khác theo quy định của pháp luật. </em>
+        </p>
+        <p> (iii) Form: VNPAY sends directly to you through the internet, electronic devices, electronic means, or other
+            forms as regulated by law. </p>
+        <p>
+            <em> (iii) Hình thức: VNPAY gửi trực tiếp cho Quý khách qua không gian mạng, thiết bị, phương tiện điện tử
+                hoặc các hình thức khác theo quy định của pháp luật. </em>
+        </p>
+        <p> (iv) Frequency: According to advertising regulations stipulated by law. </p>
+        <p>
+            <em> (iv) Tần suất: Theo quy định pháp luật về quảng cáo. </em>
+        </p>
+        <h2 class="mt-10 mb-4 text-xl md:text-2xl font-semibold text-gray-900"> 4. METHODS OF PERSONAL DATA PROCESSING/
+            <em> CÁCH THỨC XỬ LÝ DỮ LIỆU CÁ NHÂN </em>
+        </h2>
+        <p> Your personal data may be processed as follows: </p>
+        <p>
+            <em> Dữ liệu cá nhân của Quý khách có thể được xử lý: </em>
+        </p>
+        <p> (i) Manually; and/or </p>
+        <p>
+            <em> (i) Bằng tay; và/hoặc </em>
+        </p>
+        <p> (ii) Automatically (via electronic means); and/or </p>
+        <p>
+            <em> (ii) Tự động (bằng phương tiện điện tử); và/hoặc </em>
+        </p>
+        <p> (iii) Other appropriate methods as prescribed by the law. </p>
+        <p>
+            <em> (iii) Cách thức khác phù hợp với quy định của pháp luật. </em>
+        </p>
+        <h2 class="mt-10 mb-4 text-xl md:text-2xl font-semibold text-gray-900"> 5. PERSONAL DATA CONTROLLER AND
+            PROCESSOR/ <em> THÔNG TIN VỀ BÊN KIỂM SOÁT VÀ XỬ LÝ DỮ LIỆU CÁ NHÂN </em>
+        </h2>
+        <p> 5.1. The Personal Data Controller and Processor shall be VNPAY and/or VNPAY's partners involved in the
+            provision of VNPAY's products and services. </p>
+        <p>
+            <em> 5.1. Bên kiểm soát và xử lý Dữ liệu cá nhân là VNPAY và/hoặc đối tác của VNPAY có tham gia vào quá
+                trình cung cấp sản phẩm, dịch của VNPAY. </em>
+        </p>
+        <p> 5.2. To enhance customer's experience and enable VNPAY to fulfill the purposes of using personal data under
+            this Personal Data Protection Policy, VNPAY may disclose your personal data with the following organizations
+            or individuals: </p>
+        <p>
+            <em> 5.2. Nhằm phục vụ trải nghiệm của Quý khách và để VNPAY có thể thực hiện các mục đích sử dụng Dữ liệu
+                cá nhân theo Chính sách Bảo vệ Dữ liệu cá nhân này, Quý khách đồng ý cho VNPAY có thể chia sẻ Dữ liệu cá
+                nhân của Quý khách cho các tổ chức, cá nhân sau đây: </em>
+        </p>
+        <p> (i) VNPAY's products, services providers, including but not limited to information technology services,
+            marketing services, market research services, training services, legal services, auditing services,
+            transportation services; </p>
+        <p>
+            <em> (i) các nhà cung cấp sản phẩm, dịch vụ cho VNPAY, bao gồm và không giới hạn ở các dịch vụ công nghệ
+                thông tin, các dịch vụ marketing, khảo sát thị trường, các dịch vụ đào tạo, dịch vụ pháp lý, dịch vụ
+                kiểm toán, dịch vụ vận chuyển; </em>
+        </p>
+        <p> (ii) VNPAY's consulting firms, auditors, law firms, lawyers; </p>
+        <p>
+            <em> (ii) các công ty tư vấn, bên kiểm toán, tổ chức hành nghề luật sư, luật sư của VNPAY; </em>
+        </p>
+        <p> (iii) financial partners, commercial banks, switch organizations, card organizations, payment intermediary
+            companies cooperating with VNPAY; </p>
+        <p>
+            <em> (iii) các đối tác tài chính, các ngân hàng thương mại, tổ chức chuyển mạch, tổ chức thẻ, các công ty
+                trung gian thanh toán có quan hệ hợp tác với VNPAY; </em>
+        </p>
+        <p> (iv) merchants accepting VNPAY's payment services, users of VNPAY's payment intermediary services,
+            e-commerce trading platform services of VNPAY; </p>
+        <p>
+            <em> (iv) các đơn vị chấp nhận thanh toán, bên sử dụng dịch vụ trung gian thanh toán, dịch vụ sàn giao dịch
+                thương mại điện tử của VNPAY; </em>
+        </p>
+        <p> (v) employees, staff of VNPAY; </p>
+        <p>
+            <em> (v) nhân viên, người lao động của VNPAY; </em>
+        </p>
+        <p> (vi) VNPAY's parent company, subsidiaries company, and affiliated companies; </p>
+        <p>
+            <em> (vi) công ty mẹ, công ty con và công ty liên kết của VNPAY; </em>
+        </p>
+        <p> (vii) Any individual, competent authority, regulatory agency, or third party to whom VNPAY is permitted or
+            required to disclose data under the laws of any country, or pursuant to any contract or commitment between
+            the third party and VNPAY; </p>
+        <p>
+            <em> (vii) bất kỳ cá nhân, cơ quan có thẩm quyền hoặc cơ quan quản lý hoặc bên thứ ba mà VNPAY được phép
+                hoặc bắt buộc phải tiết lộ theo quy định pháp luật của bất kỳ quốc gia, hoặc theo bất kỳ hợp đồng hoặc
+                cam kết nào khác giữa bên thứ ba và VNPAY; </em>
+        </p>
+        <p> (viii) any individual involved in the enforcement or maintenance of any rights or obligations under the
+            agreements between the you and VNPAY; </p>
+        <p>
+            <em> (viii) bất kỳ cá nhân có liên quan đến việc thực thi hoặc duy trì bất kỳ quyền hoặc nghĩa vụ nào theo
+                (các) thỏa thuận giữa Quý khách với VNPAY; </em>
+        </p>
+        <p> (ix) VNPAY's service providers, and to whom the sharing or disclosing of data is necessary for VNPAY to
+            fulfill its obligations to you; </p>
+        <p>
+            <em> (ix) các bên cung cấp dịch vụ cho VNPAY mà việc chia sẻ, tiết lộ dữ liệu cho họ là cần thiết để VNPAY
+                có thể thực hiện các nghĩa vụ của mình đối với Quý khách; </em>
+        </p>
+        <p> (x) third parties responsible for processing personal data under contracts or agreements with VNPAY,
+            including research companies, survey firms, and rating agencies; </p>
+        <p>
+            <em> (x) các bên thứ ba chịu trách nhiệm xử lý dữ liệu đối với các Dữ liệu cá nhân theo hợp đồng, thỏa thuận
+                của họ với VNPAY, bao gồm cả các công ty nghiên cứu, khảo sát và cơ quan xếp hạng; </em>
+        </p>
+        <p> (xi) competent state agencies; </p>
+        <p>
+            <em> (xi) các cơ quan Nhà nước có thẩm quyền; </em>
+        </p>
+        <p> (xii) parties that you have consented to, or that VNPAY has a legal basis to share your personal data. </p>
+        <p>
+            <em> (xii) các bên được Quý Khách đồng ý hoặc VNPAY có cơ sở pháp lý để chia sẻ Dữ liệu cá nhân của Quý
+                Khách. </em>
+        </p>
+        <p> In addition to the aforementioned cases, VNPAY will not disclose your personal data to any other party,
+            unless: </p>
+        <p>
+            <em> Ngoài các trường hợp trên, VNPAY sẽ không tiết lộ Dữ liệu cá nhân của Quý khách cho bất kỳ bên nào khác
+                trừ khi: </em>
+        </p>
+        <p> (i) you have consented to it; </p>
+        <p>
+            <em> (i) có sự đồng ý của Quý khách; </em>
+        </p>
+        <p> (ii) VNPAY is required or permitted to disclose pursuant to the law; </p>
+        <p>
+            <em> (ii) VNPAY được yêu cầu hoặc được phép tiết lộ theo quy định pháp luật; </em>
+        </p>
+        <p> (iii) VNPAY transfers its rights and obligations under the agreements between you and VNPAY. </p>
+        <p>
+            <em> (iii) VNPAY chuyển giao quyền và nghĩa vụ theo (các) thỏa thuận giữa Quý khách và VNPAY. </em>
+        </p>
+        <h2 class="mt-10 mb-4 text-xl md:text-2xl font-semibold text-gray-900"> 6. POSSIBLE UNINTENDED CONSEQUENCES AND
+            DAMAGES/ <em> HẬU QUẢ, THIỆT HẠI KHÔNG MONG MUỐN CÓ KHẢ NĂNG XẢY RA </em>
+        </h2>
+        <p> VNPAY uses various information security technologies such as international standard PCI DSS, SSL... to
+            protect customer's personal data from being disclosured, exploited, used, or shared without your consent.
+            VNPAY undertakes to maximize the security and confidentiality of your personal data. </p>
+        <p>
+            <em> VNPAY sử dụng các công nghệ bảo mật thông tin khác nhau như: chuẩn quốc tế PCI DSS, SSL... nhằm bảo vệ
+                Dữ liệu cá nhân của Quý khách không bị lộ lọt, lợi dụng, sử dụng hoặc chia sẻ ngoài ý muốn. VNPAY cam
+                kết bảo mật một cách tối đa Dữ liệu cá nhân của Quý khách. </em>
+        </p>
+        <p> However, some unintended consequences and damages that may occur include, but are not limited to the
+            following reasons: (a) Hardware or software errors during data processing; (b) Security vulnerabilities
+            beyond VNPAY's control, and the system is hacked; (c) Your own subjective negligence, being scammed, or
+            accessing websites/downloading applications containing malware; (d) Natural disasters... </p>
+        <p>
+            <em> Tuy nhiên, một số hậu quả, thiệt hại không mong muốn có thể xảy ra bao gồm nhưng không giới hạn bởi các
+                nguyên nhân sau: (a) Lỗi phần cứng, phần mềm trong quá trình xử lý dữ liệu; (b) Lỗ hổng bảo mật nằm
+                ngoài khả năng kiểm soát của VNPAY, hệ thống bị tin tặc tấn công; (c) Quý khách chủ quan, bất cẩn hoặc
+                bị lừa đảo hoặc truy cập các website/tải các ứng dụng có chứa phần mềm độc hại; (d) thảm họa thiên
+                nhiên... </em> VNPAY advises you to keep the information related to your username, passwords, OTP codes,
+            and biometric data secure and not to share this information with anyone else.
+        </p>
+        <p>
+            <em> VNPAY khuyến cáo Quý khách bảo mật các thông tin liên quan đến tên đăng nhập, mật khẩu đăng nhập vào
+                tài khoản của Quý khách, mã OTP, sinh trắc học và không chia sẻ các thông tin này với bất kỳ người nào
+                khác. </em>
+        </p>
+        <p> Customers should protect your electronic devices while using. You should lock, log out, or exit the accounts
+            on VNPAY's website or application when not in use. </p>
+        <p>
+            <em> Quý khách nên bảo quản thiết bị điện tử trong quá trình sử dụng. Quý khách nên khóa, đăng xuất, hoặc
+                thoát khỏi tài khoản trên website hoặc ứng dụng của VNPAY khi không có nhu cầu sử dụng tài khoản. </em>
+        </p>
+        <p> In the event of an incident or detection of a violation concerning your personal data, VNPAY will promptly
+            notify the relevant State authorities of the personal data protection breach and make every effort to
+            implement remedial measures to prevent further consequences. </p>
+        <p>
+            <em> Trong trường hợp xảy ra sự cố hoặc phát hiện hành vi vi phạm đến Dữ liệu cá nhân của Quý khách, VNPAY
+                sẽ ngay lập tức tiến hành thông báo vi phạm quy định về bảo vệ Dữ liệu cá nhân cho cơ quan Nhà nước có
+                thẩm quyền và nỗ lực thực hiện các biện pháp khắc phục, ngăn chặn hậu quả. </em>
+        </p>
+        <h2 class="mt-10 mb-4 text-xl md:text-2xl font-semibold text-gray-900"> 7. START AND END TIME OF PERSONAL DATA
+            PROCESSING/ <em> THỜI GIAN BẮT ĐẦU, THỜI GIAN KẾT THÚC XỬ LÝ DỮ LIỆU CÁ NHÂN </em>
+        </h2>
+        <p> Start time of the personal data processing: From the time you accept this Personal Data Protection Policy or
+            when you register to use or use VNPAY's products or services. </p>
+        <p>
+            <em> Thời gian bắt đầu xử lý Dữ liệu cá nhân: Kể từ thời điểm Quý khách chấp thuận Chính sách Bảo vệ Dữ liệu
+                cá nhân này hoặc tại thời điểm Quý khách đăng ký sử dụng hoặc sử dụng sản phẩm, dịch vụ của VNPAY. </em>
+        </p>
+        <p> End time of the personal data processing: Until the time VNPAY is requested by you to stop the processing of
+            your personal data, or when VNPAY no longer has any obligations to provide products or services to you, or
+            any another time as prescribed by law. </p>
+        <p>
+            <em> Thời gian kết thúc xử lý Dữ liệu cá nhân: Cho tới thời điểm Quý khách yêu cầu VNPAY chấm dứt việc xử lý
+                Dữ liệu cá nhân hoặc khi VNPAY không còn bất kỳ nghĩa vụ nào về việc cung cấp sản phẩm, dịch vụ cho Quý
+                khách hoặc thời gian khác theo quy định của pháp luật. </em>
+        </p>
+        <h2 class="mt-10 mb-4 text-xl md:text-2xl font-semibold text-gray-900"> 8. RIGHTS AND OBLIGATIONS OF CUSTOMERS/
+            <em> QUYỀN VÀ NGHĨA VỤ CỦA QUÝ KHÁCH </em>
+        </h2>
+        <p> 8.1 As the of personal data subject, you have the following rights: </p>
+        <p> (i) The right to be informed of Personal Data processing activities; </p>
+        <p> (ii) The right to consent, withhold consent, or request the withdrawal of consent for Personal Data
+            processing; </p>
+        <p> (iii) The right to access, rectify, or request the rectification of Personal Data; </p>
+        <p> (iv) The right to request data provision, erasure, or restriction of Personal Data processing; and to object
+            to Personal Data processing; </p>
+        <p> (v) The right to complain, denounce, initiate lawsuits, and claim damages in accordance with the law; </p>
+        <p> (vi) The right to request competent authorities or relevant agencies, organizations, and individuals
+            involved in Personal Data processing to implement measures and solutions to protect their Personal Data in
+            accordance with the law; </p>
+        <p> (xi) Other rights as prescribed by law from time to time. </p>
+        <p>
+            <em> 8.1. Với tư cách là chủ thể Dữ liệu cá nhân, Quý khách có các quyền sau: </em>
+        </p>
+        <p> (i) Được biết về hoạt động xử lý Dữ liệu cá nhân; </p>
+        <p> (ii) Đồng ý hoặc không đồng ý, yêu cầu rút lại sự đồng ý cho phép xử lý Dữ liệu cá nhân; </p>
+        <p> (iii) Xem, chỉnh sửa hoặc yêu cầu chỉnh sửa Dữ liệu cá nhân; </p>
+        <p> (iv) Yêu cầu cung cấp, xóa, hạn chế xử lý Dữ liệu cá nhân; gửi yêu cầu phản đối xử lý Dữ liệu cá nhân; </p>
+        <p> (v) Khiếu nại, tố cáo, khởi kiện, yêu cầu bồi thường thiệt hại theo quy định của pháp luật; </p>
+        <p> (vi) Yêu cầu cơ quan có thẩm quyền hoặc cơ quan, tổ chức, cá nhân liên quan đến xử lý Dữ liệu cá nhân thực
+            hiện các biện pháp, giải pháp bảo vệ Dữ liệu cá nhân của mình theo quy định của pháp luật; </p>
+        <p> (xi) Các quyền khác theo quy định của pháp luật tại từng thời kỳ. </p>
+        <p> 8.2 To the extent permitted by law, you may exercise your rights by: (i) Directly performing operations on
+            VNPAY's product and service delivery platforms; or (ii) Contacting VNPAY using the contact information
+            provided in Clause 10 below. VNPAY will comply with any legitimate and valid requests from Customers within
+            the legally prescribed timeframe after receiving your valid request. </p>
+        <p>
+            <em> 8.2. Trong phạm vi pháp luật cho phép, Quý khách có thể thực hiện các quyền của mình bằng cách: (i)
+                thao tác trực tiếp các trên nền tảng cung cấp sản phẩm, dịch vụ của VNPAY hoặc (ii) liên hệ với VNPAY
+                theo thông tin được cung cấp chi tiết tại Mục 10 bên dưới. VNPAY sẽ thực hiện yêu cầu hợp pháp và hợp lệ
+                từ Quý khách trong khoảng thời gian quy định của pháp luật kể từ khi nhận được yêu cầu hợp lệ từ Quý
+                khách. </em>
+        </p>
+        <p> 8.3 In the event that you withdraw the consent to the processing of your personal data, request the data
+            deletion, or exercise other related rights with respect to any or all of the personal data, these actions
+            may: (i) affect the legal validity of the contract and the legal relation between you and VNPAY; (ii)
+            VNPAY's products and services being limited, restricted, suspended, or canceled in specific cases. These
+            changes may lead to costs or damages that you and/or third parties may incur. VNPAY will continue to process
+            your personal data within the remaining scope required (if any) or as stipulated by law. </p>
+        <p>
+            <em> 8.3 Trường hợp Quý khách rút lại sự đồng ý của mình về việc xử lý Dữ liệu cá nhân, yêu cầu xóa dữ liệu,
+                thực hiện các quyền có liên quan khác đối với bất kỳ hoặc tất cả các Dữ liệu cá nhân của Quý khách thì
+                các hành động đó có thể làm: (i) ảnh hưởng đến hiệu lực pháp lý của hợp đồng, quan hệ pháp lý của VNPAY
+                và Quý khách; (ii) sản phẩm, dịch vụ của VNPAY đối với Quý khách bị giới hạn, hạn chế, tạm ngừng, hủy bỏ
+                tùy từng trường hợp. Việc thay đổi này có thể dẫn đến các phí tổn, thiệt hại mà Quý khách và/hoặc bên
+                thứ ba sẽ phải gánh chịu. VNPAY sẽ tiếp tục xử lý Dữ liệu cá nhân của Quý khách trong phạm vi còn lại
+                được yêu cầu (nếu có) hoặc theo quy định của pháp luật. </em>
+        </p>
+        <p> 8.4 Obligations of customers: </p>
+        <p>
+            <em> 8.4 Nghĩa vụ của Quý khách: </em>
+        </p>
+        <p> As the of personal data subject, you have the following obligations: </p>
+        <p>
+            <em> Với tư cách là chủ thể Dữ liệu cá nhân, Quý khách có các nghĩa vụ sau: </em>
+        </p>
+        <p> (i) To comply with the regulations of the law, this Personal Data Protection Policy, and VNPAY's rules and
+            guidelines related to the processing of customer's personal data. </p>
+        <p>
+            <em> (i) Tuân thủ các quy định của pháp luật, Chính sách Bảo vệ Dữ liệu cá nhân này và các quy định, hướng
+                dẫn của VNPAY liên quan đến xử lý Dữ liệu cá nhân của Quý khách. </em>
+        </p>
+        <p> (ii) To provide complete, truthful, and accurate personal data and other information as required by VNPAY
+            when registering for and using VNPAY's products and services, and when there are changes to this
+            information. VNPAY will secure your personal data based on the information you have registered. VNPAY,
+            therefore, will not be responsible for any consequences or limitations to your rights due to inaccuracy of
+            the registered information. If you failure to notify VNPAY or notify incompletely of any changes or
+            inaccuracies in the personal data provided, you will be responsible for any errors, risks or losses arising
+            (if any), including financial damages and additional costs due to incorrect or inconsistent information.
+        </p>
+        <p>
+            <em> (ii) Cung cấp đầy đủ, trung thực, chính xác Dữ liệu cá nhân, các thông tin khác theo yêu cầu của VNPAY
+                khi đăng ký và sử dụng sản phẩm, dịch vụ của VNPAY và khi có thay đổi về các thông tin này. VNPAY sẽ
+                tiến hành bảo mật Dữ liệu cá nhân của Quý khách căn cứ trên thông tin Quý khách đã đăng ký. Do đó, nếu
+                có bất kỳ thông tin sai lệch nào, VNPAY sẽ không chịu trách nhiệm trong trường hợp thông tin đó làm ảnh
+                hưởng hoặc hạn chế quyền lợi của Quý khách. Trường hợp không thông báo hoặc thông báo không đầy đủ về sự
+                thay đổi hoặc không chính xác của Dữ liệu cá nhân đã cung cấp cho VNPAY, Quý khách chịu mọi trách nhiệm
+                về những sai sót, rủi ro, tổn thất phát sinh (nếu có), bao gồm cả thiệt hại về tài chính, chi phí phát
+                sinh do thông tin cung cấp sai hoặc không thống nhất. </em>
+        </p>
+        <p> (iii) To cooperate with VNPAY, competent state authorities, or third parties if there are any issues
+            affecting your personal data. </p>
+        <p>
+            <em> (iii) Phối hợp với VNPAY, cơ quan nhà nước có thẩm quyền hoặc bên thứ ba trong trường hợp phát sinh các
+                vấn đề ảnh hưởng đến Dữ liệu cá nhân của Quý khách. </em>
+        </p>
+        <p> (iv) To protect your own personal data; proactively implement appropriate measures to safeguard your
+            personal data when using VNPAY's products and services; promptly inform VNPAY upon discovering inaccuracies
+            or suspicions regarding the infringement of the personal data. </p>
+        <p>
+            <em> (iv) Tự bảo vệ Dữ liệu cá nhân của Quý khách; chủ động áp dụng các biện pháp nhằm bảo vệ Dữ liệu cá
+                nhân của mình trong quá trình sử dụng sản phẩm, dịch vụ của VNPAY; thông báo kịp thời cho VNPAY khi phát
+                hiện thấy có sai sót, nhầm lẫn về Dữ liệu cá nhân của mình hoặc nghi ngờ Dữ liệu cá nhân của mình đang
+                bị xâm phạm. </em>
+        </p>
+        <p> (v) To assume responsibility for the information, data, and consent you create or provide; to take
+            responsibility in cases where personal data leakage or infringement occurs due to your faults. </p>
+        <p>
+            <em> (v) Tự chịu trách nhiệm đối với những thông tin, dữ liệu, chấp thuận mà mình tạo lập, cung cấp; tự chịu
+                trách nhiệm trong trường hợp Dữ liệu cá nhân bị rò rỉ, xâm phạm do lỗi của mình. </em>
+        </p>
+        <p> (vi) To regularly update on the regulations and policies regarding personal data protection that VNPAY
+            notifies you from time to time or publishs on VNPAY's official website (vnpay.vn) or VNPAY e-wallet
+            application; to follow VNPAY's instructions to clearly indicate your full consent, partial consent,
+            conditional consent, or non-consent regarding contents that VNPAY notifies you from time to time. </p>
+        <p>
+            <em> (vi) Thường xuyên cập nhật các quy định, chính sách về bảo vệ Dữ liệu cá nhân VNPAY thông báo tới Quý
+                khách trong từng thời kỳ hoặc đăng tải trên trang thông tin điện tử chính thức của VNPAY (vnpay.vn) hoặc
+                ứng dụng Ví VNPAY; thực hiện các hành động theo hướng dẫn của VNPAY để thể hiện rõ việc đồng ý toàn bộ
+                hoặc đồng ý một phần hoặc đồng ý với điều kiện kèm theo hoặc không đồng ý đối với các nội dung VNPAY
+                thông báo tới Quý khách trong từng thời kỳ. </em>
+        </p>
+        <p> (vii) To respect and protect the personal data of others. </p>
+        <p>
+            <em> (vii) Tôn trọng, bảo vệ Dữ liệu cá nhân của người khác. </em>
+        </p>
+        <p> (viii) To fulfill other obligations as stipulated by law. </p>
+        <p>
+            <em> (viii) Các nghĩa vụ khác theo quy định của pháp luật. </em>
+        </p>
+        <h2 class="mt-10 mb-4 text-xl md:text-2xl font-semibold text-gray-900"> 9. AMENDMENTS AND SUPPLEMENTS TO THE
+            PERSONAL DATA PROTECTION POLICY/ <em> SỬA ĐỔI, BỔ SUNG CHÍNH SÁCH BẢO VỆ DỮ LIỆU CÁ NHÂN </em>
+        </h2>
+        <p> When necessary, VNPAY may amend, update, or supplement the contents of this Personal Data Protection Policy
+            at any time. VNPAY recommends that you regularly check the Personal Data Protection Policy on VNPAY's
+            official website (vnpay.vn) to stay updated on how to protect your personal data. Your continued use of
+            VNPAY's products and services shall be construed that you accept the updated Personal Data Protection
+            Policy. </p>
+        <p>
+            <a id="_heading=h.r8squ0ffyfpo"></a>
+            <em> Khi cần thiết, VNPAY có thể sẽ sửa đổi, cập nhật hoặc điều chỉnh các nội dung trong Chính sách Bảo vệ
+                Dữ liệu cá nhân này vào bất kỳ thời điểm nào. VNPAY khuyến nghị Quý khách nên thường xuyên kiểm tra
+                Chính sách Bảo vệ Dữ liệu cá nhân trên trang thông tin điện tử chính thức của VNPAY (vnpay.vn) để cập
+                nhật các thay đổi và luôn được VNPAY thông báo về cách thức bảo vệ Dữ liệu cá nhân của Quý khách. Việc
+                Quý khách tiếp tục sử dụng sản phẩm, dịch vụ của VNPAY được hiểu là Quý khách đã chấp nhận bản Chính
+                sách Bảo vệ Dữ liệu cá nhân được cập nhật. </em>
+        </p>
+        <h2 class="mt-10 mb-4 text-xl md:text-2xl font-semibold text-gray-900"> 10. HOW TO CONTACT VNPAY/ <em> CÁCH THỨC
+                QUÝ KHÁCH LIÊN HỆ VỚI VNPAY </em>
+        </h2>
+        <p> 10.1 To exercise your rights or for any inquiries related to this Personal Data Protection Policy,
+            kindly contact us through one of the following methods: (i) Visit VNPAY&#39;s headquarters, or (ii)
+            call the hotline number 1900555577, or (iii) send an email to hotrovnpay@vnpay.vn for
+            assistance.</p>
+        <p>
+            <em> 10.1 Để thực hiện các quyền của mình, hay khi có nhu cầu trao đổi với VNPAY liên quan đến nội
+                dung của Chính sách Bảo vệ Dữ liệu cá nhân này, Quý khách vui lòng liên hệ với VNPAY theo
+                một trong các cách thức sau: (i) đến trực tiếp trụ sở chính của VNPAY, hoặc (ii) gọi tới số
+                đường dây nóng 1900 5555 77, hoặc (iii) gửi email đến địa chỉ hotrovnpay@vnpay.vn để được
+                hướng dẫn.</em>
+        </p>
+        <p>
+            10.2 Contact Information of the Entity Collecting and Managing Information<br />
+            Vietnam Payment Solution Joint Stock Company</br />
+            Address: 8th Floor, No. 22 Lang Ha Street, Lang Ha Ward, Dong Da District, Hanoi, Vietnam.</br />
+            Hotline: 1900.555.577</br />
+            Support Email: hotrovnpay@vnpay.vn</br />
+            In case customers have any questions regarding the collection and processing of personal
+            information, they may contact the above address for request handling and support.
+        </p>
+        <p>
+            <em> 10.2 Địa chỉ đơn vị thu thập và quản lý thông tin<br />
+                CÔNG TY CỔ PHẦN GIẢI PHÁP THANH TOÁN VIỆT NAM<br />
+                Địa chỉ: Tầng 8, số 22, phố Láng Hạ, phường Láng Hạ, quận Đống Đa, thành phố Hà Nội, Việt
+                Nam.<br />
+                Hotline: 1900.555.577<br /> Email hỗ trợ: hotrovnpay@vnpay.vn</em>
+        </p>
+        <h2 class="mt-10 mb-4 text-xl md:text-2xl font-semibold text-gray-900">11. METHODS AND TOOLS FOR CUSTOMERS TO
+            ACCESS AND MODIFY THEIR PERSONAL DATA ON THE INFORMATION COLLECTOR’S E-COMMERCE SYSTEM/ <em> PHƯƠNG THỨC VÀ
+                CÔNG CỤ ĐỂ KHÁCH HÀNG TIẾP CẬN VÀ CHỈNH SỬA DỮ LIỆU CÁ NHÂN CỦA MÌNH TRÊN HỆ THỐNG THƯƠNG MẠI ĐIỆN TỬ
+                CỦA BÊN THU THẬP THÔNG TIN</em>
+        </h2>
+        <p>Customers have the right to provide their personal information to us and may change such
+            decision at any time by contacting the information collecting and managing entity mentioned
+            above.</p>
+        <p>The website vnpay.vn requires individuals registering for services/purchasing goods as
+            customers to provide complete relevant personal information, including but not limited to: full
+            name, contact address, email address, personal identification document number (Identity Card,
+            Citizen Identity Card, Passport, etc.), phone number, bank account number, payment card
+            number, and other relevant information, and customers shall be responsible for the legality of
+            such information. We shall not be liable for, nor resolve, any complaints relating to the rights
+            and interests of such customers if it is determined that the information provided during the initial
+            registration is inaccurate.</p>
+        <p>Customers have the right to review, update, and amend their personal information by logging
+            into their accounts and editing the personal information directly, or by requesting us to perform
+            such actions.</p>
+        <p>We are committed to maintaining the absolute confidentiality of customers’ personal information
+            in accordance with our personal data protection policy. The collection and use of each
+            customer’s information shall only be conducted with the customer’s consent, except where
+            otherwise required by law.</p>
+        <p>In the event that the information storage server is attacked by hackers or an information security
+            incident occurs resulting in leakage or loss of customers’ personal data, we shall be responsible
+            for promptly notifying the competent authorities for investigation and handling, and informing
+            affected customers accordingly.</p>
+        <p>Customers have the right to lodge complaints regarding the disclosure of personal information to
+            third parties by contacting us using the information specified in Section 10 above. Upon
+            receiving such feedback, we will verify the information, provide explanations, and guide
+            customers on how to restore and secure their information.</p>
+        <em>
+            <p>Khách hàng có quyền cung cấp thông tin cá nhân cho chúng tôi và có thể thay đổi quyết định đó
+                vào bất cứ lúc nào bằng cách liên hệ tới địa chỉ đơn vị thu thập và quản lý thông tin nêu trên.
+                Website vnpay.vn yêu cầu cá nhân khi đăng ký dịch vụ/mua hàng là Khách hàng, phải cung cấp
+                đầy đủ thông tin cá nhân có liên quan như: Họ và tên, địa chỉ liên hệ, email, số giấy tờ chứng
+                thực cá nhân (Chứng minh nhân dân, Căn cước công dân, Hộ chiếu,…), số điện thoại, số tài
+                khoản, số thẻ thanh toán…và chịu trách nhiệm về tính pháp lý của những thông tin trên. Chúng
+                tôi không chịu trách nhiệm cũng như không giải quyết mọi khiếu nại có liên quan đến quyền lợi
+                của khách hàng đó nếu xét thấy tất cả thông tin của khách hàng đó cung cấp khi đăng ký ban
+                đầu là không chính xác.</p>
+            <p>Khách hàng có quyền tự kiểm tra, cập nhật, điều chỉnh thông tin cá nhân của mình bằng cách
+                đăng nhập vào tài khoản và chỉnh sửa thông tin cá nhân hoặc yêu cầu khách hàng thực hiện việc
+                này.</p>
+            <p>Thông tin cá nhân của khách hàng được chúng tôi cam kết bảo mật tuyệt đối theo chính sách
+                bảo vệ thông tin cá nhân. Việc thu thập và sử dụng thông tin của mỗi khách hàng chỉ được thực
+                hiện khi có sự đồng ý của khách hàng đó trừ những trường hợp pháp luật có quy định khác.
+                Trong trường hợp máy chủ lưu trữ thông tin bị tin tặc tấn công, phát sinh sự cố mất an ninh an
+                toàn thông tin mạng dẫn đến rò rỉ, mất mát dữ liệu cá nhân khách hàng, chúng tôi sẽ có trách
+                nhiệm thông báo vụ việc cho cơ quan chức năng điều tra xử lý kịp thời và thông báo cho khách
+                hàng được biết.</p>
+            <p>Khách hàng có quyền gửi khiếu nại về việc lộ thông tin cá nhân cho bên thứ ba đến chúng tôi
+                theo thông tin nêu tại mục 10 ở trên.</p>
+
+            <p>Khi tiếp nhận những phản hồi này, chúng tôi sẽ xác nhận lại thông tin, có trách nhiệm trả lời lý
+                do và hướng dẫn khách hàng khôi phục và bảo mật lại thông tin.</p>
+        </em>
+        <div class="scroll-top">
+            <svg xmlns="http://www.w3.org/2000/svg" class="ic-arrow" width="24" height="24" viewBox="0 0 24 24">
+                <g id="ic_next" transform="translate(-336 -78)">
+                    <path id="Path_739" data-name="Path 739" d="M352,101.3l7-6.9-7-7.1" transform="translate(-7.5 -3.8)"
+                        fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1.5"></path>
+                    <rect id="Rectangle_132" data-name="Rectangle 132" width="24" height="24"
+                        transform="translate(336 78)" fill="none"></rect>
+                </g>
+            </svg>
+        </div>
+        <script>
+            const scrollBtn = document.getElementById("scrollBtn");
+
+            window.addEventListener("scroll", function () {
+                if (window.pageYOffset > 200) {
+                    scrollBtn.classList.add("show");
+                } else {
+                    scrollBtn.classList.remove("show");
+                }
+            });
+
+            scrollBtn.addEventListener("click", function () {
+                window.scrollTo({ top: 0, behavior: "smooth" });
+            });
+        </script>
+    </div>
+
+
+</body>
+
+</html>
