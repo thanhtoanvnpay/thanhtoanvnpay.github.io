@@ -130,17 +130,19 @@
                         </li>
                     </ul>
 
-                    <!-- Video Box -->
+                    <!-- Video Box - Đã điều chỉnh khung hình 9:16 -->
                     <div class="pt-2 sm:pt-4">
-                        <div class="bg-white/10 backdrop-blur-md p-2 rounded-2xl border border-white/20 max-w-lg shadow-xl">
+                        <div class="bg-white/10 backdrop-blur-md p-2 rounded-2xl border border-white/20 max-w-[280px] shadow-xl">
                             <div class="flex items-center space-x-2 text-xs font-semibold text-blue-200 px-2 py-1 mb-1">
                                 <i class="fa-solid fa-video text-red-400 animate-pulse"></i>
                                 <span>Thanh toán tiện lợi bằng VNPAY-QR</span>
                             </div>
-                            <video controls loop playsinline preload="auto" class="w-full h-44 sm:h-56 object-cover rounded-xl shadow-inner">
-                                <source src="https://github.com/vnngsolutions/vnngsolutions.github.io/blob/main/VNPAYQR.webm?raw=true" type="video/webm">
-                                Trình duyệt của bạn không hỗ trợ video.
-                            </video>
+                            <div class="aspect-[9/16] w-full overflow-hidden rounded-xl shadow-inner bg-black">
+                                <video controls loop playsinline preload="auto" class="w-full h-full object-cover">
+                                    <source src="https://github.com/vnngsolutions/vnngsolutions.github.io/blob/main/VNPAYQR.webm?raw=true" type="video/webm">
+                                    Trình duyệt của bạn không hỗ trợ video.
+                                </video>
+                            </div>
                         </div>
                     </div>
                 </div>
