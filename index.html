@@ -162,57 +162,40 @@
 
                         <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted){showSuccess();}"></iframe>
 
-                        <form id="consultationForm" action="https://docs.google.com/forms/d/e/1FAIpQLSd9k4BFTZW10Md4D2UeMlTO65Bf-YVxCMvTPyZNZkoFDpu6mw/formResponse" method="POST" target="hidden_iframe" onsubmit="handleFormSubmit(event)" class="space-y-3.5 sm:space-y-4">
-                            <div>
-                                <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Họ và tên người liên hệ <span class="text-red-500">*</span></label>
-                                <div class="relative">
-                                    <span class="absolute inset-y-0 left-0 pl-3 flex items-center text-slate-400"><i class="fa-solid fa-user"></i></span>
-                                    <input type="text" id="cusName" name="entry.1444757328" autocomplete="name" required placeholder="Ví dụ: Nguyễn Văn A" class="w-full pl-10 pr-4 py-2.5 sm:py-3 bg-slate-50 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-vnpayBlue focus:bg-white transition">
-                                </div>
-                            </div>
+                        <form id="consultationForm" action="https://docs.google.com/forms/d/e/1FAIpQLSd9k4BFTZW10Md4D2UeMlTO65Bf-YVxCMvTPyZNZkoFDpu6mw/formResponse" method="POST" target="hidden_iframe" onsubmit="handleFormSubmit(event)" class="space-y-4 sm:space-y-5">
+    <div>
+        <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Họ và tên người liên hệ <span class="text-red-500">*</span></label>
+        <div class="relative">
+            <span class="absolute inset-y-0 left-0 pl-3 flex items-center text-slate-400"><i class="fa-solid fa-user"></i></span>
+            <input type="text" id="cusName" name="entry.1444757328" autocomplete="name" required placeholder="Ví dụ: Nguyễn Văn A" class="w-full pl-10 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-vnpayBlue focus:bg-white transition">
+        </div>
+    </div>
 
-                            <div>
-                                <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Số điện thoại liên hệ (Zalo) <span class="text-red-500">*</span></label>
-                                <div class="relative">
-                                    <span class="absolute inset-y-0 left-0 pl-3 flex items-center text-slate-400"><i class="fa-solid fa-phone"></i></span>
-                                    <input type="tel" id="cusPhone" name="entry.1967364401" autocomplete="tel" required placeholder="Ví dụ: 0912345678" class="w-full pl-10 pr-4 py-2.5 sm:py-3 bg-slate-50 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-vnpayBlue focus:bg-white transition">
-                                </div>
+    <div>
+        <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Số điện thoại liên hệ (Zalo) <span class="text-red-500">*</span></label>
+        <div class="relative">
+            <span class="absolute inset-y-0 left-0 pl-3 flex items-center text-slate-400"><i class="fa-solid fa-phone"></i></span>
+            <input type="tel" id="cusPhone" name="entry.1967364401" autocomplete="tel" required placeholder="Ví dụ: 0912345678" class="w-full pl-10 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-vnpayBlue focus:bg-white transition">
+        </div>
+    </div>
 
-                            <div>
-                                <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Dịch vụ quan tâm</label>
-                                <div class="relative">
-                                    <span class="absolute inset-y-0 left-0 pl-3 flex items-center text-slate-400"><i class="fa-solid fa-store"></i></span>
-                                    <select id="cusService" name="entry.14513303" class="w-full pl-10 pr-4 py-2.5 sm:py-3 bg-slate-50 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-vnpayBlue focus:bg-white transition">
-                                        <option value="Mã VNPAY-QR (Đặt tại quầy thu ngân)">Mã VNPAY-QR (Đặt tại quầy thu ngân)</option>
-                                        <option value="Máy VNPAY SmartPOS (Quẹt thẻ & Quét QR)">Máy VNPAY SmartPOS (Quẹt thẻ &amp; Quét QR)</option>
-                                        <option value="VNPAY PhonePOS (Biến điện thoại thành máy POS)">VNPAY PhonePOS (Biến điện thoại thành máy POS)</option>
-                                        <option value="Cổng thanh toán Website / App Online">Cổng thanh toán Website / App Online</option>
-                                    </select>
-                                </div>
-                            </div>
+    <!-- Hidden inputs hoặc loại bỏ các trường thừa để giữ hệ thống gửi dữ liệu liền mạch -->
+    <input type="hidden" name="entry.14513303" value="Đăng ký tư vấn nhanh qua Form rút gọn">
 
-                            <div>
-                                <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Ghi chú hoặc yêu cầu thêm (nếu có)</label>
-                                <div class="relative">
-                                    <span class="absolute inset-y-0 left-0 pl-3 flex items-center text-slate-400"><i class="fa-solid fa-pen-to-square"></i></span>
-                                    <input type="text" id="cusExtra" name="entry.1268683863" placeholder="Nhập tên cửa hàng hoặc thông tin thêm" class="w-full pl-10 pr-4 py-2.5 sm:py-3 bg-slate-50 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-vnpayBlue focus:bg-white transition">
-                                </div>
-                            </div>
+    <div class="bg-blue-50/70 border border-blue-100 rounded-xl p-3 text-xs text-slate-600 space-y-1">
+        <div class="font-bold text-vnpayBlue flex items-center space-x-1.5">
+            <i class="fa-solid fa-gift text-amber-500"></i>
+            <span>Quyền lợi khi đăng ký ngay hôm nay:</span>
+        </div>
+        <p>✓ Khảo sát &amp; Tư vấn giải pháp tối ưu phí tốt nhất</p>
+        <p>✓ Hỗ trợ trọn gói hồ sơ, bàn giao miễn phí thiết bị tận nơi</p>
+    </div>
 
-                            <div class="bg-blue-50/70 border border-blue-100 rounded-xl p-3 text-xs text-slate-600 space-y-1">
-                                <div class="font-bold text-vnpayBlue flex items-center space-x-1.5">
-                                    <i class="fa-solid fa-gift text-amber-500"></i>
-                                    <span>Quyền lợi khi đăng ký ngay hôm nay:</span>
-                                </div>
-                                <p>✓ Khảo sát &amp; Tư vấn giải pháp tối ưu phí tốt nhất</p>
-                                <p>✓ Hỗ trợ trọn gói hồ sơ, bàn giao miễn phí thiết bị tận nơi nhanh chóng</p>
-                            </div>
-
-                            <button type="submit" class="w-full bg-gradient-to-r from-vnpayBlue to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold py-3.5 px-4 rounded-xl shadow-lg hover:shadow-xl transition transform active:scale-[0.99] flex items-center justify-center space-x-2">
-                                <span>ĐĂNG KÝ NHẬN ƯU ĐÃI THÁNG</span>
-                                <i class="fa-solid fa-arrow-right"></i>
-                            </button>
-                        </form>
+    <button type="submit" class="w-full bg-gradient-to-r from-vnpayBlue to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold py-3.5 px-4 rounded-xl shadow-lg hover:shadow-xl transition transform active:scale-[0.99] flex items-center justify-center space-x-2">
+        <span>ĐĂNG KÝ NHẬN ƯU ĐÃI THÁNG</span>
+        <i class="fa-solid fa-arrow-right"></i>
+    </button>
+</form>
 
                         <div id="successMessage" class="hidden text-center py-8 space-y-4">
                             <div class="w-14 h-14 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto text-2xl shadow-inner">
