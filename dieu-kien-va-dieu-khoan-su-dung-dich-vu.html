@@ -2355,21 +2355,6 @@
   </body>
 </html>
 
-<!-- Bottom CTA Banner -->
-    <section class="py-12 sm:py-20 bg-gradient-to-r from-blue-900 via-vnpayBlue to-blue-800 text-white text-center relative overflow-hidden">
-        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px]"></div>
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-4 sm:space-y-6">
-            <h2 class="text-2xl sm:text-4xl font-extrabold">Sẵn sàng tối ưu doanh thu ngay hôm nay?</h2>
-            <p class="text-blue-100 text-xs sm:text-lg max-w-2xl mx-auto">Để lại thông tin, chuyên viên tư vấn sẽ liên hệ hỗ trợ bạn hoàn toàn miễn phí trong thời gian sớm nhất.</p>
-            <div>
-                <a href="#dang-ky" class="inline-flex items-center space-x-2 bg-amber-400 hover:bg-amber-300 text-slate-900 font-extrabold px-6 py-3.5 sm:px-8 sm:py-4 rounded-2xl text-sm sm:text-base shadow-xl transition transform hover:-translate-y-1">
-                    <i class="fa-solid fa-rocket"></i>
-                    <span>ĐĂNG KÝ TƯ VẤN MIỄN PHÍ</span>
-                </a>
-            </div>
-        </div>
-    </section>
-
     <!-- Footer -->
     <footer class="bg-slate-900 text-slate-400 py-10 sm:py-14 border-t border-slate-800 text-xs sm:text-sm">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -2409,80 +2394,3 @@
             </div>
         </div>
     </footer>
-    
-    <!-- Floating Action Buttons (PC / Tablet) -->
-    <div class="hidden sm:flex fixed bottom-6 right-6 z-50 flex-col space-y-3">
-        <a href="https://zalo.me/0968122893" target="_blank" title="Chat Zalo Tư Vấn" class="relative group flex items-center bg-blue-600 text-white p-3.5 rounded-full shadow-2xl hover:bg-blue-700 transition transform hover:scale-110">
-            <span class="absolute -top-1 -right-1 flex h-3 w-3">
-              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-              <span class="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
-            </span>
-            <span class="max-w-0 overflow-hidden whitespace-nowrap group-hover:max-w-xs transition-all duration-300 ease-in-out font-bold text-xs px-0 group-hover:px-2">
-                Chat Zalo Nhanh
-            </span>
-            <i class="fa-solid fa-comment-dots text-xl"></i>
-        </a>
-
-        <a href="tel:0968122893" title="Gọi ngay Hotline" class="flex items-center bg-green-600 text-white p-3.5 rounded-full shadow-2xl hover:bg-green-700 transition transform hover:scale-110">
-            <i class="fa-solid fa-phone-volume text-xl"></i>
-        </a>
-    </div>
-
-    <!-- Mobile Sticky Bottom Bar -->
-    <div class="sm:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-slate-200 z-50 p-2 grid grid-cols-2 gap-2 shadow-2xl">
-        <a href="tel:0968122893" class="bg-green-600 active:bg-green-700 text-white py-2.5 rounded-xl font-bold text-xs flex items-center justify-center space-x-1.5">
-            <i class="fa-solid fa-phone"></i>
-            <span>GỌI 0968.122.893</span>
-        </a>
-        <a href="#dang-ky" class="bg-vnpayBlue active:bg-blue-700 text-white py-2.5 rounded-xl font-bold text-xs flex items-center justify-center space-x-1.5">
-            <i class="fa-solid fa-pen-to-square"></i>
-            <span>ĐĂNG KÝ NGAY</span>
-        </a>
-    </div>
-
-    <script>
-        var submitted = false;
-
-        function handleFormSubmit(event) {
-            const name = document.getElementById('cusName').value;
-            const phone = document.getElementById('cusPhone').value;
-            
-            document.getElementById('displayName').innerText = name;
-            document.getElementById('displayPhone').innerText = phone;
-            
-            // 1. Đẩy sự kiện Chuyển đổi lên Google Tag Manager (nếu dùng GTM)
-            window.dataLayer = window.dataLayer || [];
-            window.dataLayer.push({
-                'event': 'generate_lead',
-                'event_category': 'Form Submission',
-                'event_label': 'VNPAY Consultation Form'
-            });
-
-            // 2. Bắn sự kiện chuyển đổi chính xác về Google Ads (đầy đủ nhãn & giá trị)
-            if (typeof gtag === 'function') {
-                gtag('event', 'conversion', {
-                    'send_to': 'AW-18377569352/zvdGCKjB398cEMjojbtE',
-                    'value': 1.0,
-                    'currency': 'VND'
-                });
-            }
-
-            submitted = true;
-        }
-
-        function showSuccess() {
-            document.getElementById('consultationForm').classList.add('hidden');
-            document.getElementById('successMessage').classList.remove('hidden');
-        }
-
-        function resetForm() {
-            submitted = false;
-            document.getElementById('consultationForm').reset();
-            document.getElementById('consultationForm').classList.remove('hidden');
-            document.getElementById('successMessage').classList.add('hidden');
-        }
-    </script>
-</body>
-</html>
-
-
